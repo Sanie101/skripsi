@@ -1,0 +1,90 @@
+% !TEX root = ../../main.tex
+\chapter{Pendahuluan}
+
+\section{Latar Belakang}
+
+Integrasi \textit{inverter-based resources} (IBR) ke sistem transmisi mengubah asumsi dasar yang selama ini digunakan dalam perancangan proteksi saluran. Berbeda dari generator sinkron yang umumnya menyuplai arus gangguan besar dan relatif mudah diprediksi, IBR menghasilkan arus gangguan yang dibatasi oleh konverter, strategi kontrol, dan persyaratan interkoneksi, sehingga karakter magnitudo, sudut fasa, serta kandungan komponen urutan arus saat gangguan menjadi berbeda dari sistem konvensional \cite{haddadi2021systemprotection,kou2020fault,ieee2022std2800}. Perubahan ini penting karena sebagian besar skema proteksi saluran transmisi masih dibangun di atas asumsi sistem yang didominasi mesin sinkron.
+
+Pada proteksi saluran transmisi, relay jarak (relay 21) dan relay diferensial saluran (relay 87L) merupakan dua fungsi proteksi yang luas digunakan karena masing-masing menawarkan selektivitas, kecepatan, dan cakupan proteksi yang baik untuk gangguan pada saluran transmisi \cite{ieee2016c37113,ieee2015c37243}. Namun, ketika IBR terhubung ke jaringan, besaran yang menjadi dasar pengambilan keputusan kedua relay tersebut tidak lagi selalu mengikuti pola sistem konvensional. Relay 21 bergantung pada estimasi impedansi tampak dari rasio tegangan dan arus, sehingga perubahan kontribusi arus gangguan dari IBR dapat memengaruhi akurasi pengukuran impedansi dan keputusan operasi relay \cite{ieee2016c37113,hooshyar2015cirepp1,fang2019impact}. Sementara itu, relay 87L membandingkan arus pada kedua ujung saluran, sehingga perubahan amplitudo, sudut fasa, dan dinamika awal arus gangguan akibat IBR dapat memengaruhi hubungan antara arus diferensial dan arus penahan (\textit{restraint current}) yang menjadi dasar karakteristik operasinya \cite{ieee2015c37243,li2017analysis,chowdhury2023lcd}.
+
+Masalah tersebut telah dibahas secara komprehensif oleh Chowdhury dan Fischer dalam \textit{Transmission Line Protection for Systems With Inverter-Based Resources---Part I: Problems} \cite{chowdhury2021tlp1}. Pada paper tersebut, penulis menunjukkan bahwa respons IBR selama gangguan menantang keandalan skema proteksi saluran konvensional. Studi tersebut dilakukan melalui kolaborasi yang melibatkan model EMT \textit{black-box} dari beberapa pabrikan IBR dan mencakup campuran IBR berupa \textit{Type 3 wind}, \textit{Type 4 wind}, dan \textit{PV solar} \cite{chowdhury2021tlp1}. Hasilnya menunjukkan bahwa penggantian sumber sinkron dengan IBR dapat memunculkan kondisi operasi proteksi yang tidak lagi sesuai dengan ekspektasi sistem konvensional. Pada \textit{Part II}, Chowdhury dan Fischer menunjukkan bahwa modifikasi setting tertentu dapat meningkatkan keandalan secara substansial \cite{chowdhury2021tlp2}. Hal ini menegaskan bahwa persoalan utama bukan sekadar keberadaan IBR, melainkan ketidaksesuaian antara perilaku sistem baru dan setting proteksi lama.
+
+Untuk relay 21 secara khusus, penelitian Hooshyar \textit{et al.} menunjukkan bahwa saluran yang terhubung ke pembangkit energi terbarukan berbasis konverter penuh dapat mengalami kegagalan deteksi gangguan internal maupun trip yang tidak semestinya untuk gangguan eksternal \cite{hooshyar2015cirepp1}. Fang \textit{et al.} juga menunjukkan bahwa \textit{inverter-interfaced renewable energy generators} dapat memengaruhi performa relay jarak dan mendorong kebutuhan skema yang ditingkatkan \cite{fang2019impact}. Di sisi lain, untuk relay 87L, Li \textit{et al.} menganalisis bahwa kehadiran pembangkit energi terbarukan berbasis inverter dapat mengubah relasi arus operasi dan arus penahan pada proteksi diferensial saluran \cite{li2017analysis}. Chowdhury \textit{et al.} kemudian menunjukkan bahwa pada sistem dengan IBR, elemen 87L dapat mengalami penurunan \textit{dependability} dan, jika tidak diterapkan dengan tepat, degradasi \textit{security} \cite{chowdhury2023lcd}. Dengan demikian, baik relay 21 maupun relay 87L sama-sama relevan untuk dikaji ulang pada sistem transmisi dengan penetrasi IBR.
+
+Berdasarkan kondisi tersebut, penelitian ini dirancang untuk mereplikasi kerangka masalah yang diangkat dalam \cite{chowdhury2021tlp1}, tetapi dengan fokus yang dipersempit pada dua fungsi proteksi, yaitu relay 21 dan relay 87L. Penelitian tidak membahas seluruh skema proteksi saluran yang dikaji pada paper referensi, melainkan menelaah secara spesifik bagaimana karakteristik kedua relay tersebut berubah ketika sistem transmisi yang semula diasumsikan konvensional mulai mengandung IBR. Variabel utama yang dibedakan adalah jenis IBR, yaitu \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}, sedangkan setting proteksi dipertahankan berbasis sistem konvensional. Melalui pendekatan ini, penelitian diharapkan dapat menunjukkan batas kelayakan penggunaan setting konvensional sekaligus menjadi dasar penyusunan solusi teknis untuk aplikasi proteksi saluran pada sistem transmisi dengan IBR.
+
+\section{Rumusan Masalah}
+
+Berdasarkan latar belakang tersebut, rumusan masalah pada penelitian ini adalah sebagai berikut:
+
+\begin{enumerate}
+	\item Bagaimana karakteristik operasi relay 21 pada sistem transmisi dengan integrasi IBR ketika setting proteksi masih menggunakan setting konvensional?
+	\item Bagaimana karakteristik operasi relay 87L pada sistem transmisi dengan integrasi IBR ketika setting proteksi masih menggunakan setting konvensional?
+	\item Bagaimana perbedaan jenis IBR, yaitu \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}, memengaruhi respons relay 21 dan relay 87L?
+	\item Apakah penggunaan setting proteksi konvensional pada sistem transmisi yang mengandung IBR masih layak?
+	% \item Solusi teknis apa yang dapat diusulkan berdasarkan hasil evaluasi karakteristik relay 21 dan relay 87L pada sistem transmisi dengan IBR?
+\end{enumerate}
+
+\section{Tujuan Penelitian}
+
+Tujuan penelitian ini adalah sebagai berikut:
+
+\begin{enumerate}
+	\item Menganalisis karakteristik operasi relay 21 pada sistem transmisi dengan integrasi IBR menggunakan setting proteksi konvensional.
+	\item Menganalisis karakteristik operasi relay 87L pada sistem transmisi dengan integrasi IBR menggunakan setting proteksi konvensional.
+	\item Membandingkan pengaruh \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic} terhadap respons relay 21 dan relay 87L.
+	\item Mengevaluasi kelayakan penggunaan setting proteksi konvensional pada sistem transmisi yang mengandung IBR.
+	      % \item Menyusun usulan solusi teknis berupa batas penggunaan setting konvensional,
+	      %       kebutuhan penyesuaian setting, dan kemungkinan pendekatan proteksi tambahan
+	      %       berdasarkan hasil analisis.
+\end{enumerate}
+
+\section{Batasan Penelitian}
+
+Agar penelitian lebih terarah, batasan penelitian ini ditetapkan sebagai
+berikut:
+
+\begin{enumerate}
+	\item Penelitian difokuskan pada sistem transmisi dengan integrasi IBR.
+	\item Relay yang dianalisis hanya relay 21 dan relay 87L.
+	\item Penelitian ini mereplikasi sudut pandang masalah dari \cite{chowdhury2021tlp1}, tetapi hanya membatasi kajian pada relay 21 dan relay 87L.
+	\item Jenis IBR yang dianalisis adalah \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}.
+	\item Level penetrasi IBR dibuat tetap, sehingga variabel utama penelitian adalah jenis IBR.
+	\item Evaluasi relay dilakukan secara individual dan tidak membahas koordinasi proteksi maupun skema \textit{main-backup}.
+	\item Skenario gangguan mencakup gangguan pada saluran yang terhubung IBR, saluran lain yang tidak terhubung IBR, serta kondisi salah satu saluran transmisi \textit{out of service}.
+	\item Studi dilakukan melalui simulasi menggunakan DIgSILENT PowerFactory.
+\end{enumerate}
+
+\section{Manfaat Penelitian}
+
+Penelitian ini diharapkan memberikan manfaat sebagai berikut:
+
+\begin{enumerate}
+	\item \textbf{Manfaat akademik}
+	      \begin{itemize}
+		      \item Menambah referensi mengenai pengaruh IBR terhadap proteksi saluran transmisi, khususnya relay 21 dan relay 87L.
+		      \item Menjadi dasar bagi penelitian lanjutan mengenai re-setting proteksi atau proteksi adaptif pada sistem transmisi dengan IBR.
+	      \end{itemize}
+	\item \textbf{Manfaat praktis}
+	      \begin{itemize}
+		      \item Memberikan gambaran mengenai kondisi ketika setting proteksi konvensional masih layak digunakan pada sistem dengan IBR.
+		      \item Memberikan masukan teknis terkait kebutuhan evaluasi ulang setting relay 21 dan relay 87L pada sistem transmisi dengan IBR.
+		      \item Menjadi dasar penyusunan rekomendasi solusi proteksi untuk sistem transmisi yang mulai mengintegrasikan \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}.
+	      \end{itemize}
+\end{enumerate}
+
+\section{Sistematika Penulisan}
+
+Sistematika penulisan pada penelitian ini disusun sebagai berikut.
+
+\noindent Bab I membahas pendahuluan yang berisi latar belakang, rumusan masalah, tujuan penelitian, batasan penelitian, manfaat penelitian, dan sistematika penulisan.
+
+\noindent Bab II membahas tinjauan pustaka dan dasar teori yang mencakup sistem tenaga konvensional dan integrasi IBR, karakteristik \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}, prinsip kerja relay 21, prinsip kerja relay 87L, serta posisi penelitian terhadap studi terdahulu.
+
+\noindent Bab III membahas metodologi penelitian yang meliputi model sistem, asumsi studi, pemodelan sumber konvensional dan IBR, pemodelan relay 21 dan relay 87L, skenario pengujian, parameter evaluasi, prosedur simulasi, dan metode analisis hasil.
+
+\noindent Bab IV membahas hasil simulasi dan analisis karakteristik relay 21 pada sistem transmisi dengan integrasi IBR untuk berbagai skenario gangguan dan kondisi operasi sistem.
+
+\noindent Bab V membahas hasil simulasi dan analisis karakteristik relay 87L pada sistem transmisi dengan integrasi IBR untuk berbagai skenario gangguan dan kondisi operasi sistem.
+
+\noindent Bab VI membahas sintesis hasil penelitian, evaluasi kelayakan setting konvensional, usulan solusi teknis, kesimpulan, dan saran untuk penelitian lanjutan.

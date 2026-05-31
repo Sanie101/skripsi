@@ -1,0 +1,183 @@
+\chapter{Tinjauan Pustaka dan Dasar Teori}
+
+\section{Sistem Tenaga Konvensional dan Integrasi IBR}
+
+Sistem tenaga konvensional pada umumnya dibangun dengan asumsi bahwa sumber utama energi listrik adalah generator sinkron. Pada kondisi gangguan, generator sinkron dapat memberikan kontribusi arus hubung singkat yang besar karena energi elektromagnetik dan mekanik yang tersimpan pada mesin berputar. Karakteristik ini membuat pemodelan hubung singkat, pemilihan rating peralatan, dan setting proteksi saluran dapat dilakukan dengan asumsi bahwa arus gangguan cukup besar dan mempunyai hubungan fasa yang mengikuti perilaku mesin sinkron \cite{nimpitiwan2007fault_current_contribution,ieeenerc2018tr68}.
+
+Integrasi \textit{inverter-based resources} (IBR) mengubah asumsi tersebut. IBR seperti \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic} tidak terhubung ke jaringan melalui mesin sinkron secara langsung, tetapi melalui konverter elektronika daya dan sistem kontrol. Oleh karena itu, kontribusi arus gangguan IBR tidak hanya ditentukan oleh impedansi fisik sumber, tetapi juga oleh batas arus konverter, strategi kontrol, dan persyaratan \textit{ride-through} yang diterapkan pada perangkat tersebut \cite{haddadi2021systemprotection,ieee2022std2800}.
+
+Chowdhury dan Fischer menjelaskan bahwa respons IBR selama gangguan berbeda dari respons sumber sinkron dan perbedaan tersebut dapat menantang keandalan skema proteksi saluran transmisi konvensional \cite{chowdhury2021tlp1}. Studi tersebut penting karena dilakukan untuk memahami masalah proteksi saluran pada sistem dengan IBR melalui pengujian yang melibatkan beberapa model IBR dan perangkat relay. Dalam konteks penelitian ini, kerangka masalah tersebut digunakan sebagai dasar, tetapi kajian dipersempit hanya pada karakteristik relay 21 dan relay 87L.
+
+Perubahan struktur sumber juga berpengaruh pada level hubung singkat sistem. Laporan IEEE/NERC menyatakan bahwa pembangkit berbasis inverter dapat mengubah performa hubung singkat sistem tenaga karena arus gangguannya dikendalikan oleh inverter dan tidak dapat direpresentasikan secara sederhana seperti generator sinkron \cite{ieeenerc2018tr68}. Akibatnya, proteksi yang bergantung pada besar arus, sudut fasa, atau komponen urutan perlu dievaluasi ulang ketika sistem mulai mengandung IBR dalam jumlah signifikan \cite{nagpal2020tr81,quispe2022transmission_review}.
+
+\section{Karakteristik WT Type 3, WT Type 4, dan Photovoltaic terhadap Gangguan}
+
+\textit{Wind turbine type 3} umumnya menggunakan generator induksi doubly-fed atau \textit{doubly-fed induction generator} (DFIG). Pada konfigurasi ini, stator terhubung langsung ke jaringan, sedangkan rotor terhubung melalui konverter daya parsial. Karena masih terdapat hubungan elektromagnetik langsung antara stator dan jaringan, kontribusi arus gangguan WT Type 3 dapat berbeda dari IBR yang seluruh dayanya melewati konverter penuh. English \textit{et al.} menunjukkan bahwa perilaku arus gangguan Type 3 dan Type 4 tidak dapat ditangani secara memadai dengan teknik analisis hubung singkat konvensional yang dikembangkan untuk mesin sinkron \cite{english2011current_contributions}.
+
+\textit{Wind turbine type 4} menggunakan konverter penuh sehingga generator di sisi turbin terpisah secara elektrik dari jaringan. Seluruh daya yang dikirim ke jaringan dikendalikan melalui konverter. Konfigurasi ini membuat respons gangguan WT Type 4 sangat bergantung pada kontrol konverter dan batas arus yang diizinkan oleh perangkat elektronika daya. Oleh karena itu, walaupun WT Type 4 dapat tetap berkontribusi selama gangguan sesuai strategi kontrolnya, bentuk dan besar arus gangguannya tidak sama dengan generator sinkron \cite{english2011current_contributions,ieeenerc2018tr68}.
+
+\textit{Photovoltaic} (PV) merupakan IBR yang secara alami menghasilkan daya DC dan terhubung ke jaringan AC melalui inverter. Studi Kou \textit{et al.} mengenai karakteristik gangguan pembangkit surya menunjukkan bahwa kontribusi arus gangguan PV dibentuk oleh kontrol inverter dan dapat berbeda signifikan dari sumber konvensional \cite{kou2020fault}. Pada sistem transmisi, karakter injeksi komponen urutan negatif dari pembangkit surya juga menjadi perhatian karena beberapa elemen proteksi menggunakan besaran urutan negatif untuk mendeteksi atau menentukan arah gangguan \cite{kou2020negative_sequence,haddadi2021negative_sequence_elements}.
+
+Perbedaan antara WT Type 3, WT Type 4, dan PV menjadi penting karena penelitian ini tidak mengubah level penetrasi IBR, tetapi mengganti jenis IBR yang terhubung ke sistem. Dengan cara tersebut, perubahan respons relay dapat dikaitkan dengan karakteristik teknologi IBR, bukan dengan perubahan kapasitas penetrasi. Pendekatan ini mengikuti ide utama pada studi Chowdhury dan Fischer yang menggunakan campuran Type 3 wind, Type 4 wind, dan PV solar untuk mengamati masalah proteksi saluran pada sistem dengan IBR \cite{chowdhury2021tlp1}.
+
+\section{Prinsip Kerja Relay 21}
+
+Relay 21 atau relay jarak merupakan fungsi proteksi saluran transmisi yang bekerja berdasarkan impedansi tampak antara lokasi relay dan titik gangguan. Secara umum, relay menghitung impedansi tampak dari perbandingan fasor tegangan dan arus yang diukur pada terminal relay. Apabila impedansi tampak berada di dalam karakteristik operasi dan zona proteksi yang telah ditentukan, relay dapat menyatakan adanya gangguan pada daerah proteksinya \cite{ieee2016c37113,schweitzer2010distance_relay_element_design}.
+
+Setting relay jarak biasanya dibagi ke dalam beberapa zona. Zona 1 digunakan untuk melindungi sebagian besar saluran utama secara cepat, sedangkan zona berikutnya digunakan untuk cakupan lanjutan atau fungsi cadangan. Prinsip zonasi ini bergantung pada parameter saluran dan asumsi bahwa besaran tegangan serta arus selama gangguan dapat merepresentasikan lokasi gangguan secara cukup akurat \cite{ieee2016c37113}. Pada sistem konvensional, asumsi tersebut umumnya valid karena arus gangguan dari generator sinkron cukup besar dan perilakunya dapat diprediksi dengan model rangkaian ekuivalen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{contents/chapter-2/penjelasan zona 21.png}
+    \caption{R-X plot relay 21 dan cakupan daerah proteksi berdasarkan zona}
+    \label{fig:rx_plot_relay21_zona}
+\end{figure}
+
+Ilustrasi pembagian zona pada relay 21 dapat ditunjukkan melalui bidang R-X seperti pada Gambar \ref{fig:rx_plot_relay21_zona}. Pada bidang tersebut, sumbu R merepresentasikan komponen resistansi, sedangkan sumbu X merepresentasikan komponen reaktansi dari impedansi tampak yang dihitung relay. Karakteristik \textit{mho} membentuk daerah cakupan proteksi yang menghadap ke arah impedansi saluran. Titik impedansi tampak yang berada di dalam karakteristik suatu zona dapat dikenali sebagai gangguan pada cakupan zona tersebut. Zona 1 digunakan sebagai proteksi utama dengan waktu kerja instan, sedangkan zona 2 dan zona 3 memberikan cakupan yang lebih jauh dengan waktu kerja tunda sebagai proteksi lanjutan atau cadangan. Pembagian beberapa zona ini digunakan agar proteksi jarak dapat menjaga selektivitas sekaligus menyediakan cakupan cadangan pada saluran berikutnya \cite{abboud2019fivezones}.
+
+Pada sistem dengan IBR, pengukuran impedansi tampak dapat mengalami penyimpangan karena arus gangguan yang masuk ke relay dipengaruhi oleh kontrol inverter. Hooshyar \textit{et al.} menunjukkan bahwa saluran yang terhubung ke pembangkit energi terbarukan berbasis konverter penuh dapat menyebabkan relay jarak gagal mendeteksi gangguan internal atau salah beroperasi untuk gangguan eksternal \cite{hooshyar2015cirepp1}. Fang \textit{et al.} juga menunjukkan bahwa \textit{inverter-interfaced renewable energy generators} dapat memengaruhi performa proteksi jarak dan mendorong kebutuhan skema yang ditingkatkan \cite{fang2019impact}.
+
+Selain magnitudo arus yang terbatas, sudut fasa arus gangguan juga dapat berubah karena strategi kontrol inverter. Hal ini penting karena relay jarak tidak hanya bergantung pada besar arus, tetapi pada hubungan fasor antara tegangan dan arus. Sarkar \textit{et al.} menyoroti bahwa performa relay jarak perlu dianalisis kembali pada sistem masa depan yang didominasi konverter \cite{sarkar2017distance_relay_future}. Dengan demikian, evaluasi relay 21 pada penelitian ini diarahkan untuk melihat apakah setting berbasis sistem konvensional masih menghasilkan karakteristik operasi yang sesuai ketika jenis IBR yang terhubung ke sistem berubah.
+
+\section{Prinsip Kerja Relay 87L}
+
+Relay 87L atau relay diferensial saluran bekerja dengan membandingkan arus yang masuk dan keluar dari saluran transmisi. Pada kondisi normal atau gangguan eksternal, jumlah arus pada batas zona proteksi idealnya seimbang sehingga arus diferensial kecil. Pada gangguan internal, keseimbangan tersebut hilang dan arus diferensial meningkat. Prinsip ini membuat 87L menjadi salah satu fungsi proteksi saluran yang cepat dan selektif, terutama ketika didukung oleh komunikasi antar ujung saluran \cite{ieee2015c37243}.
+
+Dalam implementasi praktis, relay 87L tidak hanya menggunakan arus diferensial, tetapi juga arus penahan atau \textit{restraint current}. Karakteristik operasi biasanya dirancang agar relay tetap aman terhadap error pengukuran, ketidakseimbangan CT, saturasi CT, atau gangguan eksternal dengan arus besar. Kasztenny \textit{et al.} menjelaskan bahwa karakteristik relay diferensial modern, termasuk aplikasi multiteminal, bergantung pada hubungan antara besaran operasi dan besaran penahan \cite{kasztenny2011tutorial_multiterminal}.
+
+Pada aplikasi dua terminal, besaran operasi dapat dinyatakan sebagai arus diferensial, sedangkan besaran penahan dapat dinyatakan dari rata-rata magnitudo arus pada kedua ujung saluran. Dengan menggunakan \(I_A\) dan \(I_B\) sebagai arus pada kedua ujung saluran, arus diferensial \(I_d\) dan arus penahan \(I_r\) dapat dituliskan sebagai berikut \cite{thompson2010percentage}:
+
+\begin{align}
+    I_d & = \left| I_A + I_B \right| \label{eq:arus_diferensial_87l}                      \\
+    I_r & = \frac{\left| I_A \right| + \left| I_B \right|}{2} \label{eq:arus_penahan_87l}
+\end{align}
+
+Berdasarkan Persamaan \ref{eq:arus_diferensial_87l}, arus diferensial menunjukkan ketidakseimbangan arus yang masuk ke daerah proteksi. Sementara itu, Persamaan \ref{eq:arus_penahan_87l} menunjukkan arus penahan yang digunakan sebagai acuan agar relay tidak mudah bekerja akibat ketidakseimbangan kecil atau kondisi gangguan eksternal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{contents/chapter-2/plot 87L.png}
+    \caption{Karakteristik operasi relay diferensial untuk saluran}
+    \label{fig:karakteristik_operasi_87l}
+\end{figure}
+
+Hubungan antara \(I_d\) dan \(I_r\) tersebut dapat digambarkan melalui karakteristik operasi relay diferensial bias pada Gambar \ref{fig:karakteristik_operasi_87l}. Kurva karakteristik memisahkan daerah trip dan daerah tidak trip. Pada arus penahan yang rendah, relay tetap membutuhkan arus diferensial minimum sebagai batas pickup. Setelah melewati batas tersebut, ambang operasi meningkat mengikuti kemiringan atau \textit{slope} karakteristik. Dengan demikian, titik kerja \((I_r, I_d)\) yang berada di atas kurva menunjukkan kondisi operasi relay, sedangkan titik kerja yang berada di bawah kurva menunjukkan kondisi tertahan atau tidak trip. Karakteristik bias ini digunakan agar relay tetap sensitif terhadap gangguan internal, tetapi tetap aman terhadap \textit{through current}, gangguan eksternal, dan kondisi seperti error pengukuran atau saturasi CT \cite{anderson2017summary,thompson2010percentage,hedding2008line}.
+
+Pada sistem dengan IBR, tantangan relay 87L muncul karena arus gangguan pada salah satu atau kedua ujung saluran dapat dibatasi dan dikontrol oleh inverter. Li \textit{et al.} menganalisis bahwa kehadiran pembangkit energi terbarukan berbasis inverter dapat mengubah karakter arus yang masuk ke perhitungan proteksi diferensial saluran \cite{li2017analysis}. Akibatnya, hubungan antara arus diferensial dan arus penahan perlu diamati kembali, khususnya pada skenario gangguan internal, gangguan eksternal, dan perubahan konfigurasi jaringan.
+
+Kajian lanjutan oleh Chowdhury, McDaniel, dan Fischer menyatakan bahwa elemen 87L pada sistem dengan IBR dapat mengalami penurunan \textit{dependability} dan, jika tidak diterapkan dengan tepat, degradasi \textit{security} \cite{chowdhury2023lcd}. Pernyataan ini relevan dengan penelitian ini karena 87L tidak dikaji sebagai solusi umum semata, tetapi diamati karakteristiknya ketika setting yang digunakan masih berbasis sistem konvensional.
+
+\section{Pengaruh IBR terhadap Kinerja Proteksi Transmisi}
+
+Pengaruh IBR terhadap proteksi transmisi dapat dilihat dari perubahan besaran listrik yang digunakan oleh relay. Untuk relay 21, perubahan utama terletak pada estimasi impedansi tampak. Karena impedansi tampak dihitung dari tegangan dan arus, maka arus gangguan yang terbatas, sudut arus yang dikontrol inverter, dan perubahan kontribusi dari ujung-ujung saluran dapat menyebabkan titik operasi relay bergeser dari karakteristik yang diharapkan \cite{hooshyar2015cirepp1,fang2019impact,quispe2022transmission_review}.
+
+Untuk relay 87L, pengaruh IBR terlihat pada hubungan arus diferensial dan arus penahan. Pada gangguan internal, arus yang dibatasi oleh inverter dapat menurunkan margin operasi sehingga relay berpotensi menjadi kurang sensitif. Pada gangguan eksternal atau kondisi konfigurasi jaringan tertentu, perbedaan fase dan dinamika arus dari IBR dapat memengaruhi keamanan operasi relay apabila setting tidak mempertimbangkan karakteristik sumber berbasis inverter \cite{li2017analysis,chowdhury2023lcd}.
+
+Chowdhury dan Fischer menempatkan masalah ini dalam konteks yang lebih luas. Mereka menyatakan bahwa respons IBR selama gangguan tidak konsisten dengan respons sumber sinkron, sehingga dapat menantang keandalan skema proteksi saluran konvensional \cite{chowdhury2021tlp1}. Dalam penelitian ini, konsep tersebut digunakan sebagai titik awal, tetapi ruang lingkup analisis difokuskan pada dua fungsi proteksi yang diamati secara individual, yaitu relay 21 dan relay 87L.
+
+Standar interkoneksi modern juga memengaruhi cara IBR merespons gangguan. IEEE Std 2800-2022 mengatur kemampuan interkoneksi dan interoperabilitas IBR pada sistem tenaga transmisi, termasuk ekspektasi performa saat terjadi gangguan dan kondisi tegangan tidak seimbang \cite{ieee2022std2800}. Karena perilaku IBR saat gangguan dapat dibentuk oleh standar, kontrol pabrikan, dan setting perangkat, maka evaluasi proteksi tidak cukup hanya memakai asumsi sumber ideal seperti pada studi sistem konvensional.
+
+\section{Tinjauan Penelitian Terdahulu}
+
+Chowdhury dan Fischer melakukan studi utama mengenai masalah proteksi saluran transmisi pada sistem dengan IBR. Paper Part I membahas permasalahan proteksi yang muncul akibat respons IBR selama gangguan, sedangkan Part II membahas solusi dan modifikasi setting yang dapat meningkatkan keandalan proteksi \cite{chowdhury2021tlp1,chowdhury2021tlp2}. Kedua paper tersebut menjadi dasar utama penelitian ini. Perbedaannya, penelitian ini tidak mereplikasi seluruh cakupan fungsi proteksi yang dibahas, tetapi hanya memfokuskan analisis pada relay 21 dan relay 87L.
+
+Untuk relay 21, Hooshyar \textit{et al.} membahas masalah proteksi jarak pada saluran yang berasal dari pembangkit energi terbarukan berbasis konverter penuh \cite{hooshyar2015cirepp1}. Paper lanjutannya mengusulkan solusi dan mengevaluasi pendekatan tersebut \cite{hooshyar2015distance_part2}. Fang \textit{et al.} juga menunjukkan dampak generator energi terbarukan berbasis inverter terhadap proteksi jarak dan mengusulkan skema yang diperbaiki \cite{fang2019impact}. Studi-studi ini menunjukkan bahwa relay 21 merupakan fungsi proteksi yang sensitif terhadap karakteristik sumber IBR.
+
+Untuk relay 87L, Li \textit{et al.} membahas analisis proteksi diferensial saluran dengan mempertimbangkan pembangkit energi terbarukan berbasis inverter \cite{li2017analysis}. Chowdhury, McDaniel, dan Fischer kemudian membahas tantangan dan solusi penerapan 87L pada sistem dengan IBR \cite{chowdhury2023lcd}. Kedua studi tersebut menjadi dasar untuk melihat bahwa relay 87L, meskipun sering dianggap sangat selektif, tetap perlu dikaji pada sistem dengan sumber arus gangguan yang dikontrol inverter.
+
+Kajian tinjauan oleh Quispe \textit{et al.} menunjukkan bahwa tantangan utama proteksi saluran pada sistem dengan IBR berkaitan dengan perubahan magnitudo arus, sudut fasa, komponen urutan negatif, dan level arus hubung singkat \cite{quispe2022transmission_review}. Sementara itu, Haddadi \textit{et al.} membahas dampak IBR terhadap proteksi sistem secara umum, termasuk elemen yang menggunakan besaran urutan negatif \cite{haddadi2021systemprotection,haddadi2021negative_sequence_elements}. Literatur tersebut memperkuat kebutuhan untuk mengevaluasi proteksi transmisi ketika IBR masuk ke sistem yang setting proteksinya masih mengikuti asumsi konvensional.
+
+Ringkasan literatur yang digunakan pada Bab ini disajikan pada Tabel \ref{tab:matriks_literatur_posisi}. Tabel tersebut tidak hanya berfungsi sebagai rangkuman pustaka, tetapi juga sebagai dasar untuk menunjukkan posisi penelitian. Dengan demikian, setiap referensi ditempatkan berdasarkan fokus kajian, pendekatan yang digunakan, kontribusi utama, serta relevansinya terhadap evaluasi relay 21 dan relay 87L pada sistem transmisi dengan integrasi IBR.
+
+\begingroup
+\scriptsize
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.22}
+\newcommand{\thead}[1]{\makebox[\linewidth][c]{\shortstack{#1}}}
+\begin{longtable}{|p{0.14\textwidth}|p{0.10\textwidth}|p{0.16\textwidth}|p{0.15\textwidth}|p{0.18\textwidth}|p{0.20\textwidth}|}
+    \caption{Matriks Literatur sebagai Dasar Posisi Penelitian}
+    \label{tab:matriks_literatur_posisi} \\
+    \hline
+    \thead{\textbf{Penulis/}\\\textbf{Tahun}} &
+    \thead{\textbf{Jenis}\\\textbf{Literatur}} &
+    \thead{\textbf{Fokus}\\\textbf{Kajian}} &
+    \thead{\textbf{Metode/}\\\textbf{Pendekatan}} &
+    \thead{\textbf{Kontribusi}\\\textbf{Utama}} &
+    \thead{\textbf{Relevansi terhadap}\\\textbf{Penelitian Ini}} \\ \hline
+    \endfirsthead
+
+    \caption[]{Matriks Literatur sebagai Dasar Posisi Penelitian (lanjutan)} \\
+    \hline
+    \thead{\textbf{Penulis/}\\\textbf{Tahun}} &
+    \thead{\textbf{Jenis}\\\textbf{Literatur}} &
+    \thead{\textbf{Fokus}\\\textbf{Kajian}} &
+    \thead{\textbf{Metode/}\\\textbf{Pendekatan}} &
+    \thead{\textbf{Kontribusi}\\\textbf{Utama}} &
+    \thead{\textbf{Relevansi terhadap}\\\textbf{Penelitian Ini}} \\ \hline
+    \endhead
+
+    Nimpitiwan \textit{et al.} (2007) \cite{nimpitiwan2007fault_current_contribution} & Artikel jurnal & Kontribusi arus gangguan mesin sinkron dan generator berbasis inverter & Analisis kontribusi arus gangguan & Menunjukkan perbedaan karakteristik arus gangguan antara sumber konvensional dan sumber berbasis inverter & Menjadi dasar pembanding antara kontribusi arus gangguan sistem konvensional dan IBR \\ \hline
+
+    IEEE/NERC Task Force (2018) \cite{ieeenerc2018tr68} & Laporan teknis & Dampak pembangkit berbasis inverter terhadap dinamika sistem dan performa hubung singkat & Kajian teknis sistem tenaga & Menjelaskan bahwa IBR dapat mengubah performa hubung singkat sistem tenaga & Mendukung alasan perlunya evaluasi proteksi ketika level dan karakter arus hubung singkat berubah \\ \hline
+
+    Haddadi \textit{et al.} (2021) \cite{haddadi2021systemprotection} & Artikel jurnal & Dampak IBR terhadap proteksi sistem tenaga & Kajian dampak IBR pada elemen proteksi & Merangkum pengaruh IBR terhadap fungsi proteksi sistem tenaga & Menjadi dasar umum bahwa setting proteksi perlu dievaluasi ketika sumber IBR terintegrasi ke jaringan \\ \hline
+
+    IEEE Std 2800 (2022) \cite{ieee2022std2800} & Standar & Interkoneksi dan interoperabilitas IBR pada sistem tenaga transmisi & Standar teknis interkoneksi & Menetapkan persyaratan performa IBR yang terhubung pada sistem transmisi & Menjadi acuan bahwa perilaku IBR saat gangguan dipengaruhi oleh persyaratan interkoneksi dan kontrol perangkat \\ \hline
+
+    Chowdhury dan Fischer (2021a) \cite{chowdhury2021tlp1} & Artikel jurnal & Permasalahan proteksi saluran transmisi pada sistem dengan IBR & Studi analisis dan pengujian skema proteksi & Mengidentifikasi masalah proteksi saluran akibat respons IBR selama gangguan & Menjadi kerangka masalah utama penelitian, tetapi ruang lingkup dipersempit pada relay 21 dan relay 87L \\ \hline
+
+    Nagpal \textit{et al.} (2020) \cite{nagpal2020tr81} & Laporan teknis & Tantangan dan praktik proteksi untuk interkoneksi IBR pada sistem transmisi & Laporan teknis komite proteksi & Merangkum tantangan proteksi saat IBR dihubungkan ke sistem transmisi utilitas & Memperkuat dasar bahwa proteksi transmisi perlu dikaji ulang pada sistem dengan IBR \\ \hline
+
+    Quispe \textit{et al.} (2022) \cite{quispe2022transmission_review} & Artikel tinjauan & Tantangan proteksi saluran transmisi yang dipengaruhi IBR & Tinjauan literatur & Memetakan pengaruh IBR terhadap magnitudo arus, sudut fasa, komponen urutan, dan level hubung singkat & Menjadi dasar pemilihan indikator evaluasi seperti arus gangguan, impedansi tampak, dan respons relay \\ \hline
+
+    English \textit{et al.} (2011) \cite{english2011current_contributions} & Makalah konferensi & Kontribusi arus gangguan WT Type 3 dan WT Type 4 & Analisis kontribusi arus selama gangguan & Menunjukkan bahwa kontribusi arus WT Type 3 dan WT Type 4 berbeda dari asumsi mesin sinkron & Menjadi dasar pemilihan WT Type 3 dan WT Type 4 sebagai jenis IBR yang dibandingkan \\ \hline
+
+    Kou \textit{et al.} (2020a) \cite{kou2020fault} & Artikel jurnal & Karakteristik gangguan pembangkit surya & Analisis karakteristik arus gangguan PV & Menunjukkan bahwa kontribusi arus gangguan PV dibentuk oleh kontrol inverter & Menjadi dasar pembahasan PV sebagai salah satu IBR yang diuji pada penelitian ini \\ \hline
+
+    Kou \textit{et al.} (2020b) \cite{kou2020negative_sequence} & Artikel jurnal & Injeksi arus urutan negatif pada pembangkit surya transmisi & Analisis komponen urutan negatif & Menunjukkan perhatian terhadap injeksi urutan negatif dari pembangkit surya & Mendukung pembahasan bahwa besaran urutan dan arah gangguan dapat memengaruhi elemen proteksi \\ \hline
+
+    Haddadi \textit{et al.} (2021) \cite{haddadi2021negative_sequence_elements} & Artikel jurnal & Dampak IBR pada elemen proteksi berbasis urutan negatif & Analisis elemen proteksi & Menjelaskan pengaruh IBR terhadap besaran urutan negatif yang digunakan proteksi & Mendukung alasan evaluasi proteksi saat arus gangguan dan komponen urutan dipengaruhi kontrol inverter \\ \hline
+
+    IEEE Std C37.113 (2016) \cite{ieee2016c37113} & Standar & Aplikasi relay proteksi pada saluran transmisi & Panduan aplikasi proteksi saluran & Menjelaskan prinsip aplikasi relay proteksi saluran transmisi & Menjadi dasar teori relay 21 dan prinsip zonasi proteksi jarak \\ \hline
+
+    Schweitzer dan Roberts (2010) \cite{schweitzer2010distance_relay_element_design} & Artikel teknis & Desain elemen relay jarak & Penjelasan teknis elemen relay & Menjelaskan konsep perhitungan dan desain elemen relay jarak & Menjadi dasar pemahaman impedansi tampak yang digunakan relay 21 \\ \hline
+
+    Abboud \textit{et al.} (2019) \cite{abboud2019fivezones} & Makalah konferensi & Penggunaan beberapa zona pada proteksi jarak & Kajian teknis aplikasi zona proteksi & Menjelaskan manfaat pembagian zona proteksi jarak & Mendukung penjelasan karakteristik zona relay 21 pada bidang R-X \\ \hline
+
+    Hooshyar \textit{et al.} (2015a) \cite{hooshyar2015cirepp1} & Artikel jurnal & Proteksi jarak pada saluran dari pembangkit berbasis konverter penuh & Pernyataan masalah dan analisis proteksi & Menunjukkan potensi kegagalan atau salah operasi relay jarak pada sistem berbasis konverter & Menjadi dasar bahwa relay 21 sensitif terhadap karakteristik arus gangguan IBR \\ \hline
+
+    Fang \textit{et al.} (2019) \cite{fang2019impact} & Artikel jurnal & Dampak pembangkit energi terbarukan berbasis inverter terhadap proteksi jarak & Analisis dampak dan usulan skema perbaikan & Menunjukkan perubahan performa relay jarak akibat sumber berbasis inverter & Mendukung evaluasi perubahan impedansi tampak dan keputusan operasi relay 21 \\ \hline
+
+    Sarkar \textit{et al.} (2017) \cite{sarkar2017distance_relay_future} & Makalah konferensi & Performa relay jarak pada sistem yang didominasi konverter & Analisis performa relay & Menunjukkan perlunya evaluasi relay jarak pada sistem masa depan berbasis konverter & Memperkuat urgensi analisis relay 21 pada sistem dengan IBR \\ \hline
+
+    IEEE Std C37.243 (2015) \cite{ieee2015c37243} & Standar & Aplikasi relay diferensial arus saluran digital & Panduan aplikasi relay 87L & Menjelaskan penggunaan relay diferensial saluran berbasis komunikasi digital & Menjadi dasar teori dan pemodelan relay 87L pada saluran TL89 \\ \hline
+
+    Kasztenny \textit{et al.} (2011) \cite{kasztenny2011tutorial_multiterminal} & Makalah tutorial & Karakteristik operasi relay diferensial saluran multiterminal & Tutorial teknis relay diferensial & Menjelaskan karakteristik operasi relay diferensial berbasis mikroprosesor & Menjadi dasar pembacaan daerah operasi dan daerah penahan relay 87L \\ \hline
+
+    Thompson (2010) \cite{thompson2010percentage} & Makalah konferensi & Prinsip \textit{percentage restrained differential} & Penjelasan teknis perhitungan diferensial & Menjelaskan makna arus diferensial dan arus penahan pada relay diferensial & Menjadi dasar rumus dan interpretasi hubungan \(I_d\) dan \(I_r\) \\ \hline
+
+    Anderson (2017) \cite{anderson2017summary} & Laporan teknis & Ringkasan panduan IEEE C37.243 untuk relay diferensial digital & Ringkasan teknis standar & Merangkum aplikasi relay diferensial arus saluran digital & Mendukung penjelasan karakteristik operasi relay 87L \\ \hline
+
+    Hedding dan Holst (2008) \cite{hedding2008line} & Makalah konferensi & Operasi relay diferensial saat saturasi CT berat & Analisis kondisi operasi relay & Menunjukkan pentingnya keamanan operasi relay diferensial terhadap kondisi pengukuran tidak ideal & Menjadi dasar bahwa relay 87L perlu mempertimbangkan arus penahan dan keamanan operasi \\ \hline
+
+    Li \textit{et al.} (2017) \cite{li2017analysis} & Makalah konferensi & Proteksi diferensial saluran dengan pembangkit energi terbarukan berbasis inverter & Analisis pengaruh sumber inverter pada 87L & Menunjukkan bahwa inverter dapat mengubah arus yang digunakan dalam perhitungan relay diferensial & Menjadi dasar evaluasi relay 87L pada sistem dengan IBR \\ \hline
+
+    Chowdhury \textit{et al.} (2023) \cite{chowdhury2023lcd} & Makalah konferensi & Tantangan dan solusi relay 87L pada sistem dengan IBR & Kajian tantangan dan solusi proteksi diferensial & Menjelaskan isu \textit{dependability} dan \textit{security} relay 87L pada sistem dengan IBR & Mendukung pembahasan bahwa relay 87L tetap perlu dievaluasi meskipun bersifat selektif \\ \hline
+
+    Chowdhury dan Fischer (2021b) \cite{chowdhury2021tlp2} & Artikel jurnal & Solusi proteksi saluran transmisi pada sistem dengan IBR & Evaluasi solusi dan modifikasi setting & Mengusulkan pendekatan untuk meningkatkan keandalan proteksi saluran dengan IBR & Menjadi pembanding bahwa penelitian ini berfokus pada evaluasi respons relay, bukan optimasi setting baru \\ \hline
+
+    Hooshyar \textit{et al.} (2015b) \cite{hooshyar2015distance_part2} & Artikel jurnal & Solusi proteksi jarak untuk saluran dari pembangkit berbasis konverter penuh & Deskripsi dan evaluasi solusi & Mengevaluasi pendekatan perbaikan untuk masalah proteksi jarak pada sistem berbasis konverter & Menjadi pembanding terhadap ruang lingkup penelitian yang menilai kelayakan setting konvensional \\ \hline
+\end{longtable}
+\endgroup
+
+\section{Posisi dan Kontribusi Penelitian}
+
+Berdasarkan tinjauan pustaka, penelitian ini diposisikan sebagai studi replikasi terarah dari kerangka masalah Chowdhury dan Fischer \cite{chowdhury2021tlp1}. Replikasi yang dimaksud bukan pengulangan seluruh cakupan paper tersebut, melainkan pengujian kembali gagasan utamanya pada ruang lingkup yang lebih sempit, yaitu karakteristik relay 21 dan relay 87L pada sistem transmisi dengan IBR.
+
+Kontribusi pertama penelitian ini adalah membandingkan respons dua fungsi proteksi saluran yang berbeda prinsip kerjanya. Relay 21 dianalisis melalui perubahan impedansi tampak dan keputusan operasi, sedangkan relay 87L dianalisis melalui perubahan arus diferensial, arus penahan, dan keputusan operasi. Perbandingan ini penting karena kedua relay dapat dipengaruhi oleh IBR melalui mekanisme yang berbeda.
+
+Kontribusi kedua adalah penggunaan tiga jenis IBR sebagai variabel utama, yaitu \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}. Level penetrasi IBR dibuat tetap agar perbedaan hasil lebih dapat dikaitkan dengan karakteristik teknologi IBR. Kontribusi ketiga adalah evaluasi dilakukan pada beberapa skenario lokasi gangguan dan kondisi salah satu saluran transmisi \textit{out of service}, sehingga analisis tidak hanya melihat satu kondisi jaringan.
+
+Dengan posisi tersebut, hasil penelitian diharapkan dapat memberikan dasar untuk menentukan batas kelayakan penggunaan setting konvensional, kebutuhan penyesuaian setting, serta kemungkinan penerapan pendekatan proteksi tambahan pada sistem transmisi dengan IBR.
