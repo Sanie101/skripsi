@@ -546,6 +546,8 @@ Kenaikan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus akib
 
 \subsection{Skenario 3: WT Type 3 External DLG Fault}
 
+Subbagian ini membahas dekomposisi komponen urutan arus pada Skenario 3, yaitu kondisi sistem dengan integrasi WT Type 3 saat terjadi gangguan external \textit{double line-to-ground}. Pembahasan difokuskan pada perubahan komponen urutan positif, negatif, dan nol yang terbaca pada saluran TL89 serta sisi WT Type 3, sehingga pola ketidakseimbangan arus pada skenario ini dapat diamati sebelum dikaitkan dengan respons relay.
+
 \begin{figure}[H]
     \centering
 
@@ -569,7 +571,13 @@ Kenaikan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus akib
     \label{fig:decomposition_sequence_current_s3}
 \end{figure}
 
+Berdasarkan Gambar \ref{fig:decomposition_sequence_current_s3}, gangguan external \textit{double line-to-ground} menyebabkan kenaikan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif naik dari 0,2563 kA menjadi sekitar 0,31 kA sesaat setelah gangguan terjadi, kemudian berosilasi pada rentang 0,324 - 0,329 kA. Pada saat yang sama, komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,000043 kA dan berosilasi pada rentang 0,000023 - 0,000038 kA, sedangkan komponen urutan nol meningkat dari 0 kA menjadi sekitar 0,035 kA dan berosilasi pada rentang 0,019 - 0,04 kA.
+
+Kenaikan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus akibat gangguan dua fasa ke tanah. Komponen urutan positif meningkat karena adanya arus yang mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol muncul akibat ketidakseimbangan arus selama gangguan berlangsung. Dengan demikian, pola pada Gambar \ref{fig:decomposition_sequence_current_s3} memperlihatkan karakteristik gangguan external \textit{double line-to-ground} pada saluran TL89 untuk Skenario 3.
+
 \subsection{Skenario 4: WT Type 3 External 3P Fault}
+
+Subbagian ini membahas dekomposisi komponen urutan arus pada Skenario 4, yaitu kondisi sistem dengan integrasi WT Type 3 saat terjadi gangguan external \textit{three-phase fault}. Pembahasan difokuskan pada perubahan komponen urutan positif yang terbaca pada saluran TL89 serta sisi WT Type 3, sehingga kenaikan arus selama gangguan tiga fasa dapat diamati sebelum dikaitkan dengan respons relay.
 
 \begin{figure}[H]
     \centering
@@ -594,7 +602,13 @@ Kenaikan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus akib
     \label{fig:decomposition_sequence_current_s4}
 \end{figure}
 
+Berdasarkan Gambar \ref{fig:decomposition_sequence_current_s4}, komponen arus urutan positif meningkat saat gangguan external \textit{three-phase fault} terjadi. Nilainya naik dari 0,2563 kA menjadi sekitar 0,3785 kA sesaat setelah gangguan, kemudian stabil pada 0,3265 kA.
+
+Kenaikan tersebut menunjukkan bertambahnya arus yang mengalir melalui jalur gangguan tiga fasa. Dengan demikian, pola pada Gambar \ref{fig:decomposition_sequence_current_s4} memperlihatkan karakteristik gangguan external \textit{three-phase fault} pada saluran TL89 untuk Skenario 4 melalui peningkatan komponen urutan positif.
+
 \subsection{Skenario 5: WT Type 3 External SLG Fault}
+
+Subbagian ini membahas dekomposisi komponen urutan arus pada Skenario 5, yaitu kondisi sistem dengan integrasi WT Type 3 saat terjadi gangguan external \textit{single line-to-ground}. Karena gangguan satu fasa ke tanah merupakan gangguan tak seimbang, pembahasan diarahkan pada perubahan komponen urutan positif, negatif, dan nol yang terbaca pada saluran TL89 serta sisi WT Type 3 sebelum dikaitkan dengan respons relay.
 
 \begin{figure}[H]
     \centering
@@ -619,7 +633,13 @@ Kenaikan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus akib
     \label{fig:decomposition_sequence_current_s5}
 \end{figure}
 
+Berdasarkan Gambar \ref{fig:decomposition_sequence_current_s5}, gangguan external \textit{single line-to-ground} menyebabkan perubahan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif turun dari 0,2563 kA menjadi sekitar 0,2326 kA sesaat setelah gangguan terjadi, kemudian kembali naik hingga 0,311 kA. Pada saat yang sama, komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,000058 kA lalu menurun hingga 0,000033 kA. Komponen urutan nol juga meningkat dari 0 kA menjadi sekitar 0,036 kA dan kembali menurun hingga 0,02 kA.
+
+Perubahan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus selama gangguan satu fasa ke tanah. Komponen urutan positif berubah karena arus mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol muncul akibat ketidakseimbangan arus selama gangguan berlangsung. Dengan demikian, pola pada Gambar \ref{fig:decomposition_sequence_current_s5} memperlihatkan karakteristik gangguan external \textit{single line-to-ground} pada saluran TL89 untuk Skenario 5.
+
 \subsection{Skenario 6: Photovoltaic External DLG Fault}
+
+Subbagian ini membahas dekomposisi komponen urutan arus pada Skenario 6, yaitu kondisi sistem dengan integrasi \textit{photovoltaic} saat terjadi gangguan external \textit{double line-to-ground}. Karena gangguan dua fasa ke tanah menimbulkan ketidakseimbangan arus, pembahasan difokuskan pada perubahan komponen urutan positif, negatif, dan nol yang terbaca pada saluran TL89 serta sisi \textit{photovoltaic} sebelum dikaitkan dengan respons relay.
 
 \begin{figure}[H]
     \centering
@@ -644,6 +664,9 @@ Kenaikan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus akib
     \label{fig:decomposition_sequence_current_s6}
 \end{figure}
 
+Berdasarkan Gambar \ref{fig:decomposition_sequence_current_s6}, gangguan external \textit{double line-to-ground} menyebabkan perubahan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif turun dari 0,2571 kA menjadi sekitar 0,2424 kA sesaat setelah gangguan terjadi, kemudian tetap stabil pada 0,2424 kA. Pada saat yang sama, komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,000068 kA, lalu menurun dan berosilasi pada 0,000036 - 0,000058 kA. Komponen urutan nol juga meningkat dari 0 kA menjadi sekitar 0,3438 kA dan berosilasi pada 0,018 - 0,029 kA.
+
+Perubahan tersebut menunjukkan ketidakseimbangan arus selama gangguan dua fasa ke tanah. Komponen urutan positif berubah karena arus mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol muncul akibat ketidakseimbangan arus selama gangguan berlangsung. Dengan demikian, pola pada Gambar \ref{fig:decomposition_sequence_current_s6} memperlihatkan karakteristik gangguan external \textit{double line-to-ground} pada saluran TL89 untuk Skenario 6.
 
 \section{Respons Relay 21 pada Sistem dengan WT Type 3}
 
@@ -975,9 +998,11 @@ Pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S1} terlihat untuk titik impedan
 
 \subsection{Skenario 3 : Wind Turbine Type 3 External DLG Fault}
 
-Berbeda dengan skenario sebelumnya, gangguan pada skenario ini berada di luar saluran TL89 sehingga relay 21 seharusnya tidak membaca gangguan sebagai gangguan internal pada saluran yang diproteksi. Kondisi ini penting untuk mengevaluasi selektivitas relay ketika sistem telah terintegrasi \textit{wind turbine type 3} dan konfigurasi jaringan berubah sesuai skenario pengujian.
+Skenario ini membahas respons relay 21 ketika sistem terintegrasi \textit{wind turbine type 3} mengalami gangguan eksternal DLG. Karena gangguan berada di luar saluran TL89, relay 21 pada saluran yang diproteksi seharusnya tidak membaca gangguan tersebut sebagai gangguan internal. Kondisi ini digunakan untuk mengevaluasi selektivitas relay pada saat konfigurasi jaringan berubah sesuai skenario pengujian.
 
-Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s3} menjadi dasar untuk melihat perubahan besaran arus yang diterima oleh saluran TL89 pada gangguan eksternal DLG. Oleh karena itu, pembahasan pada subbab ini diarahkan untuk menelusuri apakah perubahan komponen arus tersebut memengaruhi syarat \textit{starting}, posisi impedansi tampak, dan keputusan trip relay 21 pada sisi Bus 8 dan Bus 9.
+Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s3} digunakan sebagai dasar untuk membaca perubahan arus yang masuk ke TL89 selama gangguan eksternal DLG. Dari konteks tersebut, analisis kemudian diarahkan pada syarat \textit{starting}, posisi impedansi tampak, dan keputusan trip relay 21 pada sisi Bus 8 maupun Bus 9.
+
+Berdasarkan dekomposisi tersebut, komponen urutan positif naik dari 0,2563 kA menjadi sekitar 0,31 kA sesaat setelah gangguan, kemudian berosilasi pada rentang 0,324 - 0,329 kA. Komponen urutan negatif dan nol muncul sebagai akibat gangguan DLG, tetapi nilainya lebih kecil dibandingkan komponen urutan positif, yaitu masing-masing berada pada rentang 0,000023 - 0,000038 kA dan 0,019 - 0,04 kA setelah gangguan. Pola ini menunjukkan adanya ketidakseimbangan arus pada TL89, tetapi kenaikan arus yang masuk ke relay 21 belum cukup untuk memenuhi syarat \textit{starting}. Akibatnya, elemen jarak sisi Bus 8 tidak berada pada kondisi aktif yang memadai untuk memproses impedansi tampak sebagai gangguan yang harus dioperasikan.
 
 % \begin{figure}[H]
 %     \centering
@@ -997,7 +1022,7 @@ Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequen
     \label{fig:Bus_8_Ex_DLG_S3}
 \end{figure}
 
-Gambar \ref{fig:Bus_8_Ex_DLG_S3} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 3. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,601 A sekunder atau 1,25 p.u., arus fasa B meningkat menjadi 1,791 A sekunder atau 1,4 p.u., dan arus fasa C meningkat menjadi 1,586 A sekunder atau 1,24 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
+Gambar \ref{fig:Bus_8_Ex_DLG_S3} menunjukkan arus sekunder CT pada Bus 8 untuk Skenario 3. Sebelum gangguan, arus pada ketiga fasa bernilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,601 A sekunder atau 1,25 p.u., arus fasa B menjadi 1,791 A sekunder atau 1,4 p.u., dan arus fasa C menjadi 1,586 A sekunder atau 1,24 p.u. Kenaikan tersebut menunjukkan adanya perubahan arus selama gangguan, tetapi besarnya masih belum memenuhi arus minimum yang diperlukan agar relay 21 sisi Bus 8 aktif.
 
 \begin{figure}[H]
     \centering
@@ -1022,7 +1047,7 @@ Gambar \ref{fig:Bus_8_Ex_DLG_S3} menunjukkan arus sekunder CT pada Bus 8 untuk s
     \label{fig:Impedansi_Tampak_ZAG_Bus_8_S3}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S3}, karena arus yang terbaca tidak memenuhi arus minimum untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S3} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8. Titik impedansi tampak tidak masuk ke dalam zona proteksi. Hasil ini konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S3}, karena arus yang terbaca belum memenuhi syarat \textit{starting}. Jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1038,19 +1063,6 @@ Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S3} menunjukkan bahwa impedansi tampa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_14_ZBG_Bus_8_S3.png}
-%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 3}
-%     \label{fig:PRIA_14_ZBG_Bus_8_S3}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_14_ZBG_Bus_8_S3.png}
-%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 3}
-%     \label{fig:PRIZI_14_ZBG_Bus_8_S3}
-% \end{figure}
 
 \begin{figure}[H]
     \centering
@@ -1075,7 +1087,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S3} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZBG_Bus_8_S3}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan kondisi arus pada Gambar \ref{fig:Bus_8_Ex_DLG_S3}, yaitu arus yang terbaca belum memenuhi arus minimum untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S3} menunjukkan impedansi tampak loop fasa B dengan ground pada relay 21 sisi Bus 8. Sama seperti elemen sebelumnya, impedansi tampak tidak masuk ke dalam zona proteksi. Kondisi ini masih berkaitan dengan arus pada Gambar \ref{fig:Bus_8_Ex_DLG_S3} yang belum memenuhi syarat \textit{starting}. Oleh karena itu, terhadap acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, elemen ini juga menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1127,7 +1139,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S3} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAB_Bus_8_S3}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S3} yang belum memenuhi arus minimum untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 3 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S3} menunjukkan impedansi tampak loop fasa A dengan fasa B pada relay 21 sisi Bus 8. Impedansi tampak pada elemen ini juga berada di luar zona proteksi. Dengan pola yang sama, rendahnya arus yang terbaca pada Gambar \ref{fig:Bus_8_Ex_DLG_S3} membuat syarat \textit{starting} tidak terpenuhi. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada Skenario 3 menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1179,7 +1191,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S3} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAG_Bus_9_S3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S3} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S3} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 9. Pada sisi ini, relay tidak mendeteksi gangguan eksternal DLG sebagai gangguan yang harus dioperasikan. Oleh karena itu, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1231,7 +1243,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S3} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZBG_Bus_9_S3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S3} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S3} menunjukkan impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 9. Hasilnya tetap menunjukkan bahwa relay tidak membaca gangguan sebagai gangguan yang perlu dioperasikan. Dengan demikian, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan masih sesuai dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1283,7 +1295,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S3} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZAB_Bus_9_S3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S3} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S3} menunjukkan impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 9. Pola responsnya konsisten dengan dua elemen sebelumnya, yaitu relay tidak mendeteksi gangguan eksternal sebagai gangguan pada daerah operasinya. Akibatnya, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan tetap bekerja sesuai acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1293,9 +1305,11 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S3} bahwa impedansi tam
 
 \subsection{Skenario 4 : Wind Turbine Type 3 External 3P Fault}
 
-Skenario ini digunakan untuk melihat respons relay 21 terhadap gangguan eksternal tiga fasa pada sistem dengan \textit{wind turbine type 3}. Gangguan tiga fasa memberikan kondisi pembanding terhadap gangguan tak seimbang karena pembacaan relay lebih dominan dikaitkan dengan elemen fasa-fasa dan komponen urutan positif.
+Skenario ini membahas respons relay 21 terhadap gangguan eksternal tiga fasa pada sistem dengan \textit{wind turbine type 3}. Karena gangguan berada di luar saluran TL89, relay 21 seharusnya menahan operasi. Gangguan tiga fasa digunakan sebagai pembanding terhadap gangguan tak seimbang karena pembacaannya lebih dominan berkaitan dengan elemen fasa-fasa dan komponen urutan positif.
 
-Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s4} membantu menjelaskan karakter arus yang diterima TL89 sebelum respons relay dianalisis. Dengan konteks tersebut, pembahasan berikutnya difokuskan pada elemen ZAB, ZBC, dan ZCA untuk menilai apakah relay 21 tetap menahan operasi pada gangguan eksternal atau menunjukkan penyimpangan terhadap acuan kondisi dasar.
+Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s4} digunakan sebagai dasar untuk melihat karakter arus yang diterima TL89 sebelum respons relay dianalisis. Setelah itu, pembahasan diarahkan pada elemen ZAB, ZBC, dan ZCA untuk menilai hubungan antara arus yang terbaca, syarat \textit{starting}, posisi impedansi tampak, dan keputusan operasi relay 21.
+
+Berdasarkan dekomposisi pada Gambar \ref{fig:decomposition_sequence_current_s4}, perubahan arus pada Skenario 4 terutama terlihat pada komponen urutan positif. Komponen ini naik dari 0,2563 kA menjadi sekitar 0,3785 kA sesaat setelah gangguan tiga fasa terjadi, kemudian stabil pada 0,3265 kA. Kenaikan tersebut menunjukkan adanya tambahan arus melalui jalur gangguan, tetapi arus yang diterima TL89 masih terbatas. Dari sisi \textit{starting} relay 21, peningkatan komponen urutan positif tersebut belum cukup untuk membuat arus masukan relay melewati arus minimum operasi. Akibatnya, relay 21 sisi Bus 8 tidak berada pada kondisi aktif yang memadai untuk memproses impedansi tampak sebagai gangguan yang harus dioperasikan.
 
 % \begin{figure}[H]
 %     \centering
@@ -1315,7 +1329,7 @@ Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_cur
     \label{fig:Bus_8_Ex_3P_S4}
 \end{figure}
 
-Gambar \ref{fig:Bus_8_Ex_3P_S4} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 4. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan tiga fasa terjadi, arus pada ketiga fasa meningkat menjadi 1,892 A sekunder atau 1,48 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
+Gambar \ref{fig:Bus_8_Ex_3P_S4} menunjukkan arus sekunder CT pada Bus 8 untuk Skenario 4. Sebelum gangguan, arus pada ketiga fasa bernilai 1,281 A sekunder. Setelah gangguan tiga fasa terjadi, arus pada ketiga fasa meningkat menjadi 1,892 A sekunder atau 1,48 p.u. Kenaikan ini menunjukkan adanya perubahan arus selama gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan agar relay 21 sisi Bus 8 aktif.
 
 \begin{figure}[H]
     \centering
@@ -1340,7 +1354,7 @@ Gambar \ref{fig:Bus_8_Ex_3P_S4} menunjukkan arus sekunder CT pada Bus 8 untuk sk
     \label{fig:Impedansi_Tampak_ZAB_Bus_8_S4}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4}, karena arus gangguan yang terbaca masih belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S4} menunjukkan impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8. Titik impedansi tampak tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4}, karena arus gangguan yang terbaca belum memenuhi syarat \textit{starting}. Dengan mengacu pada kondisi dasar gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1392,7 +1406,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S4} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZBC_Bus_8_S4}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa B dengan fasa C yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4}, yang menunjukkan bahwa arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_8_S4} menunjukkan impedansi tampak loop fasa B dengan fasa C pada relay 21 sisi Bus 8. Sama seperti elemen sebelumnya, impedansi tampak berada di luar zona proteksi. Hasil ini masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4} yang belum memenuhi syarat \textit{starting}. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, elemen ini juga menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1444,7 +1458,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_8_S4} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZCA_Bus_8_S4}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa C dengan fasa A yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada skenario 4 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_8_S4} menunjukkan impedansi tampak loop fasa C dengan fasa A pada relay 21 sisi Bus 8. Elemen ini juga tidak masuk ke dalam zona proteksi. Dengan pola yang sama, arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4} belum memenuhi syarat \textit{starting}, sehingga relay tidak berada pada kondisi aktif yang memadai. Dengan demikian, berdasarkan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada Skenario 4 menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1496,7 +1510,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_8_S4} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAB_Bus_9_S4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S4} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S4} menunjukkan impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 9. Pada sisi ini, relay tidak mendeteksi gangguan eksternal tiga fasa sebagai gangguan yang perlu dioperasikan. Oleh karena itu, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_3p}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1548,7 +1562,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S4} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZBC_Bus_9_S4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_9_S4} bahwa impedansi tampak pada fasa B dengan fasa C yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_9_S4} menunjukkan impedansi tampak loop fasa B dengan fasa C yang dibaca oleh relay 21 sisi Bus 9. Hasilnya konsisten dengan elemen sebelumnya, yaitu relay tidak membaca gangguan sebagai gangguan pada daerah operasinya. Dengan demikian, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan tetap sesuai dengan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1600,7 +1614,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_9_S4} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZCA_Bus_9_S4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_9_S4} bahwa impedansi tampak pada fasa B dengan fasa C yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_9_S4} menunjukkan impedansi tampak loop fasa C dengan fasa A yang dibaca oleh relay 21 sisi Bus 9. Pola responsnya tetap sama, yaitu relay tidak mendeteksi gangguan eksternal sebagai gangguan yang harus dioperasikan. Akibatnya, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya masih sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_3p}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1612,9 +1626,11 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_9_S4} bahwa impedansi tam
 
 \subsection{Skenario 5 : Wind Turbine Type 3 External SLG Fault}
 
-Skenario ini membahas gangguan eksternal satu fasa ke tanah pada sistem dengan \textit{wind turbine type 3}. Jenis gangguan ini penting karena melibatkan komponen urutan nol dan kompensasi urutan nol pada elemen jarak fasa-tanah, sehingga perubahan arus yang terbaca dapat memengaruhi pembentukan impedansi tampak relay 21.
+Skenario ini membahas respons relay 21 terhadap gangguan eksternal satu fasa ke tanah pada sistem dengan \textit{wind turbine type 3}. Karena gangguan SLG melibatkan komponen urutan nol dan kompensasi urutan nol pada elemen jarak fasa-tanah, perubahan arus yang terbaca dapat memengaruhi pembentukan impedansi tampak relay 21.
 
-Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s5} digunakan untuk menghubungkan karakter arus gangguan dengan pembacaan relay pada TL89. Setelah itu, analisis diarahkan pada elemen ZAG dari sisi Bus 8 dan Bus 9 untuk melihat apakah relay tetap sesuai dengan acuan gangguan eksternal atau mengalami perubahan respons akibat rendahnya arus yang terbaca.
+Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s5} digunakan sebagai dasar untuk melihat karakter arus yang diterima TL89 selama gangguan. Dengan konteks tersebut, analisis difokuskan pada elemen ZAG dari sisi Bus 8 dan Bus 9 untuk menilai hubungan antara perubahan arus, syarat \textit{starting}, posisi impedansi tampak, dan keputusan operasi relay.
+
+Berdasarkan dekomposisi tersebut, gangguan eksternal SLG menyebabkan perubahan pada komponen urutan positif, negatif, dan nol. Komponen urutan positif turun dari 0,2563 kA menjadi sekitar 0,2326 kA sesaat setelah gangguan, kemudian naik kembali hingga 0,311 kA. Komponen urutan negatif meningkat hingga sekitar 0,000058 kA lalu turun menjadi 0,000033 kA, sedangkan komponen urutan nol naik hingga sekitar 0,036 kA dan kembali turun menjadi 0,02 kA. Munculnya komponen urutan negatif dan nol menunjukkan ketidakseimbangan akibat gangguan satu fasa ke tanah, tetapi perubahan arus tersebut belum cukup untuk membuat arus masukan relay melewati batas \textit{starting}. Akibatnya, relay 21 sisi Bus 8 tidak berada pada kondisi aktif yang memadai untuk memproses impedansi tampak sebagai gangguan yang perlu dioperasikan.
 
 % \begin{figure}[H]
 %     \centering
@@ -1635,7 +1651,7 @@ Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequen
     \label{fig:Bus_8_Ex_SLG_S5}
 \end{figure}
 
-Gambar \ref{fig:Bus_8_Ex_SLG_S5} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 5 saat terjadi gangguan eksternal SLG. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,595 A sekunder atau 1,25 p.u., arus fasa B meningkat menjadi 1,613 A sekunder atau 1,26 p.u., dan arus fasa C meningkat menjadi 1,47 A sekunder atau 1,15 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
+Gambar \ref{fig:Bus_8_Ex_SLG_S5} menunjukkan arus sekunder CT pada Bus 8 untuk Skenario 5 saat terjadi gangguan eksternal SLG. Sebelum gangguan, arus pada ketiga fasa bernilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,595 A sekunder atau 1,25 p.u., arus fasa B menjadi 1,613 A sekunder atau 1,26 p.u., dan arus fasa C menjadi 1,47 A sekunder atau 1,15 p.u. Kenaikan tersebut menunjukkan adanya perubahan arus selama gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan agar relay 21 sisi Bus 8 aktif.
 
 \begin{figure}[H]
     \centering
@@ -1660,7 +1676,7 @@ Gambar \ref{fig:Bus_8_Ex_SLG_S5} menunjukkan arus sekunder CT pada Bus 8 untuk s
     \label{fig:Impedansi_Tampak_ZAG_Bus_8_S5}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S5} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_SLG_S5}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal SLG pada Subbab \ref{subsec:tanpa_IBR_ex_slg}, respons relay 21 sisi Bus 8 pada skenario 5 dikategorikan mengalami \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S5} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8. Titik impedansi tampak tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_SLG_S5}, karena arus gangguan yang terbaca masih belum memenuhi syarat \textit{starting}. Dengan mengacu pada kondisi dasar gangguan eksternal SLG pada Subbab \ref{subsec:tanpa_IBR_ex_slg}, respons relay 21 sisi Bus 8 pada Skenario 5 dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1712,7 +1728,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S5} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAG_Bus_9_S5}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S5} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_slg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S5} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 9. Pada sisi ini, relay tidak mendeteksi gangguan eksternal SLG sebagai gangguan yang harus dioperasikan. Oleh karena itu, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_slg}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1728,9 +1744,11 @@ Skenario yang digunakan pada bagian ini adalah gangguan eksternal DLG pada TL79 
 
 \subsection{Skenario 2 : Wind Turbine Type 4 External DLG Fault}
 
-Skenario ini digunakan untuk mengevaluasi respons relay 21 ketika sumber IBR yang terhubung ke sistem diganti menjadi \textit{wind turbine type 4}. Karena lokasi dan jenis gangguan yang digunakan adalah gangguan eksternal DLG pada TL79, hasil pada skenario ini dapat dibandingkan dengan acuan kondisi dasar gangguan eksternal DLG serta dengan pola respons pada \textit{wind turbine type 3}.
+Skenario ini mengevaluasi respons relay 21 ketika sumber IBR yang terhubung ke sistem menggunakan \textit{wind turbine type 4}. Gangguan yang diamati merupakan gangguan eksternal DLG pada TL79, sehingga hasilnya dapat dibandingkan dengan acuan kondisi dasar gangguan eksternal DLG serta pola respons pada sistem dengan \textit{wind turbine type 3}.
 
-Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s2} menjadi penghubung antara karakter kontribusi arus WT Type 4 dan besaran yang dibaca relay pada TL89. Dengan konteks tersebut, pembahasan berikutnya difokuskan pada elemen ZAG, ZBG, dan ZAB dari sisi Bus 8 serta Bus 9 untuk melihat pengaruh arus gangguan terhadap syarat \textit{starting}, posisi impedansi tampak, dan keputusan operasi relay 21.
+Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s2} digunakan untuk mengaitkan karakter kontribusi arus WT Type 4 dengan besaran yang diterima relay pada TL89. Dengan konteks tersebut, pembahasan diarahkan pada elemen ZAG, ZBG, dan ZAB dari sisi Bus 8 serta Bus 9 untuk menilai hubungan antara arus gangguan, syarat \textit{starting}, posisi impedansi tampak, dan keputusan operasi relay 21.
+
+Berdasarkan data dekomposisi tersebut, komponen urutan positif meningkat dari 0,2563 kA menjadi sekitar 0,31 kA, kemudian berosilasi pada rentang 0,324 - 0,329 kA. Kenaikan ini menunjukkan bahwa kontribusi arus gangguan yang terbaca pada TL89 relatif terbatas. Komponen urutan negatif hanya meningkat hingga sekitar 0,000043 kA dan berosilasi pada rentang 0,000023 - 0,000037 kA, sedangkan komponen urutan nol meningkat hingga sekitar 0,035 kA dengan osilasi pada rentang 0,019 - 0,03 kA. Bagi relay 21, nilai-nilai tersebut penting karena elemen jarak memerlukan arus masukan yang cukup untuk melewati batas \textit{starting} sebelum impedansi tampak diproses sebagai kondisi operasi. Karena perubahan arus yang terbaca masih kecil, terutama pada komponen urutan negatif dan nol, masukan relay sisi Bus 8 tidak mencapai kondisi aktif yang memadai. Akibatnya, elemen ZAG, ZBG, dan ZAB tidak memperoleh dasar \textit{starting} yang cukup untuk bekerja sesuai acuan gangguan eksternal DLG.
 
 
 % pada gambar \ref{fig:07_ZAG_Bus_8_S2_dengan_lingkaran_dan_garis} terlihat untuk titik impedansi tampak ZAG terlihat cukup bergerak dan relay 21 dari sisi bus 8 mengalami over reach pada zona 1 yang seharusnya masuk pada zona 2. pada sisi ini, relay juga mengalami dropout zona 2 yang seharusnya masih dalam jangkauannya.
@@ -1746,7 +1764,7 @@ Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_cur
     \label{fig:Bus_8_Ex_DLG_S2}
 \end{figure}
 
-Gambar \ref{fig:Bus_8_Ex_DLG_S2} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 2 saat terjadi gangguan eksternal DLG. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,6 A sekunder atau 1,25 p.u., arus fasa B meningkat menjadi 1,613 A sekunder atau 1,26 p.u., dan arus fasa C meningkat menjadi 1,47 A sekunder atau 1,15 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
+Gambar \ref{fig:Bus_8_Ex_DLG_S2} menunjukkan arus sekunder CT pada Bus 8 untuk Skenario 2 saat terjadi gangguan eksternal DLG. Sebelum gangguan, arus pada ketiga fasa bernilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,6 A sekunder atau 1,25 p.u., arus fasa B menjadi 1,613 A sekunder atau 1,26 p.u., dan arus fasa C menjadi 1,47 A sekunder atau 1,15 p.u. Kenaikan tersebut menunjukkan adanya perubahan arus selama gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan agar relay 21 sisi Bus 8 aktif.
 
 \begin{figure}[H]
     \centering
@@ -1771,7 +1789,7 @@ Gambar \ref{fig:Bus_8_Ex_DLG_S2} menunjukkan arus sekunder CT pada Bus 8 untuk s
     \label{fig:Impedansi_Tampak_ZAG_Bus_8_S2}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S2} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8. Titik impedansi tampak tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, karena arus gangguan yang terbaca masih belum memenuhi syarat \textit{starting}. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1825,7 +1843,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S2} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZBG_Bus_8_S2}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, yaitu arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S2} menunjukkan impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8. Sama seperti elemen ZAG, titik impedansi tampak tidak berada di dalam zona proteksi. Hasil ini tetap konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, yaitu arus gangguan belum memenuhi syarat \textit{starting}. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1879,7 +1897,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S2} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAB_Bus_8_S2}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 2 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S2} menunjukkan impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8. Titik impedansi tampak juga tidak masuk ke dalam zona proteksi. Kondisi ini masih berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2} yang belum memenuhi syarat \textit{starting}. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada Skenario 2 menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1931,7 +1949,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S2} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAG_Bus_9_S2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S2} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S2} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 9. Pada sisi ini, relay tidak mendeteksi gangguan eksternal DLG sebagai gangguan yang harus dioperasikan. Oleh karena itu, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1984,7 +2002,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S2} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZBG_Bus_9_S2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S2} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S2} menunjukkan impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 9. Hasilnya konsisten dengan elemen sebelumnya, yaitu relay tidak membaca gangguan eksternal DLG sebagai gangguan pada daerah operasinya. Dengan demikian, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan tetap sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2037,7 +2055,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S2} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZAB_Bus_9_S2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S2} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S2} menunjukkan impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 9. Pola responsnya tetap sama, yaitu relay tidak mendeteksi gangguan eksternal sebagai gangguan yang harus dioperasikan. Akibatnya, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya masih sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2054,9 +2072,11 @@ Hasil pada sisi Bus 8 dan Bus 9 kembali dibandingkan terhadap kondisi dasar gang
 
 \subsection{Skenario 6 : Photovoltaic External DLG Fault}
 
-Skenario ini membahas respons relay 21 ketika jenis IBR yang digunakan adalah \textit{photovoltaic}. Gangguan yang diterapkan tetap berupa gangguan eksternal DLG pada TL79 dengan TL78 \textit{out of service}, sehingga hasilnya dapat dibandingkan langsung dengan skenario eksternal DLG lain yang telah dibahas sebelumnya.
+Skenario ini membahas respons relay 21 pada sistem dengan IBR jenis \textit{photovoltaic}. Gangguan yang diterapkan tetap berupa gangguan eksternal DLG pada TL79 dengan TL78 \textit{out of service}, sehingga hasilnya dapat dibandingkan dengan skenario eksternal DLG lain yang telah dibahas sebelumnya.
 
-Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s6} digunakan sebagai dasar untuk membaca hubungan antara karakter arus pada sistem dengan PV dan pembacaan relay pada saluran TL89. Setelah konteks arus tersebut ditetapkan, analisis dilanjutkan pada impedansi tampak elemen ZAG, ZBG, dan ZAB dari sisi Bus 8 serta Bus 9 untuk menilai apakah relay 21 tetap mengikuti acuan gangguan eksternal atau menunjukkan perubahan respons.
+Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s6} digunakan sebagai dasar untuk menghubungkan karakter arus pada sistem dengan PV terhadap pembacaan relay pada saluran TL89. Dengan konteks tersebut, analisis diarahkan pada impedansi tampak elemen ZAG, ZBG, dan ZAB dari sisi Bus 8 serta Bus 9 untuk menilai hubungan antara arus gangguan, syarat \textit{starting}, arah gangguan, dan keputusan operasi relay 21.
+
+Berdasarkan data dekomposisi tersebut, komponen urutan positif turun dari 0,2571 kA menjadi sekitar 0,2424 kA dan kemudian stabil pada nilai tersebut. Komponen urutan negatif meningkat hingga sekitar 0,000068 kA, lalu menurun dan berosilasi pada rentang 0,000036 - 0,000058 kA. Sementara itu, komponen urutan nol meningkat hingga sekitar 0,3438 kA dan berosilasi pada rentang 0,018 - 0,029 kA. Pola ini menunjukkan adanya ketidakseimbangan akibat gangguan DLG, tetapi arus yang menjadi masukan relay 21 pada sisi Bus 8 tetap tidak cukup untuk melewati batas \textit{starting}. Karena elemen jarak baru dapat memproses impedansi tampak secara efektif setelah syarat \textit{starting} terpenuhi, rendahnya arus masukan tersebut menyebabkan elemen ZAG, ZBG, dan ZAB sisi Bus 8 tidak berada pada kondisi aktif yang memadai untuk bekerja sesuai acuan gangguan eksternal DLG.
 
 % \begin{figure}[H]
 %     \centering
@@ -2076,7 +2096,7 @@ Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequen
     \label{fig:Bus_8_Ex_DLG_S6}
 \end{figure}
 
-Gambar \ref{fig:Bus_8_Ex_DLG_S6} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 6 saat terjadi gangguan eksternal DLG. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,285 A sekunder. Setelah gangguan terjadi, arus fasa A menurun menjadi 1,129 A sekunder atau 0,88 p.u., arus fasa B meningkat menjadi 1,355 A sekunder atau 1,05 p.u., dan arus fasa C menurun menjadi 1,258 A sekunder atau 0,98 p.u. Perubahan arus tersebut menunjukkan adanya respons saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
+Gambar \ref{fig:Bus_8_Ex_DLG_S6} menunjukkan arus sekunder CT pada Bus 8 untuk Skenario 6 saat terjadi gangguan eksternal DLG. Sebelum gangguan, arus pada ketiga fasa bernilai 1,285 A sekunder. Setelah gangguan terjadi, arus fasa A menurun menjadi 1,129 A sekunder atau 0,88 p.u., arus fasa B meningkat menjadi 1,355 A sekunder atau 1,05 p.u., dan arus fasa C menurun menjadi 1,258 A sekunder atau 0,98 p.u. Perubahan tersebut menunjukkan adanya respons arus selama gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan agar relay 21 sisi Bus 8 aktif.
 
 \begin{figure}[H]
     \centering
@@ -2101,7 +2121,7 @@ Gambar \ref{fig:Bus_8_Ex_DLG_S6} menunjukkan arus sekunder CT pada Bus 8 untuk s
     \label{fig:Impedansi_Tampak_ZAG_Bus_8_S6}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S6} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8. Titik impedansi tampak tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, karena arus gangguan yang terbaca masih belum memenuhi syarat \textit{starting}. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2152,7 +2172,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S6} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZBG_Bus_8_S6}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, yaitu arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S6} menunjukkan impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8. Sama seperti elemen ZAG, titik impedansi tampak tidak berada di dalam zona proteksi. Hasil ini masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, yaitu arus gangguan belum memenuhi syarat \textit{starting}. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2203,7 +2223,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S6} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAB_Bus_8_S6}
 \end{figure}
 
-Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 6 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S6} menunjukkan impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8. Titik impedansi tampak juga tidak masuk ke dalam zona proteksi. Kondisi ini masih berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6} yang belum memenuhi syarat \textit{starting}. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada Skenario 6 menunjukkan \textit{misoperation}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2254,7 +2274,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S6} menunjukkan bahwa impedansi tampa
     \label{fig:Impedansi_Tampak_ZAG_Bus_9_S6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S6} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S6} menunjukkan impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 9. Pada sisi ini, relay tidak mendeteksi gangguan eksternal DLG sebagai gangguan yang harus dioperasikan. Oleh karena itu, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 
 
@@ -2306,7 +2326,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S6} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZBG_Bus_9_S6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S6} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB. Walaupun impedansi tampak yang terlihat memasuki zona 1 namun elemen phase directional tidak membaca gangguan terdapat di arah depan relay. 
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S6} menunjukkan impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 9. Pada elemen ini, impedansi tampak terlihat memasuki zona 1, tetapi elemen \textit{phase directional} tidak membaca gangguan berada di arah depan relay. Karena syarat arah tidak terpenuhi, relay 21 sisi Bus 9 tetap tidak mengirimkan sinyal trip kepada CB dan responsnya sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 
 
@@ -2360,7 +2380,7 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S6} bahwa impedansi tam
     \label{fig:Impedansi_Tampak_ZAB_Bus_9_S6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S6} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S6} menunjukkan impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 9. Pola responsnya sama dengan elemen Bus 9 lainnya, yaitu relay tidak mendeteksi gangguan eksternal DLG sebagai gangguan yang harus dioperasikan. Akibatnya, relay 21 sisi Bus 9 tidak mengirimkan sinyal trip kepada CB dan responsnya masih sesuai dengan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 
 
@@ -2368,39 +2388,52 @@ Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S6} bahwa impedansi tam
 
 \section{Perbandingan Karakteristik Relay 21 antar Jenis IBR}
 
-Hasil pada bagian sebelumnya menunjukkan bahwa respons relay 21 sangat dipengaruhi oleh kombinasi lokasi gangguan, konfigurasi jaringan, dan kontribusi arus dari sisi sumber. Pada skenario 1 dengan \textit{wind turbine type 3} dan gangguan internal DLG pada TL89, relay 21 pada sisi Bus 8 dan Bus 9 masih bekerja sesuai acuan kondisi dasar. Impedansi tampak yang terbaca tetap berada pada daerah operasi yang sesuai, sehingga integrasi IBR pada skenario tersebut tidak menimbulkan penyimpangan keputusan trip.
+Subbab ini membandingkan karakteristik operasi relay 21 pada kondisi dasar tanpa IBR dan pada sistem yang diintegrasikan dengan WT Type 3, WT Type 4, serta \textit{photovoltaic}. Kondisi dasar pada Subbab 4.1 digunakan sebagai acuan utama, sedangkan Subbab 4.2 sampai 4.6 digunakan untuk menelusuri penyebab perubahan respons melalui kontribusi arus hubung singkat, dekomposisi komponen urutan arus, dan pembacaan impedansi tampak relay.
 
-Pola yang berbeda muncul pada gangguan eksternal di TL79 dengan kondisi TL78 \textit{out of service}. Pada skenario 3, 4, dan 5 dengan \textit{wind turbine type 3}, impedansi tampak pada sisi Bus 8 tidak masuk ke zona proteksi dan arus gangguan yang terbaca tidak memenuhi syarat \textit{starting}. Pola yang sama juga terlihat pada skenario 2 dengan \textit{wind turbine type 4} dan skenario 6 dengan \textit{photovoltaic}. Dengan demikian, kondisi paling kritis untuk relay 21 pada hasil ini bukan hanya ditentukan oleh jenis IBR, tetapi oleh gangguan eksternal pada TL79 ketika konfigurasi jaringan membuat kontribusi arus pada sisi Bus 8 menjadi rendah.
+Pada kondisi dasar, relay 21 menunjukkan pola acuan yang jelas. Untuk gangguan internal DLG pada TL89, relay sisi Bus 8 dan Bus 9 mendeteksi gangguan dan memberikan perintah trip sesuai zona yang terbaca. Untuk gangguan eksternal 3P, SLG, dan DLG, sisi Bus 8 tetap aktif dan memberikan perintah trip berdasarkan pembacaan arus maupun impedansi tampak, sedangkan sisi Bus 9 tidak mengirimkan sinyal trip karena gangguan tidak terbaca sebagai gangguan di arah depan relay. Pola inilah yang digunakan sebagai pembanding ketika sistem mulai diintegrasikan dengan IBR.
 
-Jika dibandingkan antarjenis IBR, data yang ditampilkan menunjukkan bahwa \textit{wind turbine type 4} dan \textit{photovoltaic} menghasilkan pola penyimpangan yang serupa dengan skenario eksternal pada \textit{wind turbine type 3}. Sisi Bus 8 menjadi sisi yang paling terdampak karena impedansi tampak tidak masuk ke zona dan syarat arus awal operasi tidak terpenuhi. Sementara itu, sisi Bus 9 umumnya tetap tidak trip karena gangguan tidak terbaca sebagai gangguan di arah depan relay. Pada skenario PV, terdapat elemen yang sempat masuk zona 1, tetapi elemen \textit{directional} tetap menahan operasi karena arah gangguan tidak terbaca sebagai arah depan.
+Pada sistem dengan WT Type 3, respons relay 21 masih sesuai acuan untuk Skenario 1, yaitu gangguan internal DLG pada TL89. Hal ini sejalan dengan dekomposisi arus pada Subbab 4.3, karena komponen urutan positif meningkat hingga sekitar 1,414 kA dan komponen urutan negatif serta nol juga meningkat cukup besar. Namun, pada Skenario 3, 4, dan 5 yang merupakan gangguan eksternal di TL79 dengan TL78 \textit{out of service}, respons sisi Bus 8 berubah dari acuan kondisi dasar. Arus yang terbaca tidak memenuhi syarat \textit{starting}, sehingga elemen ZAG, ZBG, ZAB, ZBC, maupun ZCA yang dianalisis tidak bekerja sebagaimana respons acuan. Sisi Bus 9 tetap tidak mengirimkan sinyal trip, sehingga responsnya masih sesuai dengan acuan gangguan eksternal.
 
-Secara umum, relay 21 masih dapat bekerja sesuai acuan untuk gangguan internal pada saluran yang diproteksi. Namun, pada gangguan eksternal dengan konfigurasi jaringan tertentu, integrasi IBR menyebabkan perubahan besaran yang dibaca relay sehingga keputusan operasi pada sisi Bus 8 tidak lagi mengikuti acuan kondisi dasar.
+Pada sistem dengan WT Type 4, Subbab 4.2 menunjukkan bahwa model ini memiliki kontribusi arus hubung singkat sebesar 110 MVA atau 92,029 kA. Meskipun kontribusi hubung singkat WT Type 4 lebih besar dibandingkan WT Type 3 dan PV, respons relay 21 pada Skenario 2 tetap menunjukkan pola yang serupa dengan skenario eksternal WT Type 3. Dekomposisi arus memperlihatkan komponen urutan positif hanya naik hingga sekitar 0,31 kA dan komponen urutan negatif serta nol tetap kecil. Akibatnya, relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan dikategorikan mengalami \textit{misoperation}, sedangkan sisi Bus 9 tetap tidak trip sesuai acuan gangguan eksternal.
+
+Pada sistem dengan \textit{photovoltaic}, kontribusi arus hubung singkat dari sisi PV pada Subbab 4.2 bernilai 0 MVA karena opsi \textit{No short-circuit contribution} aktif. Pada Skenario 6, komponen urutan positif turun dan stabil pada 0,2424 kA, sedangkan komponen urutan negatif serta nol tetap rendah setelah gangguan. Kondisi ini membuat relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan mengalami \textit{misoperation}. Sisi Bus 9 tetap tidak mengirimkan sinyal trip, tetapi pada elemen ZBG terdapat kondisi khusus ketika impedansi tampak terlihat masuk zona 1 dan operasi tetap tertahan karena elemen \textit{phase directional} tidak membaca gangguan berada di arah depan relay.
+
+Berdasarkan seluruh hasil tersebut, skenario paling kritis terhadap relay 21 adalah kelompok gangguan eksternal di TL79 dengan TL78 \textit{out of service}, terutama pada sisi Bus 8. Jika satu skenario perlu ditonjolkan, Skenario 6 dengan \textit{photovoltaic} menjadi kasus yang paling menonjol karena sisi Bus 8 tetap gagal memenuhi \textit{starting} dan sisi Bus 9 memperlihatkan indikasi impedansi tampak ZBG masuk zona 1 meskipun operasi akhirnya tertahan oleh elemen arah. Namun, pola kritis utama tidak berdiri pada jenis IBR saja, melainkan pada kombinasi konfigurasi jaringan, lokasi gangguan eksternal, dan rendahnya arus masukan relay.
+
+Dari sisi kontribusi arus hubung singkat, WT Type 4 merupakan jenis IBR yang paling besar pengaruh langsungnya terhadap besaran arus gangguan karena masih memberikan kontribusi hubung singkat. Akan tetapi, dari sisi karakteristik operasi relay 21, PV menunjukkan penyimpangan paling menonjol pada hasil yang ditampilkan karena selain menyebabkan sisi Bus 8 tidak memenuhi \textit{starting}, terdapat pula kondisi impedansi tampak sisi Bus 9 yang masuk zona tetapi ditahan oleh elemen \textit{directional}. Dengan demikian, jenis IBR memengaruhi detail besaran yang terbaca relay, tetapi pola umum operasi relay 21 pada skenario eksternal lebih kuat dipengaruhi oleh rendahnya arus yang diterima relay dan arah gangguan yang terbaca.
+
+Pola umum dari seluruh simulasi adalah bahwa relay 21 masih dapat bekerja sesuai acuan untuk gangguan internal pada saluran yang diproteksi, tetapi menjadi kurang konsisten pada gangguan eksternal ketika konfigurasi jaringan membuat arus pada terminal relay menurun. Pada sisi Bus 8, masalah utama yang berulang adalah tidak terpenuhinya syarat \textit{starting}; pada sisi Bus 9, respons umumnya tetap tertahan karena gangguan tidak terbaca sebagai gangguan di arah depan relay. Oleh karena itu, kelayakan setting konvensional relay 21 pada sistem dengan IBR perlu dievaluasi terutama untuk gangguan eksternal dan kondisi konfigurasi saluran yang mengurangi arus masukan relay.
+
+Untuk memperjelas perbandingan tersebut, Tabel \ref{tab:ringkasan_respons_relay21_ibr} merangkum respons relay 21 pada kondisi dasar dan pada setiap jenis IBR yang diuji. Ringkasan ini menempatkan kondisi dasar sebagai acuan, kemudian menunjukkan perubahan respons pada sisi Bus 8 dan Bus 9 berdasarkan status operasi relay, kecukupan arus \textit{starting}, serta keterkaitannya dengan hasil dekomposisi arus dan pembacaan impedansi tampak.
 
 \begin{table}[H]
     \centering
-    \caption{Ringkasan Respons Relay 21 pada Sistem dengan Integrasi IBR}
+    \caption{Ringkasan Perbandingan Respons Relay 21 terhadap Kondisi Dasar dan Integrasi IBR}
     \label{tab:ringkasan_respons_relay21_ibr}
     \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|p{2.7cm}|p{4.2cm}|p{3.0cm}|p{5.4cm}|}
+        \begin{tabular}{|c|c|c|p{2.7cm}|p{4.5cm}|p{3.0cm}|p{6.0cm}|}
             \hline
-            \textbf{Jenis IBR} & \textbf{Skenario} & \textbf{Gangguan} & \textbf{Sisi Relay} & \textbf{Respons Utama} & \textbf{Status Operasi} & \textbf{Alasan} \\ \hline
-            Wind Turbine Type 3 & 1 & Internal DLG pada TL89 & Bus 8 dan Bus 9 & Kontribusi IBR tidak mendominasi sehingga respons relay masih mengikuti karakteristik kondisi dasar. & Sesuai acuan & Kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif, sehingga kinerja proteksi masih didominasi oleh sistem tenaga konvensional dan relay bekerja sesuai acuan kondisi dasar. \\ \hline
-            Wind Turbine Type 3 & 3 & External DLG pada TL79 & Bus 8 dan Bus 9 & Sisi Bus 8 tidak memenuhi syarat \textit{starting}, sedangkan sisi Bus 9 tidak mengirimkan sinyal trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Pada sisi Bus 8, arus yang terbaca tidak memenuhi arus minimum untuk relay aktif. Pada sisi Bus 9, relay tidak mendeteksi gangguan eksternal sebagai gangguan yang perlu dioperasikan. \\ \hline
-            Wind Turbine Type 3 & 4 & External 3P pada TL79 & Bus 8 dan Bus 9 & Sisi Bus 8 tidak memenuhi syarat \textit{starting}, sedangkan sisi Bus 9 tidak mengirimkan sinyal trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Pada sisi Bus 8, arus gangguan cukup kecil dan tidak membuat relay aktif karena tidak memenuhi syarat \textit{starting}. Pada sisi Bus 9, relay tidak mendeteksi gangguan sehingga tidak mengirimkan sinyal trip. \\ \hline
-            Wind Turbine Type 3 & 5 & External SLG pada TL79 & Bus 8 dan Bus 9 & Sisi Bus 8 tidak memenuhi syarat \textit{starting}, sedangkan sisi Bus 9 tidak mengirimkan sinyal trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Pada sisi Bus 8, arus gangguan cukup kecil dan tidak membuat relay aktif karena tidak memenuhi syarat \textit{starting}. Pada sisi Bus 9, relay bekerja sesuai acuan karena tidak mendeteksi gangguan dan tidak mengirimkan sinyal trip. \\ \hline
-            Wind Turbine Type 4 & 2 & External DLG pada TL79 & Bus 8 dan Bus 9 & Sisi Bus 8 tidak memenuhi syarat \textit{starting}, sedangkan sisi Bus 9 tidak mengirimkan sinyal trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Pada sisi Bus 8, arus gangguan cukup kecil dan tidak membuat relay aktif karena tidak memenuhi syarat \textit{starting}. Pada sisi Bus 9, relay tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip. \\ \hline
-            Photovoltaic & 6 & External DLG pada TL79 & Bus 8 dan Bus 9 & Sisi Bus 8 tidak memenuhi syarat \textit{starting}; pada sisi Bus 9, elemen \textit{directional} menahan operasi relay. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Pada sisi Bus 8, arus gangguan cukup kecil dan tidak membuat relay aktif karena tidak memenuhi syarat \textit{starting}. Pada sisi Bus 9, elemen \textit{directional} tidak membaca gangguan berada di arah depan relay. \\ \hline
+            \textbf{Sistem/Jenis IBR} & \textbf{Skenario} & \textbf{Gangguan} & \textbf{Sisi Relay} & \textbf{Respons terhadap Acuan} & \textbf{Status Operasi} & \textbf{Dasar Analisis} \\ \hline
+            Tanpa IBR & Kondisi dasar & Internal dan eksternal & Bus 8 dan Bus 9 & Internal DLG terbaca sebagai gangguan pada daerah proteksi. Pada gangguan eksternal, Bus 8 aktif sesuai acuan, sedangkan Bus 9 tidak trip. & Acuan & Kondisi dasar pada Subbab 4.1 menjadi pembanding untuk membaca perubahan akibat integrasi IBR. \\ \hline
+            Wind Turbine Type 3 & 1 & Internal DLG pada TL89 & Bus 8 dan Bus 9 & Respons masih mengikuti acuan gangguan internal. & Sesuai acuan & Komponen urutan positif, negatif, dan nol meningkat signifikan sehingga relay 21 tetap mendeteksi gangguan internal dan memberikan perintah trip. \\ \hline
+            Wind Turbine Type 3 & 3 & External DLG pada TL79 & Bus 8 dan Bus 9 & Bus 8 berubah dari acuan karena tidak memenuhi \textit{starting}; Bus 9 tetap tidak trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Komponen urutan positif hanya sekitar 0,31 kA dan komponen urutan negatif serta nol kecil, sehingga arus masukan Bus 8 tidak cukup untuk membuat relay aktif. \\ \hline
+            Wind Turbine Type 3 & 4 & External 3P pada TL79 & Bus 8 dan Bus 9 & Bus 8 berubah dari acuan karena tidak memenuhi \textit{starting}; Bus 9 tetap tidak trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Komponen urutan positif naik hingga sekitar 0,3785 kA dan stabil sekitar 0,3265 kA, tetapi kenaikan tersebut belum cukup untuk memenuhi syarat \textit{starting} sisi Bus 8. \\ \hline
+            Wind Turbine Type 3 & 5 & External SLG pada TL79 & Bus 8 dan Bus 9 & Bus 8 berubah dari acuan karena tidak memenuhi \textit{starting}; Bus 9 tetap tidak trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & Komponen urutan positif turun sesaat lalu naik hingga 0,311 kA, sementara komponen urutan negatif dan nol muncul dengan nilai kecil sehingga masukan relay sisi Bus 8 belum memadai. \\ \hline
+            Wind Turbine Type 4 & 2 & External DLG pada TL79 & Bus 8 dan Bus 9 & Bus 8 berubah dari acuan meskipun WT Type 4 memiliki kontribusi hubung singkat; Bus 9 tetap tidak trip. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & WT Type 4 memberi kontribusi hubung singkat, tetapi arus yang diterima sisi Bus 8 tetap belum memenuhi syarat \textit{starting}. \\ \hline
+            Photovoltaic & 6 & External DLG pada TL79 & Bus 8 dan Bus 9 & Bus 8 berubah dari acuan karena tidak memenuhi \textit{starting}; Bus 9 tertahan oleh elemen arah. & Bus 8 mengalami \textit{misoperation}; Bus 9 sesuai acuan & PV tidak memberi kontribusi hubung singkat. Komponen urutan positif stabil pada 0,2424 kA, dan pada Bus 9 elemen ZBG sempat masuk zona 1 tetapi ditahan oleh \textit{phase directional}. \\ \hline
         \end{tabular}%
     }
 \end{table}
 
 \section{Implikasi Penggunaan Setting Konvensional pada Relay 21}
 
-Penggunaan setting konvensional pada relay 21 masih layak untuk kondisi yang karakteristik gangguannya mendekati kondisi dasar. Hal ini terlihat pada gangguan internal DLG skenario 1, ketika relay 21 pada kedua sisi saluran masih mendeteksi gangguan dan memberikan keputusan trip sesuai acuan. Pada kondisi tersebut, integrasi \textit{wind turbine type 3} tidak mengubah pembacaan impedansi tampak secara signifikan terhadap keputusan operasi relay.
+Penggunaan setting konvensional pada relay 21 masih layak untuk kondisi gangguan yang karakteristiknya mendekati acuan sistem tanpa IBR. Hal ini terlihat pada Skenario 1, yaitu gangguan internal DLG pada TL89 dengan integrasi \textit{wind turbine type 3}, ketika relay sisi Bus 8 dan Bus 9 tetap mendeteksi gangguan serta memberikan perintah trip sesuai pembacaan zona. Dengan demikian, keberadaan IBR tidak langsung menyebabkan kegagalan relay 21 selama arus gangguan, impedansi tampak, dan arah gangguan yang diterima relay masih mendukung proses \textit{starting} dan keputusan zona.
 
-Penyimpangan mulai muncul pada gangguan eksternal di sekitar TL89 ketika konfigurasi jaringan berubah dan kontribusi arus pada sisi relay menjadi rendah. Pada skenario 2, 3, 4, 5, dan 6, sisi Bus 8 menunjukkan kecenderungan impedansi tampak berada di luar zona proteksi disertai arus gangguan yang tidak memenuhi syarat \textit{starting}. Temuan ini menunjukkan bahwa setting konvensional tidak selalu cukup untuk menjaga respons relay 21 ketika sumber arus gangguan didominasi atau dipengaruhi oleh karakteristik IBR.
+Keterbatasan setting konvensional mulai terlihat pada gangguan eksternal di TL79 dengan TL78 \textit{out of service}. Pada Skenario 2, 3, 4, 5, dan 6, relay sisi Bus 8 berulang kali tidak memenuhi syarat \textit{starting} karena arus gangguan yang terbaca rendah, sehingga responsnya berbeda dari acuan kondisi dasar dan dikategorikan sebagai \textit{misoperation}. Hasil ini menunjukkan bahwa penyetelan zona impedansi saja tidak cukup untuk menjamin operasi relay 21 apabila arus masukan relay tidak memadai untuk mengaktifkan elemen pengukuran.
 
-Berdasarkan hasil tersebut, setting konvensional relay 21 tidak dapat langsung dianggap memadai untuk seluruh skenario sistem dengan IBR. Evaluasi ulang diperlukan terutama untuk kondisi gangguan eksternal, konfigurasi saluran \textit{out of service}, dan kondisi ketika arus gangguan yang terbaca oleh relay menjadi lebih kecil dari asumsi sistem konvensional. Temuan ini menjadi dasar untuk pembahasan kebutuhan penyesuaian setting atau strategi proteksi tambahan pada bagian kesimpulan dan saran.
+Pengaruh jenis IBR terhadap implikasi setting juga perlu dibaca secara terpisah antara kontribusi arus hubung singkat dan karakteristik operasi relay. WT Type 4 memiliki kontribusi arus hubung singkat paling besar, tetapi pada Skenario 2 arus yang diterima relay sisi Bus 8 tetap belum memenuhi syarat \textit{starting}. Sebaliknya, PV tidak memberikan kontribusi arus hubung singkat pada pemodelan yang digunakan, tetapi Skenario 6 memperlihatkan kondisi khusus ketika impedansi tampak sisi Bus 9 pada elemen ZBG sempat masuk zona 1 dan operasi tetap tertahan oleh elemen \textit{phase directional}. Oleh karena itu, evaluasi setting konvensional relay 21 perlu memperhatikan kecukupan arus \textit{starting}, arah gangguan, dan konfigurasi jaringan, bukan hanya posisi impedansi tampak terhadap zona proteksi.
+
+Berdasarkan hasil tersebut, setting konvensional relay 21 tidak dapat langsung dianggap memadai untuk seluruh skenario sistem dengan IBR. Evaluasi ulang diperlukan terutama untuk gangguan eksternal, konfigurasi saluran \textit{out of service}, dan kondisi ketika arus gangguan yang terbaca oleh relay lebih kecil dari asumsi pada sistem konvensional. Temuan ini menjadi dasar untuk pembahasan kebutuhan penyesuaian setting atau strategi proteksi tambahan pada bagian kesimpulan dan saran.
 
 \section{Respons Relay 87L pada Sistem dengan WT Type 3}
 
@@ -2601,6 +2634,8 @@ Pada \textit{wind turbine type 4} dan \textit{photovoltaic}, skenario yang ditam
 
 Pola umum yang dapat ditarik adalah bahwa relay 87L masih mampu membedakan gangguan internal dan eksternal berdasarkan hubungan arus diferensial dan arus \textit{restraint}. Pada hasil yang tersedia di Bab ini, belum terdapat indikasi relay 87L mengalami salah trip untuk gangguan eksternal maupun gagal trip untuk gangguan internal. Namun, kesimpulan ini hanya berlaku untuk skenario dan setting yang diuji pada penelitian ini.
 
+Untuk memperjelas perbandingan tersebut, Tabel \ref{tab:ringkasan_respons_relay87l_ibr} merangkum respons relay 87L pada setiap jenis IBR dan skenario yang dianalisis. Ringkasan ini menunjukkan jenis gangguan, fasa yang diamati, posisi arus diferensial terhadap batas operasi, serta keputusan akhir relay, sehingga pola selektivitas relay 87L pada gangguan internal dan eksternal dapat dibaca secara lebih langsung.
+
 \begin{table}[H]
     \centering
     \caption{Ringkasan Respons Relay 87L pada Sistem dengan Integrasi IBR}
@@ -2629,10 +2664,12 @@ Secara keseluruhan, Bab ini menunjukkan bahwa relay 21 lebih sensitif terhadap p
 
 \section{Rangkuman Kelayakan Relay pada Sistem Terintegrasi IBR}
 
-Berdasarkan hasil simulasi pada Bab ini, kelayakan relay 21 dan relay 87L pada sistem terintegrasi IBR menunjukkan karakteristik yang berbeda. Relay 21 masih dapat bekerja sesuai acuan pada gangguan internal di saluran yang diproteksi, khususnya pada skenario ketika kontribusi sistem konvensional masih mendominasi dan konfigurasi jaringan tidak menyebabkan penurunan arus gangguan yang signifikan pada terminal relay.
+Berdasarkan hasil simulasi pada Bab ini, kelayakan relay 21 dan relay 87L pada sistem terintegrasi IBR menunjukkan karakteristik yang berbeda. Relay 21 masih dapat bekerja sesuai acuan pada gangguan internal di saluran yang diproteksi. Hal ini terlihat pada Skenario 1, ketika gangguan internal DLG pada TL89 tetap membuat relay sisi Bus 8 dan Bus 9 mendeteksi gangguan serta memberikan perintah trip sesuai pembacaan zona. Dengan demikian, integrasi IBR tidak selalu menyebabkan perubahan operasi relay 21 apabila arus gangguan, impedansi tampak, dan arah gangguan masih mendukung kerja elemen relay.
 
-Namun, pada gangguan eksternal dengan kondisi saluran tertentu, respons relay 21 tidak selalu mengikuti acuan kondisi dasar. Beberapa skenario menunjukkan bahwa arus gangguan yang terbaca oleh relay 21 pada sisi Bus 8 tidak memenuhi syarat \textit{starting}, sehingga keputusan operasi relay tidak lagi sesuai dengan perilaku yang diharapkan. Dengan demikian, penggunaan setting konvensional relay 21 pada sistem dengan integrasi IBR masih layak secara terbatas, tetapi memerlukan evaluasi ulang untuk kondisi gangguan eksternal, perubahan konfigurasi jaringan, dan kondisi ketika kontribusi arus gangguan dari sumber konvensional berkurang.
+Namun, pada gangguan eksternal di TL79 dengan kondisi TL78 \textit{out of service}, respons relay 21 tidak selalu mengikuti acuan kondisi dasar. Pada Skenario 2, 3, 4, 5, dan 6, relay sisi Bus 8 berulang kali tidak memenuhi syarat \textit{starting} karena arus gangguan yang terbaca rendah, sehingga responsnya dikategorikan mengalami \textit{misoperation}. Sisi Bus 9 umumnya tetap tidak trip karena gangguan tidak terbaca sebagai gangguan di arah depan relay. Pada Skenario 6 dengan \textit{photovoltaic}, terdapat kondisi khusus ketika impedansi tampak elemen ZBG sisi Bus 9 sempat masuk zona 1, tetapi operasi tetap tertahan oleh elemen \textit{phase directional}.
+
+Perbandingan antarjenis IBR menunjukkan bahwa pengaruh IBR terhadap relay 21 tidak hanya ditentukan oleh besar kontribusi arus hubung singkat. WT Type 4 memiliki kontribusi arus hubung singkat paling besar pada hasil pemodelan, tetapi relay sisi Bus 8 pada Skenario 2 tetap tidak memenuhi syarat \textit{starting}. Sebaliknya, PV tidak memberikan kontribusi arus hubung singkat pada pengaturan yang digunakan, tetapi tetap menghasilkan pola respons yang kritis karena kombinasi arus rendah pada sisi Bus 8 dan penahanan arah pada sisi Bus 9. Dengan demikian, penggunaan setting konvensional relay 21 masih layak secara terbatas, tetapi perlu dievaluasi ulang untuk gangguan eksternal, konfigurasi saluran \textit{out of service}, kecukupan arus \textit{starting}, dan pembacaan arah gangguan.
 
 Berbeda dengan relay 21, relay 87L menunjukkan respons yang lebih konsisten pada skenario yang diuji. Pada gangguan internal, titik arus diferensial berada di daerah operasi sehingga relay memberikan perintah trip. Pada gangguan eksternal, titik arus tetap berada di daerah penahan sehingga relay tidak mengirimkan perintah trip. Pola tersebut menunjukkan bahwa relay 87L masih mampu mempertahankan selektivitas berdasarkan perbandingan arus diferensial dan arus \textit{restraint}.
 
-Dengan mempertimbangkan hasil tersebut, relay 87L dapat dinyatakan lebih layak dan lebih konsisten dibandingkan relay 21 untuk skenario integrasi IBR yang diuji pada penelitian ini. Pernyataan ini tidak dimaksudkan sebagai generalisasi untuk seluruh sistem dengan IBR, karena kelayakan relay tetap dipengaruhi oleh model IBR, level penetrasi, konfigurasi jaringan, lokasi gangguan, serta setting proteksi yang digunakan.
+Dengan mempertimbangkan hasil tersebut, relay 87L dapat dinyatakan lebih layak dan lebih konsisten dibandingkan relay 21 untuk skenario integrasi IBR yang diuji pada penelitian ini. Pernyataan ini tidak dimaksudkan sebagai generalisasi untuk seluruh sistem dengan IBR, karena kelayakan relay tetap dipengaruhi oleh model IBR, level penetrasi, konfigurasi jaringan, lokasi gangguan, kontrol inverter, serta setting proteksi yang digunakan. Oleh karena itu, hasil Bab ini menunjukkan bahwa evaluasi setting konvensional perlu dilakukan secara selektif: relay 21 memerlukan perhatian utama pada kondisi gangguan eksternal dan arus rendah, sedangkan relay 87L tetap perlu diuji ulang apabila asumsi sistem atau konfigurasi IBR berubah.
