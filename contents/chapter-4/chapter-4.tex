@@ -418,6 +418,232 @@ Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_PV}, kontribusi hubun
 
 Implikasinya, respons relay pada skenario dengan \textit{photovoltaic} tidak dapat dijelaskan sebagai akibat tambahan kontribusi arus hubung singkat dari sisi PV. Jika pada bagian berikutnya terdapat perubahan pembacaan impedansi tampak, arus diferensial, arus \textit{restraint}, atau keputusan operasi relay, perubahan tersebut perlu dikaitkan dengan konfigurasi jaringan, lokasi gangguan, dan besaran listrik yang terbaca pada terminal relay. Dengan demikian, hasil pada subbagian ini menjadi dasar bahwa pengaruh PV pada analisis relay berikutnya tidak berasal dari injeksi arus gangguan tambahan dari unit PV.
 
+\section{Dekomposisi Komponen Urutan Arus pada Setiap Skenario}
+
+\subsection{Kondisi Tanpa Integrasi IBR}
+
+\subsubsection{Gangguan Internal Double Line-to-Ground Fault}
+
+Subbagian ini membahas perubahan komponen arus urutan pada saluran TL89 untuk kondisi sistem tanpa integrasi IBR saat terjadi gangguan internal \textit{double line-to-ground}. Pembahasan difokuskan pada komponen urutan positif, negatif, dan nol, karena ketiga komponen tersebut menunjukkan pola ketidakseimbangan arus yang muncul selama gangguan dua fasa ke tanah.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{contents/chapter-4/TL89_seq_internal_dlg.png}
+    \caption{Dekomposisi Komponen Urutan Arus pada Gangguan Internal Double Line-to-Ground}
+    \label{fig:TL89_seq_internal_dlg}
+\end{figure}
+
+Berdasarkan Gambar \ref{fig:TL89_seq_internal_dlg}, gangguan internal \textit{double line-to-ground} menyebabkan peningkatan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif naik dari 0,063 kA menjadi sekitar 1,163 kA sesaat setelah gangguan terjadi, kemudian berosilasi pada rentang 1,17 - 1,705 kA. Pada saat yang sama, komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,3411 kA, lalu berosilasi pada rentang 0,2395 - 0,3115 kA. Komponen urutan nol juga menunjukkan peningkatan dari 0 kA menjadi sekitar 0,45 kA, kemudian berosilasi pada rentang 0,3142 - 0,4087 kA.
+
+Peningkatan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus yang signifikan akibat gangguan. Komponen urutan positif meningkat karena adanya arus yang mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol meningkat akibat ketidakseimbangan arus pada gangguan dua fasa ke tanah. Dengan demikian, pola kenaikan komponen urutan pada Gambar \ref{fig:TL89_seq_internal_dlg} memperlihatkan karakteristik gangguan internal \textit{double line-to-ground} pada saluran TL89.
+
+\subsubsection{Gangguan External 3-Phase Fault}
+
+Subbagian ini membahas perubahan komponen arus urutan pada saluran TL89 untuk kondisi sistem tanpa integrasi IBR saat terjadi gangguan external \textit{3-phase fault}. Pembahasan difokuskan pada respons komponen urutan positif, negatif, dan nol untuk melihat pola arus yang muncul pada saluran selama gangguan berlangsung.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{contents/chapter-4/TL89_seq_external_3p.png}
+    \caption{Dekomposisi Komponen Urutan Arus pada Gangguan External 3-Phase Fault}
+    \label{fig:TL89_seq_external_3p}
+\end{figure}
+
+Berdasarkan Gambar \ref{fig:TL89_seq_external_3p}, gangguan external \textit{3-phase fault} menyebabkan peningkatan pada komponen arus urutan positif. Nilainya naik dari 0,063 kA menjadi sekitar 0,57 kA sesaat setelah gangguan terjadi, kemudian berosilasi pada rentang 0,61 - 1,84 kA. Sementara itu, komponen urutan negatif dan nol tidak mengalami perubahan, karena keduanya tetap bernilai nol selama kondisi gangguan tersebut.
+
+Peningkatan komponen urutan positif menunjukkan adanya perubahan arus yang signifikan, karena arus mengalir melalui jalur gangguan. Tidak munculnya perubahan pada komponen urutan negatif dan nol memperlihatkan bahwa pola arus pada kasus ini didominasi oleh komponen urutan positif. Dengan demikian, hasil pada Gambar \ref{fig:TL89_seq_external_3p} menunjukkan karakteristik gangguan external \textit{3-phase fault} pada saluran TL89.
+
+\subsubsection{Gangguan External Single Line-to-Ground Fault}
+
+Subbagian ini membahas perubahan komponen arus urutan pada saluran TL89 untuk kondisi sistem tanpa integrasi IBR saat terjadi gangguan external \textit{single line-to-ground}. Pembahasan difokuskan pada komponen urutan positif, negatif, dan nol, karena gangguan satu fasa ke tanah menimbulkan ketidakseimbangan arus yang dapat terlihat pada ketiga komponen tersebut.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{contents/chapter-4/TL89_seq_external_slg.png}
+    \caption{Dekomposisi Komponen Urutan Arus pada Gangguan External Single Line-to-Ground}
+    \label{fig:TL89_seq_external_slg}
+\end{figure}
+
+Berdasarkan Gambar \ref{fig:TL89_seq_external_slg}, gangguan external \textit{single line-to-ground} menyebabkan peningkatan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif naik dari 0,063 kA menjadi sekitar 0,225 kA sesaat setelah gangguan terjadi, kemudian berosilasi pada rentang 0,32 - 0,76 kA. Komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,2 kA dan berosilasi pada rentang 0,18 - 0,19 kA, sedangkan komponen urutan nol meningkat dari 0 kA menjadi sekitar 0,053 kA dan berosilasi pada rentang 0,048 - 0,05 kA.
+
+Peningkatan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus yang signifikan akibat gangguan. Komponen urutan positif meningkat karena adanya arus yang mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol meningkat akibat ketidakseimbangan arus pada gangguan satu fasa ke tanah. Dengan demikian, pola kenaikan komponen urutan pada Gambar \ref{fig:TL89_seq_external_slg} memperlihatkan karakteristik gangguan external \textit{single line-to-ground} pada saluran TL89.
+
+\subsubsection{Gangguan External Double Line-to-Ground Fault}
+
+Subbagian ini membahas perubahan komponen arus urutan pada saluran TL89 untuk kondisi sistem tanpa integrasi IBR saat terjadi gangguan external \textit{double line-to-ground}. Pembahasan difokuskan pada komponen urutan positif, negatif, dan nol, karena gangguan dua fasa ke tanah menghasilkan ketidakseimbangan arus yang tercermin pada ketiga komponen tersebut.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{contents/chapter-4/TL89_seq_external_dlg.png}
+    \caption{Dekomposisi Komponen Urutan Arus pada Gangguan External Double Line-to-Ground}
+    \label{fig:TL89_seq_external_dlg}
+\end{figure}
+
+Berdasarkan Gambar \ref{fig:TL89_seq_external_dlg}, gangguan external \textit{double line-to-ground} menyebabkan peningkatan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif naik dari 0,063 kA menjadi sekitar 0,4112 kA sesaat setelah gangguan terjadi, kemudian berosilasi pada rentang 0,4313 - 1,95 kA. Komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,15 kA dan berosilasi pada rentang 0,079 - 0,14 kA, sedangkan komponen urutan nol meningkat dari 0 kA menjadi sekitar 0,06 kA dan berosilasi pada rentang 0,032 - 0,057 kA.
+
+Peningkatan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus yang signifikan akibat gangguan. Komponen urutan positif meningkat karena adanya arus yang mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol meningkat akibat ketidakseimbangan arus pada gangguan dua fasa ke tanah. Dengan demikian, pola pada Gambar \ref{fig:TL89_seq_external_dlg} memperlihatkan karakteristik gangguan external \textit{double line-to-ground} pada saluran TL89.
+
+\subsection{Skenario 1: WT Type 3 Internal DLG Fault}
+
+Subbagian ini membahas dekomposisi komponen urutan arus pada Skenario 1, yaitu kondisi integrasi WT Type 3 saat terjadi gangguan internal \textit{double line-to-ground}. Pembahasan difokuskan pada perubahan komponen urutan positif, negatif, dan nol yang terbaca selama gangguan, sehingga pola ketidakseimbangan arus pada skenario ini dapat diamati secara lebih jelas.
+
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/TL89_seq_s1.png}
+        \caption{Saluran TL89}
+        \label{fig:sequence_current_tl89_s1}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/WTT3_seq_internal_dlg.png}
+        \caption{\textit{Wind Turbine Type 3}.}
+        \label{fig:sequence_current_wtt3_s1}
+    \end{subfigure}
+
+    \caption{Dekomposisi Komponen Urutan Arus pada Skenario 1}
+    \label{fig:decomposition_sequence_current_s1}
+\end{figure}
+
+Berdasarkan Gambar \ref{fig:decomposition_sequence_current_s1}, gangguan internal \textit{double line-to-ground} menyebabkan peningkatan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif naik dari 0,2563 kA menjadi sekitar 1,414 kA sesaat setelah gangguan terjadi, kemudian berosilasi pada rentang 0,2554 - 3,198 kA. Komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,3478 kA dan berosilasi pada rentang 0,1765 - 0,3277 kA, sedangkan komponen urutan nol meningkat dari 0 kA menjadi sekitar 0,4563 kA dan berosilasi pada rentang 0,2315 - 0,4038 kA.
+
+Peningkatan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus yang signifikan akibat gangguan. Komponen urutan positif meningkat karena adanya arus yang mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol meningkat akibat ketidakseimbangan arus pada gangguan dua fasa ke tanah. Dengan demikian, pola pada Gambar \ref{fig:decomposition_sequence_current_s1} memperlihatkan karakteristik gangguan internal \textit{double line-to-ground} pada saluran TL89 untuk Skenario 1.
+
+\subsection{Skenario 2: WT Type 4 External DLG Fault}
+
+Subbagian ini membahas dekomposisi komponen urutan arus pada Skenario 2, yaitu kondisi sistem dengan integrasi WT Type 4 saat terjadi gangguan external \textit{double line-to-ground}. Pembahasan difokuskan pada perubahan komponen urutan positif, negatif, dan nol yang terbaca pada saluran TL89 serta sisi WT Type 4, karena gangguan dua fasa ke tanah menimbulkan ketidakseimbangan arus yang dapat diamati melalui ketiga komponen tersebut.
+
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/TL89_seq_s2.png}
+        \caption{Saluran TL89}
+        \label{fig:sequence_current_tl89_s2}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/WTT4_seq_external_dlg.png}
+        \caption{\textit{Wind Turbine Type 4}.}
+        \label{fig:sequence_current_wtt4_s2}
+    \end{subfigure}
+
+    \caption{Dekomposisi Komponen Urutan Arus pada Skenario 2}
+    \label{fig:decomposition_sequence_current_s2}
+\end{figure}
+
+Berdasarkan Gambar \ref{fig:decomposition_sequence_current_s2}, gangguan external \textit{double line-to-ground} menyebabkan kenaikan pada komponen arus urutan positif, negatif, dan nol. Komponen urutan positif naik dari 0,2563 kA menjadi sekitar 0,31 kA sesaat setelah gangguan terjadi, kemudian berosilasi pada rentang 0,324 - 0,329 kA. Komponen urutan negatif meningkat dari 0 kA menjadi sekitar 0,000043 kA dan berosilasi pada rentang 0,000023 - 0,000037 kA. Sementara itu, komponen urutan nol meningkat dari 0 kA menjadi sekitar 0,035 kA dan berosilasi pada rentang 0,019 - 0,03 kA.
+
+Kenaikan ketiga komponen tersebut menunjukkan adanya ketidakseimbangan arus akibat gangguan. Komponen urutan positif meningkat karena adanya arus yang mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol muncul akibat ketidakseimbangan arus pada gangguan dua fasa ke tanah. Dengan demikian, pola pada Gambar \ref{fig:decomposition_sequence_current_s2} memperlihatkan karakteristik gangguan external \textit{double line-to-ground} pada saluran TL89 untuk Skenario 2.
+
+\subsection{Skenario 3: WT Type 3 External DLG Fault}
+
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/tl89_seq_s3.png}
+        \caption{Saluran TL89}
+        \label{fig:sequence_current_tl89_s3}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/WTT3_seq_external_dlg.png}
+        \caption{\textit{Wind Turbine Type 3}.}
+        \label{fig:sequence_current_wtt3_s3}
+    \end{subfigure}
+
+    \caption{Dekomposisi Komponen Urutan Arus pada Skenario 3}
+    \label{fig:decomposition_sequence_current_s3}
+\end{figure}
+
+\subsection{Skenario 4: WT Type 3 External 3P Fault}
+
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/TL89_seq_s4.png}
+        \caption{Saluran TL89}
+        \label{fig:sequence_current_tl89_s4}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/WTT3_seq_external_3p.png}
+        \caption{\textit{Wind Turbine Type 3}.}
+        \label{fig:sequence_current_wtt3_s4}
+    \end{subfigure}
+
+    \caption{Dekomposisi Komponen Urutan Arus pada Skenario 4}
+    \label{fig:decomposition_sequence_current_s4}
+\end{figure}
+
+\subsection{Skenario 5: WT Type 3 External SLG Fault}
+
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/TL89_seq_s5.png}
+        \caption{Saluran TL89}
+        \label{fig:sequence_current_tl89_s5}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/WTT3_seq_external_slg.png}
+        \caption{\textit{Wind Turbine Type 3}.}
+        \label{fig:sequence_current_wtt3_s5}
+    \end{subfigure}
+
+    \caption{Dekomposisi Komponen Urutan Arus pada Skenario 5}
+    \label{fig:decomposition_sequence_current_s5}
+\end{figure}
+
+\subsection{Skenario 6: Photovoltaic External DLG Fault}
+
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/TL89_seq_s6.png}
+        \caption{Saluran TL89}
+        \label{fig:sequence_current_tl89_s6}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PV_seq_external_dlg.png}
+        \caption{\textit{Photovoltaic}.}
+        \label{fig:sequence_current_pv_s6}
+    \end{subfigure}
+
+    \caption{Dekomposisi Komponen Urutan Arus pada Skenario 6}
+    \label{fig:decomposition_sequence_current_s6}
+\end{figure}
+
 
 \section{Respons Relay 21 pada Sistem dengan WT Type 3}
 
@@ -426,6 +652,10 @@ Bagian ini membahas respons relay 21 ketika sistem diintegrasikan dengan \textit
 Pada setiap skenario, pembacaan relay dari sisi Bus 8 dan Bus 9 dibahas secara terpisah. Pemisahan ini diperlukan karena kedua sisi relay dapat menerima kontribusi arus gangguan yang berbeda, sehingga keputusan operasi relay 21 dapat berbeda antara ujung saluran yang satu dan ujung saluran yang lain.
 
 \subsection{Skenario 1 : Wind Turbine Type 3 Internal DLG Fault}
+
+Skenario ini menjadi titik awal pembahasan respons relay 21 pada sistem dengan \textit{wind turbine type 3} karena gangguan ditempatkan pada TL89, yaitu saluran yang diproteksi. Dengan demikian, respons relay yang diharapkan adalah relay dari kedua sisi saluran mampu membaca gangguan sebagai gangguan internal dan memberikan perintah trip sesuai daerah operasi yang terbaca.
+
+Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s1} digunakan sebagai konteks untuk membaca besaran arus gangguan yang masuk ke relay. Setelah kontribusi arus pada skenario ini diketahui, analisis dilanjutkan pada impedansi tampak yang terbaca pada masing-masing elemen gangguan, yaitu ZAG, ZBG, dan ZAB, dari sisi Bus 8 maupun Bus 9.
 
 % \begin{figure}[H]
 %     \centering
@@ -438,21 +668,44 @@ Pada setiap skenario, pembacaan relay dari sisi Bus 8 dan Bus 9 dibahas secara t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_01_ZAG_Bus_8_S1.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 1}
-    \label{fig:PRIA_01_ZAG_Bus_8_S1}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_01_ZAG_Bus_8_S1.png}
+%     \caption{Impedansi Tampak ZAG Bus 8 Skenario 1}
+%     \label{fig:PRIA_01_ZAG_Bus_8_S1}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_01_ZAG_Bus_8_S1.png}
+%     \caption{Impedansi Tampak ZAG Bus 8 Skenario 1}
+%     \label{fig:PRIZI_01_ZAG_Bus_8_S1}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_01_ZAG_Bus_8_S1.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_01_ZAG_Bus_8_S1.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_01_ZAG_Bus_8_S1}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_01_ZAG_Bus_8_S1.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_01_ZAG_Bus_8_S1}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAG Bus 8 Skenario 1}
-    \label{fig:PRIZI_01_ZAG_Bus_8_S1}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_8_S1}
 \end{figure}
 
-Pada gambar \ref{fig:PRIA_01_ZAG_Bus_8_S1} terlihat untuk titik impedansi tampak pada fasa A dan ground yang dibaca oleh relay 21 dari sisi bus 8 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
+Pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S1} terlihat untuk titik impedansi tampak pada fasa A dan ground yang dibaca oleh relay 21 dari sisi bus 8 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -467,21 +720,44 @@ Pada gambar \ref{fig:PRIA_01_ZAG_Bus_8_S1} terlihat untuk titik impedansi tampak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_02_ZBG_Bus_8_S1.png}
-    \caption{Impedansi Tampak ZBG Bus 8 Skenario 1}
-    \label{fig:PRIA_02_ZBG_Bus_8_S1}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_02_ZBG_Bus_8_S1.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 1}
+%     \label{fig:PRIA_02_ZBG_Bus_8_S1}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_02_ZBG_Bus_8_S1.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 1}
+%     \label{fig:PRIZI_02_ZBG_Bus_8_S1}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_02_ZBG_Bus_8_S1.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_02_ZBG_Bus_8_S1.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_02_ZBG_Bus_8_S1}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_02_ZBG_Bus_8_S1.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_02_ZBG_Bus_8_S1}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 8 Skenario 1}
-    \label{fig:PRIZI_02_ZBG_Bus_8_S1}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_8_S1}
 \end{figure}
 
-Pada gambar \ref{fig:PRIA_02_ZBG_Bus_8_S1} terlihat untuk titik impedansi tampak pada fasa B dan ground yang dibaca oleh relay 21 dari sisi bus 8 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
+Pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S1} terlihat untuk titik impedansi tampak pada fasa B dan ground yang dibaca oleh relay 21 dari sisi bus 8 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -496,21 +772,44 @@ Pada gambar \ref{fig:PRIA_02_ZBG_Bus_8_S1} terlihat untuk titik impedansi tampak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_03_ZAB_Bus_8_S1.png}
-    \caption{Impedansi Tampak ZAB Bus 8 Skenario 1}
-    \label{fig:PRIA_03_ZAB_Bus_8_S1}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_03_ZAB_Bus_8_S1.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 1}
+%     \label{fig:PRIA_03_ZAB_Bus_8_S1}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_03_ZAB_Bus_8_S1.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 1}
+%     \label{fig:PRIZI_03_ZAB_Bus_8_S1}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_03_ZAB_Bus_8_S1.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_03_ZAB_Bus_8_S1.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_03_ZAB_Bus_8_S1}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_03_ZAB_Bus_8_S1.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_03_ZAB_Bus_8_S1}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 8 Skenario 1}
-    \label{fig:PRIZI_03_ZAB_Bus_8_S1}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_8_S1}
 \end{figure}
 
-Pada gambar \ref{fig:PRIA_03_ZAB_Bus_8_S1} terlihat untuk titik impedansi tampak pada fasa A dan fasa B terlihat cukup stabil dan relay 21 dari sisi bus 8 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional. Walaupun impedansi loop fasa A dan B terbaca pada zona 1 namun relay tetap trip pada zona 2 dikarenakan melihat pada impedansi loop yang lainnya.
+Pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S1} terlihat untuk titik impedansi tampak pada fasa A dan fasa B terlihat cukup stabil dan relay 21 dari sisi bus 8 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional. Walaupun impedansi loop fasa A dan B terbaca pada zona 1 namun relay tetap trip pada zona 2 dikarenakan melihat pada impedansi loop yang lainnya.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -525,21 +824,44 @@ Pada gambar \ref{fig:PRIA_03_ZAB_Bus_8_S1} terlihat untuk titik impedansi tampak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_04_ZAG_Bus_9_S1.png}
-    \caption{Impedansi Tampak ZAG Bus 9 Skenario 1}
-    \label{fig:PRIA_04_ZAG_Bus_9_S1}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_04_ZAG_Bus_9_S1.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 1}
+%     \label{fig:PRIA_04_ZAG_Bus_9_S1}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_04_ZAG_Bus_9_S1.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 1}
+%     \label{fig:PRIZI_04_ZAG_Bus_9_S1}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_04_ZAG_Bus_9_S1.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_04_ZAG_Bus_9_S1.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_04_ZAG_Bus_9_S1}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_04_ZAG_Bus_9_S1.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_04_ZAG_Bus_9_S1}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAG Bus 9 Skenario 1}
-    \label{fig:PRIZI_04_ZAG_Bus_9_S1}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_9_S1}
 \end{figure}
 
-Pada gambar \ref{fig:PRIA_04_ZAG_Bus_9_S1} terlihat untuk titik impedansi tampak pada fasa A dan ground yang di baca relay 21 dari sisi bus 9 memasuki zona 1 namun tidak terbaca sebagai gangguan karena elemen fasa directional tidak membaca bahwa gangguan terdapat di depan relay maka relay 21 bus 9 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
+Pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S1} terlihat untuk titik impedansi tampak pada fasa A dan ground yang di baca relay 21 dari sisi bus 9 memasuki zona 1 namun tidak terbaca sebagai gangguan karena elemen fasa directional tidak membaca bahwa gangguan terdapat di depan relay maka relay 21 bus 9 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -554,21 +876,44 @@ Pada gambar \ref{fig:PRIA_04_ZAG_Bus_9_S1} terlihat untuk titik impedansi tampak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_05_ZBG_Bus_9_S1.png}
-    \caption{Impedansi Tampak ZBG Bus 9 Skenario 1}
-    \label{fig:PRIA_05_ZBG_Bus_9_S1}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_05_ZBG_Bus_9_S1.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 1}
+%     \label{fig:PRIA_05_ZBG_Bus_9_S1}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_05_ZBG_Bus_9_S1.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 1}
+%     \label{fig:PRIZI_05_ZBG_Bus_9_S1}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_05_ZBG_Bus_9_S1.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_05_ZBG_Bus_9_S1.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_05_ZBG_Bus_9_S1}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_05_ZBG_Bus_9_S1.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_05_ZBG_Bus_9_S1}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 9 Skenario 1}
-    \label{fig:PRIZI_05_ZBG_Bus_9_S1}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_9_S1}
 \end{figure}
 
-Pada gambar \ref{fig:PRIA_05_ZBG_Bus_9_S1} terlihat untuk titik impedansi tampak pada fasa B dan ground yang di baca relay 21 dari sisi bus 9 memasuki zona 1 namun tidak terbaca sebagai gangguan karena elemen fasa directional tidak membaca bahwa gangguan terdapat di depan relay maka relay 21 bus 9 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
+Pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S1} terlihat untuk titik impedansi tampak pada fasa B dan ground yang di baca relay 21 dari sisi bus 9 memasuki zona 1 namun tidak terbaca sebagai gangguan karena elemen fasa directional tidak membaca bahwa gangguan terdapat di depan relay maka relay 21 bus 9 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -583,21 +928,44 @@ Pada gambar \ref{fig:PRIA_05_ZBG_Bus_9_S1} terlihat untuk titik impedansi tampak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_06_ZAB_Bus_9_S1.png}
-    \caption{Impedansi Tampak ZAB Bus 9 Skenario 1}
-    \label{fig:PRIA_06_ZAB_Bus_9_S1}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_06_ZAB_Bus_9_S1.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 1}
+%     \label{fig:PRIA_06_ZAB_Bus_9_S1}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_06_ZAB_Bus_9_S1.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 1}
+%     \label{fig:PRIZI_06_ZAB_Bus_9_S1}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_06_ZAB_Bus_9_S1.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_06_ZAB_Bus_9_S1.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_06_ZAB_Bus_9_S1}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_06_ZAB_Bus_9_S1.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_06_ZAB_Bus_9_S1}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 9 Skenario 1}
-    \label{fig:PRIZI_06_ZAB_Bus_9_S1}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_9_S1}
 \end{figure}
 
-Pada gambar \ref{fig:PRIA_06_ZAB_Bus_9_S1} terlihat untuk titik impedansi tampak pada fasa A dan fasa B yang di baca relay 21 dari sisi bus 9 memasuki zona 1 namun tidak terbaca sebagai gangguan karena elemen fasa directional tidak membaca bahwa gangguan terdapat di depan relay maka relay 21 bus 9 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
+Pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S1} terlihat untuk titik impedansi tampak pada fasa A dan fasa B yang di baca relay 21 dari sisi bus 9 memasuki zona 1 namun tidak terbaca sebagai gangguan karena elemen fasa directional tidak membaca bahwa gangguan terdapat di depan relay maka relay 21 bus 9 bekerja dengan baik sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -606,6 +974,10 @@ Pada gambar \ref{fig:PRIA_06_ZAB_Bus_9_S1} terlihat untuk titik impedansi tampak
 % Pada gambar \ref{fig:01_ZAG_Bus_8_S1_dengan_lingkaran_dan_garis} hingga \ref{fig:06_ZAB_Bus_9_S1_dengan_lingkaran_dan_garis} terlihat untuk titik impedansi tampak ZAG, ZBG, dan ZAB terlihat cukup stabil dan relay 21 dari sisi bus 8 maupun bus 9 bekerja dengan normal sebagaimana mestinya dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} karena kontribusi dari sisi IBR tidak mendominasi karena TL78 tetap aktif mengakibatkan IBR tidak memengaruhi kinerja proteksi serta kontribusi tetap di dominasi oleh sistem tenaga konvensional.
 
 \subsection{Skenario 3 : Wind Turbine Type 3 External DLG Fault}
+
+Berbeda dengan skenario sebelumnya, gangguan pada skenario ini berada di luar saluran TL89 sehingga relay 21 seharusnya tidak membaca gangguan sebagai gangguan internal pada saluran yang diproteksi. Kondisi ini penting untuk mengevaluasi selektivitas relay ketika sistem telah terintegrasi \textit{wind turbine type 3} dan konfigurasi jaringan berubah sesuai skenario pengujian.
+
+Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s3} menjadi dasar untuk melihat perubahan besaran arus yang diterima oleh saluran TL89 pada gangguan eksternal DLG. Oleh karena itu, pembahasan pada subbab ini diarahkan untuk menelusuri apakah perubahan komponen arus tersebut memengaruhi syarat \textit{starting}, posisi impedansi tampak, dan keputusan trip relay 21 pada sisi Bus 8 dan Bus 9.
 
 % \begin{figure}[H]
 %     \centering
@@ -620,20 +992,6 @@ Pada gambar \ref{fig:PRIA_06_ZAB_Bus_9_S1} terlihat untuk titik impedansi tampak
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_13_ZAG_Bus_8_S3.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 3}
-    \label{fig:PRIA_13_ZAG_Bus_8_S3}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_13_ZAG_Bus_8_S3.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 3}
-    \label{fig:PRIZI_13_ZAG_Bus_8_S3}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
     \includegraphics[width=0.8\textwidth]{contents/chapter-4/Bus_8_Ex_DLG_S3.png}
     \caption{Arus Sekunder CT Bus 8 Skenario 3}
     \label{fig:Bus_8_Ex_DLG_S3}
@@ -641,7 +999,30 @@ Pada gambar \ref{fig:PRIA_06_ZAB_Bus_9_S1} terlihat untuk titik impedansi tampak
 
 Gambar \ref{fig:Bus_8_Ex_DLG_S3} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 3. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,601 A sekunder atau 1,25 p.u., arus fasa B meningkat menjadi 1,791 A sekunder atau 1,4 p.u., dan arus fasa C meningkat menjadi 1,586 A sekunder atau 1,24 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
 
-Gambar \ref{fig:PRIA_13_ZAG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S3}, karena arus yang terbaca tidak memenuhi arus minimum untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_13_ZAG_Bus_8_S3.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_13_ZAG_Bus_8_S3}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_13_ZAG_Bus_8_S3.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_13_ZAG_Bus_8_S3}
+    \end{subfigure}
+
+    \caption{Impedansi Tampak ZAG Bus 8 Skenario 3}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_8_S3}
+\end{figure}
+
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S3}, karena arus yang terbaca tidak memenuhi arus minimum untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -657,21 +1038,44 @@ Gambar \ref{fig:PRIA_13_ZAG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_14_ZBG_Bus_8_S3.png}
-    \caption{Impedansi Tampak ZBG Bus 8 Skenario 3}
-    \label{fig:PRIA_14_ZBG_Bus_8_S3}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_14_ZBG_Bus_8_S3.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 3}
+%     \label{fig:PRIA_14_ZBG_Bus_8_S3}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_14_ZBG_Bus_8_S3.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 3}
+%     \label{fig:PRIZI_14_ZBG_Bus_8_S3}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_14_ZBG_Bus_8_S3.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_14_ZBG_Bus_8_S3.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_14_ZBG_Bus_8_S3}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_14_ZBG_Bus_8_S3.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_14_ZBG_Bus_8_S3}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 8 Skenario 3}
-    \label{fig:PRIZI_14_ZBG_Bus_8_S3}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_8_S3}
 \end{figure}
 
-Gambar \ref{fig:PRIA_14_ZBG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan kondisi arus pada Gambar \ref{fig:Bus_8_Ex_DLG_S3}, yaitu arus yang terbaca belum memenuhi arus minimum untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan kondisi arus pada Gambar \ref{fig:Bus_8_Ex_DLG_S3}, yaitu arus yang terbaca belum memenuhi arus minimum untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -686,21 +1090,44 @@ Gambar \ref{fig:PRIA_14_ZBG_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_15_ZAB_Bus_8_S3.png}
-    \caption{Impedansi Tampak ZAB Bus 8 Skenario 3}
-    \label{fig:PRIA_15_ZAB_Bus_8_S3}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_15_ZAB_Bus_8_S3.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 3}
+%     \label{fig:PRIA_15_ZAB_Bus_8_S3}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_15_ZAB_Bus_8_S3.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 3}
+%     \label{fig:PRIZI_15_ZAB_Bus_8_S3}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_15_ZAB_Bus_8_S3.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_15_ZAB_Bus_8_S3.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_15_ZAB_Bus_8_S3}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_15_ZAB_Bus_8_S3.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_15_ZAB_Bus_8_S3}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 8 Skenario 3}
-    \label{fig:PRIZI_15_ZAB_Bus_8_S3}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_8_S3}
 \end{figure}
 
-Gambar \ref{fig:PRIA_15_ZAB_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S3} yang belum memenuhi arus minimum untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 3 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S3} yang belum memenuhi arus minimum untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 3 menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -715,21 +1142,44 @@ Gambar \ref{fig:PRIA_15_ZAB_Bus_8_S3} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_16_ZAG_Bus_9_S3.png}
-    \caption{Impedansi Tampak ZAG Bus 9 Skenario 3}
-    \label{fig:PRIA_16_ZAG_Bus_9_S3}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_16_ZAG_Bus_9_S3.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 3}
+%     \label{fig:PRIA_16_ZAG_Bus_9_S3}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_16_ZAG_Bus_9_S3.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 3}
+%     \label{fig:PRIZI_16_ZAG_Bus_9_S3}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_16_ZAG_Bus_9_S3.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_16_ZAG_Bus_9_S3.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_16_ZAG_Bus_9_S3}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_16_ZAG_Bus_9_S3.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_16_ZAG_Bus_9_S3}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAG Bus 9 Skenario 3}
-    \label{fig:PRIZI_16_ZAG_Bus_9_S3}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_9_S3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_16_ZAG_Bus_9_S3} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S3} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -744,21 +1194,44 @@ Terlihat pada gambar \ref{fig:PRIA_16_ZAG_Bus_9_S3} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_17_ZBG_Bus_9_S3.png}
-    \caption{Impedansi Tampak ZBG Bus 9 Skenario 3}
-    \label{fig:PRIA_17_ZBG_Bus_9_S3}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_17_ZBG_Bus_9_S3.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 3}
+%     \label{fig:PRIA_17_ZBG_Bus_9_S3}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_17_ZBG_Bus_9_S3.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 3}
+%     \label{fig:PRIZI_17_ZBG_Bus_9_S3}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_17_ZBG_Bus_9_S3.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_17_ZBG_Bus_9_S3.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_17_ZBG_Bus_9_S3}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_17_ZBG_Bus_9_S3.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_17_ZBG_Bus_9_S3}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 9 Skenario 3}
-    \label{fig:PRIZI_17_ZBG_Bus_9_S3}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_9_S3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_17_ZBG_Bus_9_S3} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S3} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -773,21 +1246,44 @@ Terlihat pada gambar \ref{fig:PRIA_17_ZBG_Bus_9_S3} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_18_ZAB_Bus_9_S3.png}
-    \caption{Impedansi Tampak ZAB Bus 9 Skenario 3}
-    \label{fig:PRIA_18_ZAB_Bus_9_S3}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_18_ZAB_Bus_9_S3.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 3}
+%     \label{fig:PRIA_18_ZAB_Bus_9_S3}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_18_ZAB_Bus_9_S3.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 3}
+%     \label{fig:PRIZI_18_ZAB_Bus_9_S3}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_18_ZAB_Bus_9_S3.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_18_ZAB_Bus_9_S3.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_18_ZAB_Bus_9_S3}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_18_ZAB_Bus_9_S3.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_18_ZAB_Bus_9_S3}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 9 Skenario 3}
-    \label{fig:PRIZI_18_ZAB_Bus_9_S3}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_9_S3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_18_ZAB_Bus_9_S3} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S3} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -796,6 +1292,10 @@ Terlihat pada gambar \ref{fig:PRIA_18_ZAB_Bus_9_S3} bahwa impedansi tampak pada 
 
 
 \subsection{Skenario 4 : Wind Turbine Type 3 External 3P Fault}
+
+Skenario ini digunakan untuk melihat respons relay 21 terhadap gangguan eksternal tiga fasa pada sistem dengan \textit{wind turbine type 3}. Gangguan tiga fasa memberikan kondisi pembanding terhadap gangguan tak seimbang karena pembacaan relay lebih dominan dikaitkan dengan elemen fasa-fasa dan komponen urutan positif.
+
+Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s4} membantu menjelaskan karakter arus yang diterima TL89 sebelum respons relay dianalisis. Dengan konteks tersebut, pembahasan berikutnya difokuskan pada elemen ZAB, ZBC, dan ZCA untuk menilai apakah relay 21 tetap menahan operasi pada gangguan eksternal atau menunjukkan penyimpangan terhadap acuan kondisi dasar.
 
 % \begin{figure}[H]
 %     \centering
@@ -810,20 +1310,6 @@ Terlihat pada gambar \ref{fig:PRIA_18_ZAB_Bus_9_S3} bahwa impedansi tampak pada 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_19_ZAB_Bus_8_S4.png}
-    \caption{Impedansi Tampak ZAB Bus 8 Skenario 4}
-    \label{fig:PRIA_19_ZAB_Bus_8_S4}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_19_ZAB_Bus_8_S4.png}
-    \caption{Impedansi Tampak ZAB Bus 8 Skenario 4}
-    \label{fig:PRIZI_19_ZAB_Bus_8_S4}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
     \includegraphics[width=0.8\textwidth]{contents/chapter-4/Bus_8_Ex_3P_S4.png}
     \caption{Arus Sekunder CT Bus 8 Skenario 4}
     \label{fig:Bus_8_Ex_3P_S4}
@@ -831,7 +1317,30 @@ Terlihat pada gambar \ref{fig:PRIA_18_ZAB_Bus_9_S3} bahwa impedansi tampak pada 
 
 Gambar \ref{fig:Bus_8_Ex_3P_S4} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 4. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan tiga fasa terjadi, arus pada ketiga fasa meningkat menjadi 1,892 A sekunder atau 1,48 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
 
-Gambar \ref{fig:PRIA_19_ZAB_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4}, karena arus gangguan yang terbaca masih belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_19_ZAB_Bus_8_S4.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_19_ZAB_Bus_8_S4}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_19_ZAB_Bus_8_S4.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_19_ZAB_Bus_8_S4}
+    \end{subfigure}
+
+    \caption{Impedansi Tampak ZAB Bus 8 Skenario 4}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_8_S4}
+\end{figure}
+
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4}, karena arus gangguan yang terbaca masih belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -846,21 +1355,44 @@ Gambar \ref{fig:PRIA_19_ZAB_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_20_ZBC_Bus_8_S4.png}
-    \caption{Impedansi Tampak ZBC Bus 8 Skenario 4}
-    \label{fig:PRIA_20_ZBC_Bus_8_S4}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_20_ZBC_Bus_8_S4.png}
+%     \caption{Impedansi Tampak ZBC Bus 8 Skenario 4}
+%     \label{fig:PRIA_20_ZBC_Bus_8_S4}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_20_ZBC_Bus_8_S4.png}
+%     \caption{Impedansi Tampak ZBC Bus 8 Skenario 4}
+%     \label{fig:PRIZI_20_ZBC_Bus_8_S4}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_20_ZBC_Bus_8_S4.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_20_ZBC_Bus_8_S4.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_20_ZBC_Bus_8_S4}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_20_ZBC_Bus_8_S4.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_20_ZBC_Bus_8_S4}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBC Bus 8 Skenario 4}
-    \label{fig:PRIZI_20_ZBC_Bus_8_S4}
+    \label{fig:Impedansi_Tampak_ZBC_Bus_8_S4}
 \end{figure}
 
-Gambar \ref{fig:PRIA_20_ZBC_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa B dengan fasa C yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4}, yang menunjukkan bahwa arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa B dengan fasa C yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4}, yang menunjukkan bahwa arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -875,21 +1407,44 @@ Gambar \ref{fig:PRIA_20_ZBC_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_21_ZCA_Bus_8_S4.png}
-    \caption{Impedansi Tampak ZCA Bus 8 Skenario 4}
-    \label{fig:PRIA_21_ZCA_Bus_8_S4}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_21_ZCA_Bus_8_S4.png}
+%     \caption{Impedansi Tampak ZCA Bus 8 Skenario 4}
+%     \label{fig:PRIA_21_ZCA_Bus_8_S4}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_21_ZCA_Bus_8_S4.png}
+%     \caption{Impedansi Tampak ZCA Bus 8 Skenario 4}
+%     \label{fig:PRIZI_21_ZCA_Bus_8_S4}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_21_ZCA_Bus_8_S4.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_21_ZCA_Bus_8_S4.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_21_ZCA_Bus_8_S4}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_21_ZCA_Bus_8_S4.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_21_ZCA_Bus_8_S4}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZCA Bus 8 Skenario 4}
-    \label{fig:PRIZI_21_ZCA_Bus_8_S4}
+    \label{fig:Impedansi_Tampak_ZCA_Bus_8_S4}
 \end{figure}
 
-Gambar \ref{fig:PRIA_21_ZCA_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa C dengan fasa A yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada skenario 4 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fasa C dengan fasa A yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_3P_S4} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal tiga fasa pada Subbab \ref{subsec:tanpa_IBR_ex_3p}, respons relay 21 sisi Bus 8 pada skenario 4 menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -904,21 +1459,44 @@ Gambar \ref{fig:PRIA_21_ZCA_Bus_8_S4} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_22_ZAB_Bus_9_S4.png}
-    \caption{Impedansi Tampak ZAB Bus 9 Skenario 4}
-    \label{fig:PRIA_22_ZAB_Bus_9_S4}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_22_ZAB_Bus_9_S4.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 4}
+%     \label{fig:PRIA_22_ZAB_Bus_9_S4}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_22_ZAB_Bus_9_S4.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 4}
+%     \label{fig:PRIZI_22_ZAB_Bus_9_S4}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_22_ZAB_Bus_9_S4.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_22_ZAB_Bus_9_S4.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_22_ZAB_Bus_9_S4}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_22_ZAB_Bus_9_S4.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_22_ZAB_Bus_9_S4}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 9 Skenario 4}
-    \label{fig:PRIZI_22_ZAB_Bus_9_S4}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_9_S4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_22_ZAB_Bus_9_S4} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S4} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -933,21 +1511,44 @@ Terlihat pada gambar \ref{fig:PRIA_22_ZAB_Bus_9_S4} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_23_ZBC_Bus_9_S4.png}
-    \caption{Impedansi Tampak ZBC Bus 9 Skenario 4}
-    \label{fig:PRIA_23_ZBC_Bus_9_S4}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_23_ZBC_Bus_9_S4.png}
+%     \caption{Impedansi Tampak ZBC Bus 9 Skenario 4}
+%     \label{fig:PRIA_23_ZBC_Bus_9_S4}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_23_ZBC_Bus_9_S4.png}
+%     \caption{Impedansi Tampak ZBC Bus 9 Skenario 4}
+%     \label{fig:PRIZI_23_ZBC_Bus_9_S4}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_23_ZBC_Bus_9_S4.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_23_ZBC_Bus_9_S4.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_23_ZBC_Bus_9_S4}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_23_ZBC_Bus_9_S4.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_23_ZBC_Bus_9_S4}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBC Bus 9 Skenario 4}
-    \label{fig:PRIZI_23_ZBC_Bus_9_S4}
+    \label{fig:Impedansi_Tampak_ZBC_Bus_9_S4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_23_ZBC_Bus_9_S4} bahwa impedansi tampak pada fasa B dengan fasa C yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBC_Bus_9_S4} bahwa impedansi tampak pada fasa B dengan fasa C yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -962,21 +1563,44 @@ Terlihat pada gambar \ref{fig:PRIA_23_ZBC_Bus_9_S4} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_24_ZCA_Bus_9_S4.png}
-    \caption{Impedansi Tampak ZCA Bus 9 Skenario 4}
-    \label{fig:PRIA_24_ZCA_Bus_9_S4}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_24_ZCA_Bus_9_S4.png}
+%     \caption{Impedansi Tampak ZCA Bus 9 Skenario 4}
+%     \label{fig:PRIA_24_ZCA_Bus_9_S4}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_24_ZCA_Bus_9_S4.png}
+%     \caption{Impedansi Tampak ZCA Bus 9 Skenario 4}
+%     \label{fig:PRIZI_24_ZCA_Bus_9_S4}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_24_ZCA_Bus_9_S4.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_24_ZCA_Bus_9_S4.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_24_ZCA_Bus_9_S4}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_24_ZCA_Bus_9_S4.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_24_ZCA_Bus_9_S4}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZCA Bus 9 Skenario 4}
-    \label{fig:PRIZI_24_ZCA_Bus_9_S4}
+    \label{fig:Impedansi_Tampak_ZCA_Bus_9_S4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_24_ZCA_Bus_9_S4} bahwa impedansi tampak pada fasa B dengan fasa C yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZCA_Bus_9_S4} bahwa impedansi tampak pada fasa B dengan fasa C yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_3p} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -987,6 +1611,10 @@ Terlihat pada gambar \ref{fig:PRIA_24_ZCA_Bus_9_S4} bahwa impedansi tampak pada 
 
 
 \subsection{Skenario 5 : Wind Turbine Type 3 External SLG Fault}
+
+Skenario ini membahas gangguan eksternal satu fasa ke tanah pada sistem dengan \textit{wind turbine type 3}. Jenis gangguan ini penting karena melibatkan komponen urutan nol dan kompensasi urutan nol pada elemen jarak fasa-tanah, sehingga perubahan arus yang terbaca dapat memengaruhi pembentukan impedansi tampak relay 21.
+
+Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s5} digunakan untuk menghubungkan karakter arus gangguan dengan pembacaan relay pada TL89. Setelah itu, analisis diarahkan pada elemen ZAG dari sisi Bus 8 dan Bus 9 untuk melihat apakah relay tetap sesuai dengan acuan gangguan eksternal atau mengalami perubahan respons akibat rendahnya arus yang terbaca.
 
 % \begin{figure}[H]
 %     \centering
@@ -1002,20 +1630,6 @@ Terlihat pada gambar \ref{fig:PRIA_24_ZCA_Bus_9_S4} bahwa impedansi tampak pada 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_25_ZAG_Bus_8_S5.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 5}
-    \label{fig:PRIA_25_ZAG_Bus_8_S5}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_25_ZAG_Bus_8_S5.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 5}
-    \label{fig:PRIZI_25_ZAG_Bus_8_S5}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
     \includegraphics[width=0.8\textwidth]{contents/chapter-4/Bus_8_Ex_SLG_S5.png}
     \caption{Arus Sekunder CT Bus 8 Skenario 5}
     \label{fig:Bus_8_Ex_SLG_S5}
@@ -1023,7 +1637,30 @@ Terlihat pada gambar \ref{fig:PRIA_24_ZCA_Bus_9_S4} bahwa impedansi tampak pada 
 
 Gambar \ref{fig:Bus_8_Ex_SLG_S5} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 5 saat terjadi gangguan eksternal SLG. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,595 A sekunder atau 1,25 p.u., arus fasa B meningkat menjadi 1,613 A sekunder atau 1,26 p.u., dan arus fasa C meningkat menjadi 1,47 A sekunder atau 1,15 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
 
-Gambar \ref{fig:PRIA_25_ZAG_Bus_8_S5} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_SLG_S5}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal SLG pada Subbab \ref{subsec:tanpa_IBR_ex_slg}, respons relay 21 sisi Bus 8 pada skenario 5 dikategorikan mengalami \textit{misoperation}.
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_25_ZAG_Bus_8_S5.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_25_ZAG_Bus_8_S5}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_25_ZAG_Bus_8_S5.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_25_ZAG_Bus_8_S5}
+    \end{subfigure}
+
+    \caption{Impedansi Tampak ZAG Bus 8 Skenario 5}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_8_S5}
+\end{figure}
+
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S5} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_SLG_S5}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal SLG pada Subbab \ref{subsec:tanpa_IBR_ex_slg}, respons relay 21 sisi Bus 8 pada skenario 5 dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1038,21 +1675,44 @@ Gambar \ref{fig:PRIA_25_ZAG_Bus_8_S5} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_26_ZAG_Bus_9_S5.png}
-    \caption{Impedansi Tampak ZAG Bus 9 Skenario 5}
-    \label{fig:PRIA_26_ZAG_Bus_9_S5}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_26_ZAG_Bus_9_S5.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 5}
+%     \label{fig:PRIA_26_ZAG_Bus_9_S5}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_26_ZAG_Bus_9_S5.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 5}
+%     \label{fig:PRIZI_26_ZAG_Bus_9_S5}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_26_ZAG_Bus_9_S5.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_26_ZAG_Bus_9_S5.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_26_ZAG_Bus_9_S5}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_26_ZAG_Bus_9_S5.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_26_ZAG_Bus_9_S5}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAG Bus 9 Skenario 5}
-    \label{fig:PRIZI_26_ZAG_Bus_9_S5}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_9_S5}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_26_ZAG_Bus_9_S5} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_slg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S5} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_slg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1068,32 +1728,16 @@ Skenario yang digunakan pada bagian ini adalah gangguan eksternal DLG pada TL79 
 
 \subsection{Skenario 2 : Wind Turbine Type 4 External DLG Fault}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/07_ZAG_Bus_8_S2_dengan_lingkaran_dan_garis.png}
-%     \caption{Impedansi Tampak ZAG Bus 8 Skenario 2}
-%     \label{fig:07_ZAG_Bus_8_S2_dengan_lingkaran_dan_garis}
-% \end{figure}
+Skenario ini digunakan untuk mengevaluasi respons relay 21 ketika sumber IBR yang terhubung ke sistem diganti menjadi \textit{wind turbine type 4}. Karena lokasi dan jenis gangguan yang digunakan adalah gangguan eksternal DLG pada TL79, hasil pada skenario ini dapat dibandingkan dengan acuan kondisi dasar gangguan eksternal DLG serta dengan pola respons pada \textit{wind turbine type 3}.
+
+Dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s2} menjadi penghubung antara karakter kontribusi arus WT Type 4 dan besaran yang dibaca relay pada TL89. Dengan konteks tersebut, pembahasan berikutnya difokuskan pada elemen ZAG, ZBG, dan ZAB dari sisi Bus 8 serta Bus 9 untuk melihat pengaruh arus gangguan terhadap syarat \textit{starting}, posisi impedansi tampak, dan keputusan operasi relay 21.
+
 
 % pada gambar \ref{fig:07_ZAG_Bus_8_S2_dengan_lingkaran_dan_garis} terlihat untuk titik impedansi tampak ZAG terlihat cukup bergerak dan relay 21 dari sisi bus 8 mengalami over reach pada zona 1 yang seharusnya masuk pada zona 2. pada sisi ini, relay juga mengalami dropout zona 2 yang seharusnya masih dalam jangkauannya.
 
 % Terlihat pada gambar \ref{fig:07_ZAG_Bus_8_S2_dengan_lingkaran_dan_garis} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 8 saat terdapat gangguan external DLG bekerja dengan acuan pada \ref{subsec:tanpa_IBR_in_dlg} relay 21 bus 8 mengalami misoperation karena mendeteksi adanya gangguan namun overreach pada zona 1 yang seharusnya pada zona 2 serta mengalami dropout pada zona 2 dan memberikan sinyal trip kepada CB pada zona 2.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_07_ZAG_Bus_8_S2.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 2}
-    \label{fig:PRIA_07_ZAG_Bus_8_S2}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_07_ZAG_Bus_8_S2.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 2}
-    \label{fig:PRIZI_07_ZAG_Bus_8_S2}
-\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -1104,7 +1748,30 @@ Skenario yang digunakan pada bagian ini adalah gangguan eksternal DLG pada TL79 
 
 Gambar \ref{fig:Bus_8_Ex_DLG_S2} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 2 saat terjadi gangguan eksternal DLG. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,281 A sekunder. Setelah gangguan terjadi, arus fasa A meningkat menjadi 1,6 A sekunder atau 1,25 p.u., arus fasa B meningkat menjadi 1,613 A sekunder atau 1,26 p.u., dan arus fasa C meningkat menjadi 1,47 A sekunder atau 1,15 p.u. Kenaikan arus tersebut menunjukkan adanya perubahan arus saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
 
-Gambar \ref{fig:PRIA_07_ZAG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_07_ZAG_Bus_8_S2.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_07_ZAG_Bus_8_S2}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_07_ZAG_Bus_8_S2.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_07_ZAG_Bus_8_S2}
+    \end{subfigure}
+
+    \caption{Impedansi Tampak ZAG Bus 8 Skenario 2}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_8_S2}
+\end{figure}
+
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1121,21 +1788,44 @@ Gambar \ref{fig:PRIA_07_ZAG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_08_ZBG_Bus_8_S2.png}
-    \caption{Impedansi Tampak ZBG Bus 8 Skenario 2}
-    \label{fig:PRIA_08_ZBG_Bus_8_S2}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_08_ZBG_Bus_8_S2.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 2}
+%     \label{fig:PRIA_08_ZBG_Bus_8_S2}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_08_ZBG_Bus_8_S2.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 2}
+%     \label{fig:PRIZI_08_ZBG_Bus_8_S2}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_08_ZBG_Bus_8_S2.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_08_ZBG_Bus_8_S2.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_08_ZBG_Bus_8_S2}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_08_ZBG_Bus_8_S2.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_08_ZBG_Bus_8_S2}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 8 Skenario 2}
-    \label{fig:PRIZI_08_ZBG_Bus_8_S2}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_8_S2}
 \end{figure}
 
-Gambar \ref{fig:PRIA_08_ZBG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, yaitu arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2}, yaitu arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1152,21 +1842,44 @@ Gambar \ref{fig:PRIA_08_ZBG_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_09_ZAB_Bus_8_S2.png}
-    \caption{Impedansi Tampak ZAB Bus 8 Skenario 2}
-    \label{fig:PRIA_09_ZAB_Bus_8_S2}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_09_ZAB_Bus_8_S2.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 2}
+%     \label{fig:PRIA_09_ZAB_Bus_8_S2}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_09_ZAB_Bus_8_S2.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 2}
+%     \label{fig:PRIZI_09_ZAB_Bus_8_S2}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_09_ZAB_Bus_8_S2.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_09_ZAB_Bus_8_S2.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_09_ZAB_Bus_8_S2}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_09_ZAB_Bus_8_S2.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_09_ZAB_Bus_8_S2}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 8 Skenario 2}
-    \label{fig:PRIZI_09_ZAB_Bus_8_S2}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_8_S2}
 \end{figure}
 
-Gambar \ref{fig:PRIA_09_ZAB_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 2 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S2} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 2 menunjukkan \textit{misoperation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1181,21 +1894,44 @@ Gambar \ref{fig:PRIA_09_ZAB_Bus_8_S2} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_10_ZAG_Bus_9_S2.png}
-    \caption{Impedansi Tampak ZAG Bus 9 Skenario 2}
-    \label{fig:PRIA_10_ZAG_Bus_9_S2}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_10_ZAG_Bus_9_S2.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 2}
+%     \label{fig:PRIA_10_ZAG_Bus_9_S2}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_10_ZAG_Bus_9_S2.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 2}
+%     \label{fig:PRIZI_10_ZAG_Bus_9_S2}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_10_ZAG_Bus_9_S2.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_10_ZAG_Bus_9_S2.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_10_ZAG_Bus_9_S2}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_10_ZAG_Bus_9_S2.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_10_ZAG_Bus_9_S2}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAG Bus 9 Skenario 2}
-    \label{fig:PRIZI_10_ZAG_Bus_9_S2}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_9_S2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_10_ZAG_Bus_9_S2} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S2} bahwa impedansi tampak pada fasa A dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1211,21 +1947,44 @@ Terlihat pada gambar \ref{fig:PRIA_10_ZAG_Bus_9_S2} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_11_ZBG_Bus_9_S2.png}
-    \caption{Impedansi Tampak ZBG Bus 9 Skenario 2}
-    \label{fig:PRIA_11_ZBG_Bus_9_S2}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_11_ZBG_Bus_9_S2.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 2}
+%     \label{fig:PRIA_11_ZBG_Bus_9_S2}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_11_ZBG_Bus_9_S2.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 2}
+%     \label{fig:PRIZI_11_ZBG_Bus_9_S2}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_11_ZBG_Bus_9_S2.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_11_ZBG_Bus_9_S2.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_11_ZBG_Bus_9_S2}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_11_ZBG_Bus_9_S2.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_11_ZBG_Bus_9_S2}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 9 Skenario 2}
-    \label{fig:PRIZI_11_ZBG_Bus_9_S2}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_9_S2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_11_ZBG_Bus_9_S2} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S2} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1241,21 +2000,44 @@ Terlihat pada gambar \ref{fig:PRIA_11_ZBG_Bus_9_S2} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_12_ZAB_Bus_9_S2.png}
-    \caption{Impedansi Tampak ZAB Bus 9 Skenario 2}
-    \label{fig:PRIA_12_ZAB_Bus_9_S2}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_12_ZAB_Bus_9_S2.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 2}
+%     \label{fig:PRIA_12_ZAB_Bus_9_S2}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_12_ZAB_Bus_9_S2.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 2}
+%     \label{fig:PRIZI_12_ZAB_Bus_9_S2}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_12_ZAB_Bus_9_S2.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_12_ZAB_Bus_9_S2.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_12_ZAB_Bus_9_S2}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_12_ZAB_Bus_9_S2.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_12_ZAB_Bus_9_S2}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 9 Skenario 2}
-    \label{fig:PRIZI_12_ZAB_Bus_9_S2}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_9_S2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_12_ZAB_Bus_9_S2} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S2} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1272,6 +2054,10 @@ Hasil pada sisi Bus 8 dan Bus 9 kembali dibandingkan terhadap kondisi dasar gang
 
 \subsection{Skenario 6 : Photovoltaic External DLG Fault}
 
+Skenario ini membahas respons relay 21 ketika jenis IBR yang digunakan adalah \textit{photovoltaic}. Gangguan yang diterapkan tetap berupa gangguan eksternal DLG pada TL79 dengan TL78 \textit{out of service}, sehingga hasilnya dapat dibandingkan langsung dengan skenario eksternal DLG lain yang telah dibahas sebelumnya.
+
+Hasil dekomposisi komponen urutan arus pada Gambar \ref{fig:decomposition_sequence_current_s6} digunakan sebagai dasar untuk membaca hubungan antara karakter arus pada sistem dengan PV dan pembacaan relay pada saluran TL89. Setelah konteks arus tersebut ditetapkan, analisis dilanjutkan pada impedansi tampak elemen ZAG, ZBG, dan ZAB dari sisi Bus 8 serta Bus 9 untuk menilai apakah relay 21 tetap mengikuti acuan gangguan eksternal atau menunjukkan perubahan respons.
+
 % \begin{figure}[H]
 %     \centering
 %     \includegraphics[width=0.8\textwidth]{contents/chapter-4/27_ZAG_Bus_8_S6_dengan_lingkaran_dan_garis.png}
@@ -1285,20 +2071,6 @@ Hasil pada sisi Bus 8 dan Bus 9 kembali dibandingkan terhadap kondisi dasar gang
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_27_ZAG_Bus_8_S6.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 6}
-    \label{fig:PRIA_27_ZAG_Bus_8_S6}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_27_ZAG_Bus_8_S6.png}
-    \caption{Impedansi Tampak ZAG Bus 8 Skenario 6}
-    \label{fig:PRIZI_27_ZAG_Bus_8_S6}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
     \includegraphics[width=0.8\textwidth]{contents/chapter-4/Bus_8_Ex_DLG_S6.png}
     \caption{Arus Sekunder CT Bus 8 Skenario 6}
     \label{fig:Bus_8_Ex_DLG_S6}
@@ -1306,7 +2078,30 @@ Hasil pada sisi Bus 8 dan Bus 9 kembali dibandingkan terhadap kondisi dasar gang
 
 Gambar \ref{fig:Bus_8_Ex_DLG_S6} menunjukkan arus sekunder CT pada Bus 8 untuk skenario 6 saat terjadi gangguan eksternal DLG. Sebelum gangguan, arus pada ketiga fasa berada pada nilai 1,285 A sekunder. Setelah gangguan terjadi, arus fasa A menurun menjadi 1,129 A sekunder atau 0,88 p.u., arus fasa B meningkat menjadi 1,355 A sekunder atau 1,05 p.u., dan arus fasa C menurun menjadi 1,258 A sekunder atau 0,98 p.u. Perubahan arus tersebut menunjukkan adanya respons saat gangguan, tetapi nilainya masih belum memenuhi arus minimum yang diperlukan untuk membuat relay 21 sisi Bus 8 aktif.
 
-Gambar \ref{fig:PRIA_27_ZAG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_27_ZAG_Bus_8_S6.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_27_ZAG_Bus_8_S6}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_27_ZAG_Bus_8_S6.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_27_ZAG_Bus_8_S6}
+    \end{subfigure}
+
+    \caption{Impedansi Tampak ZAG Bus 8 Skenario 6}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_8_S6}
+\end{figure}
+
+Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa A dengan ground yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Kondisi ini sejalan dengan pembacaan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, karena arus gangguan yang terbaca masih cukup kecil dan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan mengacu pada kondisi dasar gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini dikategorikan mengalami \textit{misoperation}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1320,21 +2115,44 @@ Gambar \ref{fig:PRIA_27_ZAG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_28_ZBG_Bus_8_S6.png}
-    \caption{Impedansi Tampak ZBG Bus 8 Skenario 6}
-    \label{fig:PRIA_28_ZBG_Bus_8_S6}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_28_ZBG_Bus_8_S6.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 6}
+%     \label{fig:PRIA_28_ZBG_Bus_8_S6}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_28_ZBG_Bus_8_S6.png}
+%     \caption{Impedansi Tampak ZBG Bus 8 Skenario 6}
+%     \label{fig:PRIZI_28_ZBG_Bus_8_S6}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_28_ZBG_Bus_8_S6.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_28_ZBG_Bus_8_S6.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_28_ZBG_Bus_8_S6}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_28_ZBG_Bus_8_S6.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_28_ZBG_Bus_8_S6}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 8 Skenario 6}
-    \label{fig:PRIZI_28_ZBG_Bus_8_S6}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_8_S6}
 \end{figure}
 
-Gambar \ref{fig:PRIA_28_ZBG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, yaitu arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa B dengan ground yang dibaca oleh relay 21 sisi Bus 8 juga tidak masuk ke dalam zona proteksi. Hasil tersebut masih konsisten dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6}, yaitu arus gangguan belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Oleh karena itu, jika dibandingkan dengan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada elemen ini juga menunjukkan \textit{misoperation}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1348,21 +2166,44 @@ Gambar \ref{fig:PRIA_28_ZBG_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_29_ZAB_Bus_8_S6.png}
-    \caption{Impedansi Tampak ZAB Bus 8 Skenario 6}
-    \label{fig:PRIA_29_ZAB_Bus_8_S6}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_29_ZAB_Bus_8_S6.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 6}
+%     \label{fig:PRIA_29_ZAB_Bus_8_S6}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_29_ZAB_Bus_8_S6.png}
+%     \caption{Impedansi Tampak ZAB Bus 8 Skenario 6}
+%     \label{fig:PRIZI_29_ZAB_Bus_8_S6}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_29_ZAB_Bus_8_S6.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_29_ZAB_Bus_8_S6.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_29_ZAB_Bus_8_S6}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_29_ZAB_Bus_8_S6.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_29_ZAB_Bus_8_S6}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAB Bus 8 Skenario 6}
-    \label{fig:PRIZI_29_ZAB_Bus_8_S6}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_8_S6}
 \end{figure}
 
-Gambar \ref{fig:PRIA_29_ZAB_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 6 menunjukkan \textit{misoperation}.
+Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fasa A dengan fasa B yang dibaca oleh relay 21 sisi Bus 8 tidak masuk ke dalam zona proteksi. Sama seperti dua elemen sebelumnya, kondisi ini berkaitan dengan arus sekunder CT pada Gambar \ref{fig:Bus_8_Ex_DLG_S6} yang belum memenuhi syarat \textit{starting} untuk membuat relay aktif. Dengan demikian, berdasarkan acuan gangguan eksternal DLG pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}, respons relay 21 sisi Bus 8 pada skenario 6 menunjukkan \textit{misoperation}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1376,21 +2217,44 @@ Gambar \ref{fig:PRIA_29_ZAB_Bus_8_S6} menunjukkan bahwa impedansi tampak loop fa
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_30_ZAG_Bus_9_S6.png}
-    \caption{Impedansi Tampak ZAG Bus 9 Skenario 6}
-    \label{fig:PRIA_30_ZAG_Bus_9_S6}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_30_ZAG_Bus_9_S6.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 6}
+%     \label{fig:PRIA_30_ZAG_Bus_9_S6}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_30_ZAG_Bus_9_S6.png}
+%     \caption{Impedansi Tampak ZAG Bus 9 Skenario 6}
+%     \label{fig:PRIZI_30_ZAG_Bus_9_S6}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_30_ZAG_Bus_9_S6.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_30_ZAG_Bus_9_S6.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_30_ZAG_Bus_9_S6}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_30_ZAG_Bus_9_S6.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_30_ZAG_Bus_9_S6}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZAG Bus 9 Skenario 6}
-    \label{fig:PRIZI_30_ZAG_Bus_9_S6}
+    \label{fig:Impedansi_Tampak_ZAG_Bus_9_S6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_30_ZAG_Bus_9_S6} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S6} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 
 
@@ -1405,21 +2269,44 @@ Terlihat pada gambar \ref{fig:PRIA_30_ZAG_Bus_9_S6} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_31_ZBG_Bus_9_S6.png}
-    \caption{Impedansi Tampak ZBG Bus 9 Skenario 6}
-    \label{fig:PRIA_31_ZBG_Bus_9_S6}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_31_ZBG_Bus_9_S6.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 6}
+%     \label{fig:PRIA_31_ZBG_Bus_9_S6}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_31_ZBG_Bus_9_S6.png}
+%     \caption{Impedansi Tampak ZBG Bus 9 Skenario 6}
+%     \label{fig:PRIZI_31_ZBG_Bus_9_S6}
+% \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIZI_31_ZBG_Bus_9_S6.png}
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_31_ZBG_Bus_9_S6.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_31_ZBG_Bus_9_S6}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_31_ZBG_Bus_9_S6.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_31_ZBG_Bus_9_S6}
+    \end{subfigure}
+
     \caption{Impedansi Tampak ZBG Bus 9 Skenario 6}
-    \label{fig:PRIZI_31_ZBG_Bus_9_S6}
+    \label{fig:Impedansi_Tampak_ZBG_Bus_9_S6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_31_ZBG_Bus_9_S6} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB. Walaupun impedansi tampak yang terlihat memasuki zona 1 namun elemen phase directional tidak membaca gangguan terdapat di arah depan relay. 
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZBG_Bus_9_S6} bahwa impedansi tampak pada fasa B dengan ground yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB. Walaupun impedansi tampak yang terlihat memasuki zona 1 namun elemen phase directional tidak membaca gangguan terdapat di arah depan relay. 
 
 
 
@@ -1436,12 +2323,12 @@ Terlihat pada gambar \ref{fig:PRIA_31_ZBG_Bus_9_S6} bahwa impedansi tampak pada 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SISI PRIMER%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_32_ZAB_Bus_9_S6.png}
-    \caption{Impedansi Tampak ZAB Bus 9 Skenario 6}
-    \label{fig:PRIA_32_ZAB_Bus_9_S6}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{contents/chapter-4/PRIA_32_ZAB_Bus_9_S6.png}
+%     \caption{Impedansi Tampak ZAB Bus 9 Skenario 6}
+%     \label{fig:PRIA_32_ZAB_Bus_9_S6}
+% \end{figure}
 
 % \begin{figure}[H]
 %     \centering
@@ -1450,7 +2337,30 @@ Terlihat pada gambar \ref{fig:PRIA_31_ZBG_Bus_9_S6} bahwa impedansi tampak pada 
 %     \label{fig:PRIZI_32_ZAB_Bus_9_S6}
 % \end{figure}
 
-Terlihat pada gambar \ref{fig:PRIA_32_ZAB_Bus_9_S6} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
+\begin{figure}[H]
+    \centering
+
+    % Gambar sebelah kiri
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIA_32_ZAB_Bus_9_S6.png}
+        \caption{Seluruh Impedansi Tampak}
+        \label{fig:PRIA_32_ZAB_Bus_9_S6}
+    \end{subfigure}
+    \hfill
+    % Gambar sebelah kanan
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{contents/chapter-4/PRIZI_32_ZAB_Bus_9_S6.png}
+        \caption{Zoom In Pada Zona Proteksi}
+        \label{fig:PRIZI_32_ZAB_Bus_9_S6}
+    \end{subfigure}
+
+    \caption{Impedansi Tampak ZAB Bus 9 Skenario 6}
+    \label{fig:Impedansi_Tampak_ZAB_Bus_9_S6}
+\end{figure}
+
+Terlihat pada gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S6} bahwa impedansi tampak pada fasa A dengan fasa B yang dibaca oleh relay 21 sisi bus 9 saat terdapat gangguan bekerja dengan baik sesuai acuan pada \ref{subsec:tanpa_IBR_ex_dlg} relay 21 bus 9 tidak mendeteksi adanya gangguan sehingga tidak mengirimkan sinyal trip kepada CB.
 
 
 
