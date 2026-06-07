@@ -1,26 +1,4 @@
 % !TEX root = ../../main.tex
-Intisari ditulis menggunakan bahasa Indonesia dengan jarak antar baris 1 spasi dan maksimal 1 halaman. Intisari sekurang-kurangnya berisi tentang latar belakang dan tujuan penelitian, metodologi yang digunakan, hasil penelitian, kesimpulan dan implikasi, dan Kata kunci yang berhubungan dengan penelitian.
+Integrasi \textit{inverter-based resources} (IBR) pada sistem transmisi mengubah karakteristik arus gangguan yang menjadi dasar kerja proteksi saluran. Perubahan tersebut dapat memengaruhi relay jarak atau relay 21 yang bekerja berdasarkan impedansi tampak, serta relay diferensial saluran atau relay 87L yang bekerja berdasarkan perbandingan arus pada kedua ujung saluran. Penelitian ini bertujuan menganalisis karakteristik operasi relay 21 dan relay 87L pada sistem transmisi terintegrasi IBR, membandingkan pengaruh \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}, serta mengevaluasi kelayakan penggunaan setting proteksi konvensional pada skenario yang diuji. Penelitian dilakukan melalui simulasi DIgSILENT PowerFactory menggunakan sistem \textit{modified two-area Kundur}. Saluran TL89 antara Bus 8 dan Bus 9 digunakan sebagai objek proteksi. Kondisi dasar tanpa IBR digunakan sebagai acuan, kemudian dibandingkan dengan kondisi sistem yang terintegrasi WT Type 3, WT Type 4, dan \textit{photovoltaic}. Setting relay 21 disusun berdasarkan kondisi sistem konvensional, sedangkan relay 87L menggunakan setting \textit{default} pada model. Evaluasi dilakukan pada skenario gangguan internal DLG di TL89 serta gangguan eksternal DLG, tiga fasa, dan SLG di TL79 dengan kondisi TL78 \textit{out of service}. Parameter yang diamati meliputi status operasi, zona dan impedansi tampak relay 21, serta hubungan arus diferensial dan arus \textit{restraint} relay 87L. Hasil simulasi menunjukkan bahwa relay 21 dengan setting konvensional masih bekerja sesuai acuan pada gangguan internal DLG di TL89. Namun, pada gangguan eksternal di TL79 dengan TL78 \textit{out of service}, relay 21 sisi Bus 8 berulang kali tidak memenuhi syarat \textit{starting} karena arus gangguan yang terbaca rendah, sehingga responsnya dikategorikan sebagai \textit{misoperation}. Sisi Bus 9 umumnya tetap tidak trip karena gangguan tidak terbaca berada di arah depan relay. Pada skenario dengan \textit{photovoltaic}, impedansi tampak elemen ZBG sisi Bus 9 sempat masuk zona 1, tetapi operasi tertahan oleh elemen \textit{phase directional}. Sebaliknya, relay 87L menunjukkan respons yang lebih konsisten. Pada gangguan internal, arus diferensial berada pada daerah operasi sehingga relay memberikan perintah trip, sedangkan pada gangguan eksternal titik arus tetap berada pada daerah penahan sehingga relay tidak memberikan perintah trip. Berdasarkan hasil tersebut, setting konvensional relay 21 hanya layak secara terbatas pada sistem dan skenario yang diuji, khususnya ketika arus gangguan, impedansi tampak, dan arah gangguan masih mendukung kerja relay. Evaluasi ulang diperlukan untuk gangguan eksternal, konfigurasi saluran \textit{out of service}, kecukupan arus \textit{starting}, dan pembacaan arah gangguan. Relay 87L menunjukkan kelayakan yang lebih konsisten pada kombinasi skenario penelitian, tetapi kesimpulan ini tetap terbatas pada model sistem, jenis dan level IBR, lokasi gangguan, konfigurasi jaringan, kontrol inverter, serta setting yang digunakan.
 
-Kata Kunci ditulis maksimal 5 kata yang paling berhubungan dengan isi skripsi. Silakan mengacu pada ACM / IEEE \textit{Computing classification} jika Anda adalah mahasiswa Sarjana TI \textcolor{blue}{http://www.acm.org/about/class/} atau mengacu kepada IEEE keywords \textcolor{blue}{http://www.ieee.org/documents/taxonomy\_v101.pdf} jika Anda berasal dari Prodi Sarjana TE.
-
-\noindent{Kata kunci} : Kata kunci 1, Kata kunci 2, Kata kunci 3, Kata kunci 4, Kata kunci 5
-
-\vspace{1cm}
-
-%HAPUS YANG TIDAK PERLU
-%-------------------------------------------------
-\noindent\fbox{%
-	\parbox{\textwidth}{%
-\textbf{Contoh Abstrak Teknik Elektro:} \\
-
-\hspace{1cm} "Penelitian ini bertujuan untuk mengembangkan sistem pengendalian suhu ruangan dengan menggunakan microcontroller. Metodologi yang digunakan adalah desain sirkuit, implementasi sistem pengendalian, dan pengujian performa. Hasil penelitian menunjukkan 
-bahwa sistem pengendalian suhu ruangan yang dikembangkan mampu mengendalikan suhu ruangan dengan akurasi sebesar ±0,5°C. Kesimpulan dari penelitian ini adalah sistem pengendalian suhu ruangan yang dikembangkan efektif dan efisien. \\
-
-Kata kunci: microcontroller, sistem pengendalian suhu, akurasi."
-\vspace{5mm}
-
-
-	}%
-}
-
-%-------------------------------------------------
+\noindent{Kata kunci} : \textit{inverter-based resources}, relay 21, relay 87L, proteksi transmisi, setting konvensional
