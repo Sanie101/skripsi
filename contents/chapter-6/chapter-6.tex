@@ -3,14 +3,28 @@
 
 \section{Kesimpulan}
 
-Kesimpulan dapat diawali dengan apa yang dilakukan dengan tugas akhir ini lalu 
-dilanjutkan dengan poin-poin yang menjawab tujuan penelitian, apakah tujuan sudah tercapai atau belum, tentunya berdasarkan data ataupun hasil dari Bab pembahasan sebelumnya. Dalam beberapa hal, kesimpulan dapat juga berisi tentang temuan/\textit{findings} yang Anda dapatkan setelah melakukan pengamatan dan atau analisis terhadap hasil penelitian. 
+Penelitian ini mengevaluasi karakteristik operasi relay 21 dan relay 87L pada saluran TL89 dalam sistem \textit{modified two-area Kundur} yang terintegrasi \textit{inverter-based resources} (IBR). Evaluasi dilakukan melalui simulasi DIgSILENT PowerFactory dengan membandingkan kondisi dasar tanpa IBR terhadap sistem yang menggunakan \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}. Setting relay 21 dipertahankan berdasarkan kondisi sistem konvensional, sedangkan relay 87L menggunakan setting \textit{default} pada model. Hasil dianalisis secara kualitatif dan komparatif berdasarkan impedansi tampak dan keputusan operasi relay 21 serta hubungan arus diferensial dan arus \textit{restraint} pada relay 87L. Berdasarkan hasil simulasi dan pembahasan, diperoleh kesimpulan sebagai berikut:
 
-Kesimpulan menjawab seberapa jauh rumusan masalah tercapai berdasarkan hasil penelitian. Semua rumusan masalah harus disimpulkan berdasarkan data penelitian.
+\begin{enumerate}
+	\item Relay 21 dengan setting konvensional masih bekerja sesuai acuan pada gangguan internal DLG di TL89. Pada Skenario 1 dengan \textit{wind turbine type 3}, relay sisi Bus 8 dan Bus 9 mendeteksi gangguan dan memberikan perintah trip sesuai zona yang terbaca. Namun, pada Skenario 2 sampai Skenario 6 berupa gangguan eksternal di TL79 ketika TL78 \textit{out of service}, relay sisi Bus 8 tidak memenuhi syarat \textit{starting} karena arus gangguan yang terbaca rendah. Respons tersebut berbeda dari kondisi dasar dan dikategorikan sebagai \textit{misoperation} pada pembahasan penelitian. Relay sisi Bus 9 umumnya tetap tidak trip karena gangguan tidak terbaca berada di arah depan relay.
+
+	\item Relay 87L menunjukkan respons yang konsisten pada skenario yang diuji. Pada gangguan internal DLG dengan \textit{wind turbine type 3}, arus diferensial berada di atas batas operasi sehingga relay memberikan perintah trip. Pada gangguan eksternal DLG, tiga fasa, dan SLG dengan \textit{wind turbine type 3}, serta gangguan eksternal DLG dengan \textit{wind turbine type 4} dan \textit{photovoltaic}, titik arus tetap berada di bawah batas operasi sehingga relay berada pada daerah penahan dan tidak memberikan perintah trip. Dengan demikian, pada hasil yang tersedia tidak ditemukan salah trip untuk gangguan eksternal maupun gagal trip untuk gangguan internal pada relay 87L.
+
+	\item Perbedaan jenis IBR memengaruhi besaran arus dan detail pembacaan relay, tetapi tidak menjadi satu-satunya penentu keputusan operasi. WT Type 4 memberikan kontribusi hubung singkat terbesar pada pemodelan, tetapi pada gangguan eksternal DLG relay 21 sisi Bus 8 tetap tidak memenuhi syarat \textit{starting}. PV tidak memberikan kontribusi arus hubung singkat karena opsi \textit{No short-circuit contribution} aktif, dan pada Skenario 6 relay 21 sisi Bus 8 juga tidak memenuhi syarat \textit{starting}; pada sisi Bus 9, impedansi tampak elemen ZBG sempat masuk zona 1 tetapi operasi tertahan oleh elemen \textit{phase directional}. Pada relay 87L, pergantian WT Type 3, WT Type 4, dan PV tidak mengubah keputusan operasi untuk gangguan eksternal DLG yang dibandingkan, karena seluruh titik arus tetap berada di bawah batas operasi.
+
+	\item Setting konvensional relay 21 hanya layak secara terbatas pada sistem dan skenario yang diuji. Setting tersebut masih memadai untuk gangguan internal ketika arus gangguan, impedansi tampak, dan arah gangguan mendukung kerja relay, tetapi perlu dievaluasi ulang pada gangguan eksternal, konfigurasi saluran \textit{out of service}, dan kondisi arus masukan yang rendah. Sebaliknya, setting relay 87L masih layak dan lebih konsisten daripada relay 21 untuk kombinasi skenario penelitian karena tetap dapat membedakan daerah operasi dan daerah penahan. Kesimpulan kelayakan ini terbatas pada model, level penetrasi IBR, jenis dan lokasi gangguan, konfigurasi jaringan, kontrol inverter, serta setting yang digunakan dalam penelitian.
+\end{enumerate}
 
 \section{Saran}
 
-Saran berisi hal-hal yang bisa dilanjutkan dari penelitian atau skripsi ini, yang belum dilakukan karena batasan permasalahan. Saran bukan berisi saran kepada sistem atau pengguna, tetapi saran diberikan kepada aspek penelitian yang dapat dikembangkan dan ditambahkan di penelitian atau skripsi selanjutnya.
+Berdasarkan batasan penelitian dan hasil yang diperoleh, pengembangan penelitian selanjutnya dapat dilakukan melalui beberapa hal berikut:
 
+\begin{enumerate}
+	\item Memvariasikan level penetrasi dan karakteristik kontrol WT Type 3, WT Type 4, dan PV untuk menentukan pengaruh perubahan kapasitas serta respons kontrol IBR terhadap impedansi tampak relay 21 dan karakteristik operasi relay 87L.
 
-\noindent \textcolor{red}{Catatan: Mahasiswa perlu melihat sinkronisasi antara rumusan masalah, tujuan, metode, hasil penelitian, dan kesimpulan.}
+	\item Menguji setiap jenis IBR dengan susunan skenario yang setara, meliputi gangguan internal dan eksternal untuk jenis gangguan DLG, SLG, dan tiga fasa pada kondisi jaringan normal maupun ketika saluran \textit{out of service}. Pengujian yang setara diperlukan agar perbandingan antarjenis IBR tidak terbatas pada skenario tertentu.
+
+	\item Mengembangkan dan menguji penyesuaian setting relay 21, khususnya pada elemen \textit{starting}, jangkauan zona impedansi, dan elemen arah, kemudian membandingkan hasilnya dengan setting konvensional yang digunakan dalam penelitian ini. Kajian tersebut dapat diarahkan pada \textit{re-setting} atau proteksi adaptif untuk kondisi arus gangguan rendah.
+
+	\item Memperluas evaluasi dengan mengkaji koordinasi relay 21 dan relay 87L, koordinasi proteksi utama dan cadangan, serta perubahan konfigurasi jaringan yang lebih beragam. Pengembangan ini diperlukan karena penelitian ini mengevaluasi kedua relay secara individual dan belum membahas koordinasi proteksi.
+\end{enumerate}

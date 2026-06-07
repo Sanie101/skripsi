@@ -358,7 +358,7 @@ Hasil kontribusi hubung singkat pada bagian ini digunakan sebagai konteks awal u
 
 \subsection{Wind Turbine Type 3}
 
-Pembahasan pada model \textit{wind turbine type 3} diawali dari pengaturan hubung singkat yang digunakan pada simulasi. Pengaturan ini penting karena WT Type 3 memiliki karakteristik yang berbeda dari WT Type 4. WT Type 3 masih menggunakan generator induksi \textit{doubly fed}, tetapi kontribusi arus gangguannya pada simulasi tetap bergantung pada parameter hubung singkat yang dimasukkan pada model.
+Pembahasan model \textit{wind turbine type 3} diawali dengan meninjau pengaturan hubung singkat yang digunakan dalam simulasi. WT Type 3 menggunakan \textit{doubly fed asynchronous generator} sehingga karakter kontribusi arus gangguannya ditentukan oleh parameter hubung singkat pada model, termasuk besar arus awal, faktor puncak, dan kontribusi arus keadaan tunak.
 
 \begin{figure}[H]
     \centering
@@ -367,9 +367,11 @@ Pembahasan pada model \textit{wind turbine type 3} diawali dari pengaturan hubun
     \label{fig:SC_Setting_WTT3}
 \end{figure}
 
-Gambar \ref{fig:SC_Setting_WTT3} menunjukkan bahwa model WT Type 3 pada tab VDE/IEC untuk hubung singkat menggunakan tipe unit \textit{doubly fed asynchronous generator} dengan transformator unit yang dimodelkan secara eksternal. Pada pengaturan tersebut, opsi \textit{No Short-Circuit Contribution} tidak diaktifkan. Namun, nilai kontribusi arus hubung singkat yang dimasukkan pada model bernilai 0 $\mathrm{kA}$, sehingga model tidak memberikan kontribusi arus gangguan pada kondisi yang dihitung.
+Gambar \ref{fig:SC_Setting_WTT3} menunjukkan pengaturan hubung singkat WT Type 3 pada tab VDE/IEC. Model menggunakan tipe unit \textit{doubly fed asynchronous generator} dengan transformator unit yang dimodelkan secara eksternal. Opsi \textit{No Short-Circuit Contribution} tidak diaktifkan, sehingga WT Type 3 diperhitungkan sebagai sumber kontribusi arus hubung singkat dalam simulasi.
 
-Parameter pada Gambar \ref{fig:SC_Setting_WTT3} memperlihatkan bahwa nilai \textit{max. instantaneous short-circuit current} ditetapkan sebesar 0 $\mathrm{kA}$. Pada bagian \textit{steady-state short-circuit current contribution}, arus maksimum dan arus minimum juga bernilai 0 $\mathrm{kA}$. Selain itu, impedansi urutan negatif pada parameter $r_2$ dan $x_2$ ditetapkan sangat besar, yaitu 9999 p.u. Kombinasi pengaturan ini menunjukkan bahwa WT Type 3 tidak menyediakan jalur kontribusi arus gangguan yang signifikan pada simulasi hubung singkat.
+Pada bagian \textit{initial symmetrical short-circuit current contribution}, nilai \textit{max. instantaneous short-circuit current} ($i_{\mathrm{WDmax}}$) ditetapkan sebesar 0,15 $\mathrm{kA}$, dengan faktor $\kappa_{\mathrm{WD}}$ sebesar 1,7 dan rasio $R_{\mathrm{WD}}/X_{\mathrm{WD}}$ sebesar 0,1. Parameter tersebut menunjukkan bahwa WT Type 3 memberikan kontribusi pada periode awal gangguan. Sementara itu, arus maksimum dan minimum pada bagian \textit{steady-state short-circuit current contribution} bernilai 0 $\mathrm{kA}$, sehingga model tidak mempertahankan kontribusi arus hubung singkat pada keadaan tunak.
+
+Nilai resistansi dan reaktansi urutan negatif, masing-masing $r_2$ dan $x_2$, ditetapkan sebesar 9999 p.u. Nilai impedansi yang sangat besar ini membatasi kontribusi arus urutan negatif dari WT Type 3. Dengan demikian, pengaturan pada Gambar \ref{fig:SC_Setting_WTT3} menggambarkan kontribusi arus gangguan yang muncul pada periode awal, tidak berlanjut pada keadaan tunak, dan sangat terbatas untuk komponen urutan negatif.
 
 \begin{figure}[H]
     \centering
@@ -378,13 +380,15 @@ Parameter pada Gambar \ref{fig:SC_Setting_WTT3} memperlihatkan bahwa nilai \text
     \label{fig:kontribusi_WTType3}
 \end{figure}
 
-Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType3}, kontribusi hubung singkat dari \textit{wind turbine type 3} terbaca sebesar 0 MVA. Hasil ini konsisten dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT3}, karena arus hubung singkat awal maupun tunak pada model ditetapkan sebesar 0 $\mathrm{kA}$. Dengan demikian, WT Type 3 tidak menambah komponen arus gangguan dari sisi IBR terhadap titik gangguan yang dievaluasi.
+Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType3}, kontribusi hubung singkat dari \textit{wind turbine type 3} terbaca sebesar 119,7 MVA atau sekitar 1,2 p.u. pada basis daya 100 MVA. Hasil ini selaras dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT3}, khususnya nilai $i_{\mathrm{WDmax}}$ sebesar 0,15 $\mathrm{kA}$ yang mengaktifkan kontribusi arus pada periode awal gangguan.
 
-Implikasinya, respons proteksi pada skenario dengan WT Type 3 tidak dapat dijelaskan sebagai akibat tambahan kontribusi arus hubung singkat dari unit tersebut. Jika pada bagian berikutnya terdapat perubahan pembacaan impedansi tampak, arus diferensial, arus \textit{restraint}, atau keputusan operasi relay, perubahan tersebut perlu dikaitkan dengan konfigurasi jaringan, lokasi gangguan, dan kontribusi dari sumber lain yang masih aktif. Dengan demikian, hasil pada subbagian ini menjadi dasar bahwa pengaruh WT Type 3 pada analisis relay berikutnya bukan berasal dari injeksi arus gangguan tambahan dari unit WT Type 3.
+Selain nilai daya hubung singkat tersebut, Gambar \ref{fig:kontribusi_WTType3} menunjukkan bahwa kontribusi arus hubung singkat mencapai nilai puncak sebesar 245,444 $\mathrm{kA}$ atau setara dengan 3,05 p.u. Setelah periode puncak gangguan, kontribusi arus turun menjadi 100,132 $\mathrm{kA}$ atau setara dengan 1,24 p.u. Penurunan ini menunjukkan bahwa kontribusi WT Type 3 paling besar terjadi pada periode awal gangguan, kemudian berkurang setelah kondisi transien awal terlewati.
+
+Implikasinya, kontribusi awal WT Type 3 perlu diperhitungkan ketika menganalisis pembacaan impedansi tampak, arus diferensial, arus \textit{restraint}, dan keputusan operasi relay sesaat setelah gangguan. Perbedaan antara nilai puncak dan nilai setelah gangguan menunjukkan bahwa besaran arus yang diterima relay berubah sepanjang periode gangguan. Respons relay pada bagian berikutnya tetap perlu dibaca bersama konfigurasi jaringan, lokasi gangguan, serta kontribusi sumber lain yang masih aktif.
 
 \subsection{Wind Turbine Type 4}
 
-Pembahasan pada model \textit{wind turbine type 4} diawali dari pengaturan hubung singkat yang digunakan pada simulasi. Berbeda dengan WT Type 3 dan PV yang tidak menunjukkan kontribusi arus hubung singkat pada hasil perbandingan ini, model WT Type 4 masih memiliki parameter kontribusi arus gangguan yang aktif. Oleh karena itu, pengaturan pada menu hubung singkat perlu dicermati sebelum hasil kontribusi pada sistem dianalisis.
+Pembahasan pada model \textit{wind turbine type 4} diawali dari pengaturan hubung singkat yang digunakan pada simulasi. Model WT Type 4 juga memiliki parameter kontribusi arus gangguan yang aktif, tetapi karakter dan besar parameternya berbeda dari WT Type 3. Oleh karena itu, pengaturan pada menu hubung singkat perlu dicermati sebelum hasil kontribusi pada sistem dianalisis.
 
 \begin{figure}[H]
     \centering
@@ -404,11 +408,11 @@ Parameter pada Gambar \ref{fig:SC_Setting_WTT4} memperlihatkan bahwa arus hubung
     \label{fig:kontribusi_WTType4}
 \end{figure}
 
-Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType4}, \textit{wind turbine type 4} memberikan kontribusi hubung singkat sebesar 110 MVA atau setara dengan 1,1 p.u. Hasil ini konsisten dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT4}, karena opsi kontribusi hubung singkat tidak dinonaktifkan dan model masih memiliki batas arus gangguan yang didefinisikan.
+Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType4}, \textit{wind turbine type 4} memberikan kontribusi daya hubung singkat sebesar 110 MVA atau setara dengan 1,1 p.u. Hasil ini konsisten dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT4}, karena opsi kontribusi hubung singkat tidak dinonaktifkan dan model masih memiliki batas arus gangguan yang didefinisikan.
 
-Selain dalam satuan daya hubung singkat, Gambar \ref{fig:kontribusi_WTType4} juga menunjukkan kontribusi arus hubung singkat sebesar 92,029 $\mathrm{kA}$ atau 1,14 p.u. Nilai ini menegaskan bahwa WT Type 4 masih menyuplai arus gangguan pada kondisi yang diuji. Dengan demikian, WT Type 4 menjadi jenis IBR yang perlu mendapat perhatian khusus pada analisis relay berikutnya, karena kontribusi arus gangguannya dapat memengaruhi besaran yang terbaca oleh relay 21 maupun relay 87L.
+Selain dalam satuan daya, Gambar \ref{fig:kontribusi_WTType4} menunjukkan bahwa kontribusi arus hubung singkat mencapai nilai puncak sebesar 130,149 $\mathrm{kA}$ atau setara dengan 1,6 p.u. Setelah periode puncak gangguan, kontribusi arus turun menjadi 92,029 $\mathrm{kA}$ atau setara dengan 1,14 p.u. Penurunan tersebut menunjukkan bahwa WT Type 4 memberikan arus terbesar pada periode awal gangguan, kemudian mempertahankan kontribusi yang lebih rendah setelah kondisi transien awal terlewati.
 
-Implikasinya, respons proteksi pada skenario dengan WT Type 4 tidak dapat dibaca dengan asumsi bahwa sumber IBR tidak menyuplai arus gangguan. Berbeda dengan WT Type 3 dan PV yang menunjukkan kontribusi 0 MVA, WT Type 4 memberikan tambahan kontribusi hubung singkat yang dapat memengaruhi arus gangguan, impedansi tampak, arus diferensial, dan arus \textit{restraint}. Oleh karena itu, hasil pada subbagian ini menjadi dasar untuk membaca perubahan respons relay pada skenario yang melibatkan WT Type 4.
+Implikasinya, respons proteksi pada skenario dengan WT Type 4 perlu dianalisis dengan memperhatikan perubahan arus antara periode puncak dan periode setelah gangguan. Kedua nilai tersebut dapat memengaruhi arus yang diterima relay, impedansi tampak, arus diferensial, serta arus \textit{restraint}. Hasil pada subbagian ini menjadi dasar untuk membaca perubahan respons relay pada skenario yang melibatkan WT Type 4 dan membandingkannya dengan karakter kontribusi WT Type 3 maupun PV.
 
 \subsection{Photovoltaic}
 
@@ -2424,7 +2428,7 @@ Pada kondisi dasar, relay 21 menunjukkan pola acuan yang jelas. Untuk gangguan i
 
 Pada sistem dengan WT Type 3, respons relay 21 masih sesuai acuan untuk Skenario 1, yaitu gangguan internal DLG pada TL89. Hal ini sejalan dengan dekomposisi arus pada Subbab , karena komponen urutan positif meningkat hingga sekitar 1,414 kA dan komponen urutan negatif serta nol juga meningkat cukup besar. Namun, pada Skenario 3, 4, dan 5 yang merupakan gangguan eksternal di TL79 dengan TL78 \textit{out of service}, respons sisi Bus 8 berubah dari acuan kondisi dasar. Arus yang terbaca tidak memenuhi syarat \textit{starting}, sehingga elemen ZAG, ZBG, ZAB, ZBC, maupun ZCA yang dianalisis tidak bekerja sebagaimana respons acuan. Sisi Bus 9 tetap tidak mengirimkan sinyal trip, sehingga responsnya masih sesuai dengan acuan gangguan eksternal.
 
-Pada sistem dengan WT Type 4, Subbab 4.2 menunjukkan bahwa model ini memiliki kontribusi arus hubung singkat sebesar 110 MVA atau 92,029 kA. Meskipun kontribusi hubung singkat WT Type 4 lebih besar dibandingkan WT Type 3 dan PV, respons relay 21 pada Skenario 2 tetap menunjukkan pola yang serupa dengan skenario eksternal WT Type 3. Dekomposisi arus memperlihatkan komponen urutan positif hanya naik hingga sekitar 0,31 kA dan komponen urutan negatif serta nol tetap kecil. Akibatnya, relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan dikategorikan mengalami \textit{misoperation}, sedangkan sisi Bus 9 tetap tidak trip sesuai acuan gangguan eksternal.
+Pada sistem dengan WT Type 4, Subbab 4.2 menunjukkan kontribusi daya hubung singkat sebesar 110 MVA. Kontribusi arusnya mencapai nilai puncak 130,149 kA, kemudian turun menjadi 92,029 kA setelah periode puncak gangguan. Meskipun WT Type 4 tetap menyuplai arus gangguan, respons relay 21 pada Skenario 2 menunjukkan pola yang serupa dengan skenario eksternal WT Type 3. Dekomposisi arus memperlihatkan komponen urutan positif hanya naik hingga sekitar 0,31 kA dan komponen urutan negatif serta nol tetap kecil. Akibatnya, relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan dikategorikan mengalami \textit{misoperation}, sedangkan sisi Bus 9 tetap tidak trip sesuai acuan gangguan eksternal.
 
 Pada sistem dengan \textit{photovoltaic}, kontribusi arus hubung singkat dari sisi PV pada Subbab 4.2 bernilai 0 MVA karena opsi \textit{No short-circuit contribution} aktif. Pada Skenario 6, komponen urutan positif turun dan stabil pada 0,2424 kA, sedangkan komponen urutan negatif serta nol tetap rendah setelah gangguan. Kondisi ini membuat relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan mengalami \textit{misoperation}. Sisi Bus 9 tetap tidak mengirimkan sinyal trip, tetapi pada elemen ZBG terdapat kondisi khusus ketika impedansi tampak terlihat masuk zona 1 dan operasi tetap tertahan karena elemen \textit{phase directional} tidak membaca gangguan berada di arah depan relay.
 
