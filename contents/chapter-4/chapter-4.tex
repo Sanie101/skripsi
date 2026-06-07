@@ -4,6 +4,7 @@
 Bab ini menyajikan hasil simulasi dan pembahasan respons relay 21 serta relay 87L pada saluran TL89. Pembahasan diawali dengan kondisi dasar tanpa integrasi IBR sebagai acuan, kemudian dilanjutkan dengan respons relay pada sistem yang terintegrasi \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}. Setiap hasil dibandingkan terhadap acuan operasi pada kondisi dasar sehingga perubahan karakteristik akibat integrasi IBR dapat ditelusuri secara konsisten.
 
 \section{Kondisi Dasar Sistem dan Verifikasi Awal}
+\label{sec:kondisi_dasar_sistem}
 
 Subbab ini digunakan untuk memverifikasi respons relay pada kondisi sistem sebelum variasi jenis IBR diterapkan. Kondisi dasar diperlukan sebagai pembanding karena setting relay 21 dan relay 87L disusun berdasarkan sistem konvensional. Dengan demikian, hasil pada bagian ini menjadi acuan untuk menilai apakah respons relay pada sistem terintegrasi IBR masih mengikuti karakteristik operasi yang diharapkan.
 
@@ -11,6 +12,10 @@ Verifikasi dilakukan terhadap gangguan internal dan gangguan eksternal pada bebe
 
 \subsection{Respons Relay terhadap gangguan Internal Double Line to Ground (DLG)}
 \label{subsec:tanpa_IBR_in_dlg}
+
+Subbab ini membahas respons relay pada kondisi dasar tanpa integrasi IBR ketika terjadi gangguan internal \textit{double line to ground} (DLG) pada saluran TL89. Skenario ini digunakan sebagai acuan awal karena gangguan berada di dalam daerah proteksi saluran, sehingga relay pada kedua ujung saluran diharapkan mampu mendeteksi gangguan dan memberikan perintah trip sesuai setting konvensional.
+
+Gangguan DLG melibatkan dua fasa dan tanah sehingga respons relay diamati melalui beberapa elemen pengukuran. Pada relay 21, evaluasi dilakukan berdasarkan posisi impedansi tampak elemen fasa-tanah dan fasa-fasa pada sisi Bus 8 dan Bus 9 terhadap zona proteksi. Pada relay 87L, evaluasi dilakukan berdasarkan posisi arus diferensial dan arus penahan tiap fasa terhadap batas operasi relay. Hasil verifikasi ini menjadi pembanding untuk menilai perubahan respons relay pada skenario sistem yang telah terintegrasi IBR.
 
 \begin{figure}[H]
     \centering
@@ -93,8 +98,12 @@ Gambar \ref{fig:87LTIBR_plot_Bx4_By4} menunjukkan plot \textit{current compariso
 
 Gambar \ref{fig:87LTIBR_plot_Cx4_Cy4} menunjukkan plot \textit{current comparison differential} fasa C saat terjadi gangguan internal DLG. Pada fasa ini, titik arus berada di bawah batas operasi yang ditentukan oleh setting relay sehingga relay 87L tidak membaca adanya gangguan pada fasa C dan tidak mengeluarkan perintah trip dari fasa tersebut. Namun, keputusan operasi keseluruhan tetap terpenuhi karena fasa lain sudah berada pada daerah operasi dan telah memberikan perintah trip kepada CB.
 
-\subsection{Respons Relay terhadap gangguan External 3 Phase}
+\subsection{Respons Relay terhadap gangguan External Three Phase}
 \label{subsec:tanpa_IBR_ex_3p}
+
+Subbab ini membahas respons relay pada kondisi dasar tanpa integrasi IBR ketika terjadi gangguan eksternal tiga fasa. Berbeda dengan gangguan internal pada Subbab \ref{subsec:tanpa_IBR_in_dlg}, gangguan pada skenario ini berada di luar daerah proteksi utama saluran TL89. Oleh karena itu, bagian ini digunakan untuk memeriksa kemampuan relay dalam mempertahankan selektivitas ketika arus gangguan besar mengalir melalui sistem, tetapi titik gangguan tidak berada pada saluran yang diamankan.
+
+Gangguan tiga fasa bersifat simetris sehingga evaluasi relay 21 difokuskan pada elemen fasa-fasa, yaitu ZAB, ZBC, dan ZCA, serta pembacaan arus sekunder CT yang menentukan kondisi operasi relay. Untuk relay 87L, evaluasi dilakukan melalui posisi arus diferensial dan arus penahan pada masing-masing fasa terhadap batas operasi. Hasil pada bagian ini menjadi acuan untuk menilai apakah skema proteksi tetap mampu membedakan gangguan eksternal sebelum sistem dibandingkan dengan kondisi yang telah terintegrasi IBR.
 
 \begin{figure}[H]
     \centering
@@ -187,6 +196,10 @@ Gambar \ref{fig:87LTIBR_plot_Cx1_Cy1} menunjukkan plot \textit{current compariso
 \subsection{Respons Relay terhadap gangguan External Single Line to Ground (SLG)}
 \label{subsec:tanpa_IBR_ex_slg}
 
+Subbab ini membahas respons relay pada kondisi dasar tanpa integrasi IBR ketika terjadi gangguan eksternal \textit{single line to ground} (SLG). Gangguan ini berada di luar daerah proteksi utama saluran TL89, sehingga relay yang diamati seharusnya mampu menahan operasi untuk gangguan yang tidak terjadi pada saluran yang diamankan. Berbeda dengan gangguan tiga fasa, gangguan SLG bersifat tidak seimbang dan melibatkan jalur tanah, sehingga respons relay perlu diamati melalui elemen fasa-tanah dan perubahan arus pada fasa yang terganggu.
+
+Pada relay 21, evaluasi difokuskan pada elemen ZAG di sisi Bus 8 dan Bus 9 serta pembacaan arus sekunder CT yang memengaruhi kondisi operasi relay. Pada relay 87L, evaluasi dilakukan dengan melihat posisi arus diferensial dan arus penahan pada setiap fasa terhadap batas operasi. Hasil pada bagian ini digunakan sebagai acuan untuk menilai apakah relay tetap selektif terhadap gangguan eksternal SLG sebelum responsnya dibandingkan dengan sistem yang telah terintegrasi IBR.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{contents/chapter-4/TIBR_13_ZAG_Bus_8_Ex_AG.png}
@@ -241,6 +254,10 @@ Gambar \ref{fig:87LTIBR_plot_Cx3_Cy3} menunjukkan plot \textit{current compariso
 
 \subsection{Respons Relay terhadap gangguan External Double Line to Ground (DLG)}
 \label{subsec:tanpa_IBR_ex_dlg}
+
+Subbab ini membahas respons relay pada kondisi dasar tanpa integrasi IBR ketika terjadi gangguan eksternal \textit{double line to ground} (DLG). Gangguan ini berada di luar daerah proteksi utama saluran TL89, sehingga hasilnya digunakan untuk memeriksa selektivitas relay terhadap gangguan tak seimbang yang melibatkan dua fasa dan jalur tanah. Kondisi ini penting karena gangguan DLG dapat memengaruhi pembacaan elemen fasa-tanah maupun fasa-fasa pada relay jarak.
+
+Pada relay 21, evaluasi dilakukan melalui elemen ZAG, ZBG, dan ZAB di sisi Bus 8 serta Bus 9, disertai pembacaan arus sekunder CT sebagai dasar untuk menilai kondisi operasi relay. Pada relay 87L, evaluasi dilakukan berdasarkan posisi arus diferensial dan arus penahan tiap fasa terhadap batas operasi. Hasil pada bagian ini menjadi acuan untuk menilai apakah relay tetap mampu membedakan gangguan eksternal DLG sebelum responsnya dibandingkan dengan sistem yang telah terintegrasi IBR.
 
 \begin{figure}[H]
     \centering
@@ -331,6 +348,7 @@ Gambar \ref{fig:87LTIBR_plot_Bx2_By2} menunjukkan plot \textit{current compariso
 Gambar \ref{fig:87LTIBR_plot_Cx2_Cy2} menunjukkan plot \textit{current comparison differential} pada fasa C saat terjadi gangguan eksternal DLG. Titik arus pada fasa C berada di bawah batas operasi yang ditentukan oleh setting relay. Oleh karena itu, relay 87L membaca kondisi tersebut sebagai gangguan di luar daerah proteksi dan tidak memerintahkan trip pada CB.
 
 \section{Perbandingan Kontribusi Arus Hubung Singkat antar Jenis IBR}
+\label{sec:perbandingan_kontribusi_SC_IBR}
 
 Subbab ini membahas perbandingan kontribusi hubung singkat dari masing-masing jenis IBR yang digunakan pada skenario penelitian, yaitu \textit{wind turbine type 3}, \textit{wind turbine type 4}, dan \textit{photovoltaic}. Pembahasan ini ditempatkan sebelum analisis respons relay karena besar kecilnya kontribusi arus gangguan dari sumber IBR dapat memengaruhi besaran listrik yang dibaca oleh relay, terutama pada kondisi gangguan dan konfigurasi jaringan tertentu.
 
@@ -340,7 +358,7 @@ Hasil kontribusi hubung singkat pada bagian ini digunakan sebagai konteks awal u
 
 \subsection{Wind Turbine Type 3}
 
-Pembahasan pada model \textit{wind turbine type 3} diawali dari pengaturan hubung singkat yang digunakan pada simulasi. Pengaturan ini penting karena WT Type 3 memiliki karakteristik yang berbeda dari WT Type 4. WT Type 3 masih menggunakan generator induksi \textit{doubly fed}, tetapi kontribusi arus gangguannya pada simulasi tetap bergantung pada parameter hubung singkat yang dimasukkan pada model.
+Pembahasan model \textit{wind turbine type 3} diawali dengan meninjau pengaturan hubung singkat yang digunakan dalam simulasi. WT Type 3 menggunakan \textit{doubly fed asynchronous generator} sehingga karakter kontribusi arus gangguannya ditentukan oleh parameter hubung singkat pada model, termasuk besar arus awal, faktor puncak, dan kontribusi arus keadaan tunak.
 
 \begin{figure}[H]
     \centering
@@ -349,9 +367,11 @@ Pembahasan pada model \textit{wind turbine type 3} diawali dari pengaturan hubun
     \label{fig:SC_Setting_WTT3}
 \end{figure}
 
-Gambar \ref{fig:SC_Setting_WTT3} menunjukkan bahwa model WT Type 3 pada tab VDE/IEC untuk hubung singkat menggunakan tipe unit \textit{doubly fed asynchronous generator} dengan transformator unit yang dimodelkan secara eksternal. Pada pengaturan tersebut, opsi \textit{No Short-Circuit Contribution} tidak diaktifkan. Namun, nilai kontribusi arus hubung singkat yang dimasukkan pada model bernilai 0 $\mathrm{kA}$, sehingga model tidak memberikan kontribusi arus gangguan pada kondisi yang dihitung.
+Gambar \ref{fig:SC_Setting_WTT3} menunjukkan pengaturan hubung singkat WT Type 3 pada tab VDE/IEC. Model menggunakan tipe unit \textit{doubly fed asynchronous generator} dengan transformator unit yang dimodelkan secara eksternal. Opsi \textit{No Short-Circuit Contribution} tidak diaktifkan, sehingga WT Type 3 diperhitungkan sebagai sumber kontribusi arus hubung singkat dalam simulasi.
 
-Parameter pada Gambar \ref{fig:SC_Setting_WTT3} memperlihatkan bahwa nilai \textit{max. instantaneous short-circuit current} ditetapkan sebesar 0 $\mathrm{kA}$. Pada bagian \textit{steady-state short-circuit current contribution}, arus maksimum dan arus minimum juga bernilai 0 $\mathrm{kA}$. Selain itu, impedansi urutan negatif pada parameter $r_2$ dan $x_2$ ditetapkan sangat besar, yaitu 9999 p.u. Kombinasi pengaturan ini menunjukkan bahwa WT Type 3 tidak menyediakan jalur kontribusi arus gangguan yang signifikan pada simulasi hubung singkat.
+Pada bagian \textit{initial symmetrical short-circuit current contribution}, nilai \textit{max. instantaneous short-circuit current} ($i_{\mathrm{WDmax}}$) ditetapkan sebesar 0,15 $\mathrm{kA}$, dengan faktor $\kappa_{\mathrm{WD}}$ sebesar 1,7 dan rasio $R_{\mathrm{WD}}/X_{\mathrm{WD}}$ sebesar 0,1. Parameter tersebut menunjukkan bahwa WT Type 3 memberikan kontribusi pada periode awal gangguan. Sementara itu, arus maksimum dan minimum pada bagian \textit{steady-state short-circuit current contribution} bernilai 0 $\mathrm{kA}$, sehingga model tidak mempertahankan kontribusi arus hubung singkat pada keadaan tunak.
+
+Nilai resistansi dan reaktansi urutan negatif, masing-masing $r_2$ dan $x_2$, ditetapkan sebesar 9999 p.u. Nilai impedansi yang sangat besar ini membatasi kontribusi arus urutan negatif dari WT Type 3. Dengan demikian, pengaturan pada Gambar \ref{fig:SC_Setting_WTT3} menggambarkan kontribusi arus gangguan yang muncul pada periode awal, tidak berlanjut pada keadaan tunak, dan sangat terbatas untuk komponen urutan negatif.
 
 \begin{figure}[H]
     \centering
@@ -360,13 +380,15 @@ Parameter pada Gambar \ref{fig:SC_Setting_WTT3} memperlihatkan bahwa nilai \text
     \label{fig:kontribusi_WTType3}
 \end{figure}
 
-Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType3}, kontribusi hubung singkat dari \textit{wind turbine type 3} terbaca sebesar 0 MVA. Hasil ini konsisten dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT3}, karena arus hubung singkat awal maupun tunak pada model ditetapkan sebesar 0 $\mathrm{kA}$. Dengan demikian, WT Type 3 tidak menambah komponen arus gangguan dari sisi IBR terhadap titik gangguan yang dievaluasi.
+Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType3}, kontribusi hubung singkat dari \textit{wind turbine type 3} terbaca sebesar 119,7 MVA atau sekitar 1,2 p.u. pada basis daya 100 MVA. Hasil ini selaras dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT3}, khususnya nilai $i_{\mathrm{WDmax}}$ sebesar 0,15 $\mathrm{kA}$ yang mengaktifkan kontribusi arus pada periode awal gangguan.
 
-Implikasinya, respons proteksi pada skenario dengan WT Type 3 tidak dapat dijelaskan sebagai akibat tambahan kontribusi arus hubung singkat dari unit tersebut. Jika pada bagian berikutnya terdapat perubahan pembacaan impedansi tampak, arus diferensial, arus \textit{restraint}, atau keputusan operasi relay, perubahan tersebut perlu dikaitkan dengan konfigurasi jaringan, lokasi gangguan, dan kontribusi dari sumber lain yang masih aktif. Dengan demikian, hasil pada subbagian ini menjadi dasar bahwa pengaruh WT Type 3 pada analisis relay berikutnya bukan berasal dari injeksi arus gangguan tambahan dari unit WT Type 3.
+Selain nilai daya hubung singkat tersebut, Gambar \ref{fig:kontribusi_WTType3} menunjukkan bahwa kontribusi arus hubung singkat mencapai nilai puncak sebesar 245,444 $\mathrm{kA}$ atau setara dengan 3,05 p.u. Setelah periode puncak gangguan, kontribusi arus turun menjadi 100,132 $\mathrm{kA}$ atau setara dengan 1,24 p.u. Penurunan ini menunjukkan bahwa kontribusi WT Type 3 paling besar terjadi pada periode awal gangguan, kemudian berkurang setelah kondisi transien awal terlewati.
+
+Implikasinya, kontribusi awal WT Type 3 perlu diperhitungkan ketika menganalisis pembacaan impedansi tampak, arus diferensial, arus \textit{restraint}, dan keputusan operasi relay sesaat setelah gangguan. Perbedaan antara nilai puncak dan nilai setelah gangguan menunjukkan bahwa besaran arus yang diterima relay berubah sepanjang periode gangguan. Respons relay pada bagian berikutnya tetap perlu dibaca bersama konfigurasi jaringan, lokasi gangguan, serta kontribusi sumber lain yang masih aktif.
 
 \subsection{Wind Turbine Type 4}
 
-Pembahasan pada model \textit{wind turbine type 4} diawali dari pengaturan hubung singkat yang digunakan pada simulasi. Berbeda dengan WT Type 3 dan PV yang tidak menunjukkan kontribusi arus hubung singkat pada hasil perbandingan ini, model WT Type 4 masih memiliki parameter kontribusi arus gangguan yang aktif. Oleh karena itu, pengaturan pada menu hubung singkat perlu dicermati sebelum hasil kontribusi pada sistem dianalisis.
+Pembahasan pada model \textit{wind turbine type 4} diawali dari pengaturan hubung singkat yang digunakan pada simulasi. Model WT Type 4 juga memiliki parameter kontribusi arus gangguan yang aktif, tetapi karakter dan besar parameternya berbeda dari WT Type 3. Oleh karena itu, pengaturan pada menu hubung singkat perlu dicermati sebelum hasil kontribusi pada sistem dianalisis.
 
 \begin{figure}[H]
     \centering
@@ -386,11 +408,11 @@ Parameter pada Gambar \ref{fig:SC_Setting_WTT4} memperlihatkan bahwa arus hubung
     \label{fig:kontribusi_WTType4}
 \end{figure}
 
-Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType4}, \textit{wind turbine type 4} memberikan kontribusi hubung singkat sebesar 110 MVA atau setara dengan 1,1 p.u. Hasil ini konsisten dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT4}, karena opsi kontribusi hubung singkat tidak dinonaktifkan dan model masih memiliki batas arus gangguan yang didefinisikan.
+Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_WTType4}, \textit{wind turbine type 4} memberikan kontribusi daya hubung singkat sebesar 110 MVA atau setara dengan 1,1 p.u. Hasil ini konsisten dengan pengaturan pada Gambar \ref{fig:SC_Setting_WTT4}, karena opsi kontribusi hubung singkat tidak dinonaktifkan dan model masih memiliki batas arus gangguan yang didefinisikan.
 
-Selain dalam satuan daya hubung singkat, Gambar \ref{fig:kontribusi_WTType4} juga menunjukkan kontribusi arus hubung singkat sebesar 92,029 $\mathrm{kA}$ atau 1,14 p.u. Nilai ini menegaskan bahwa WT Type 4 masih menyuplai arus gangguan pada kondisi yang diuji. Dengan demikian, WT Type 4 menjadi jenis IBR yang perlu mendapat perhatian khusus pada analisis relay berikutnya, karena kontribusi arus gangguannya dapat memengaruhi besaran yang terbaca oleh relay 21 maupun relay 87L.
+Selain dalam satuan daya, Gambar \ref{fig:kontribusi_WTType4} menunjukkan bahwa kontribusi arus hubung singkat mencapai nilai puncak sebesar 130,149 $\mathrm{kA}$ atau setara dengan 1,6 p.u. Setelah periode puncak gangguan, kontribusi arus turun menjadi 92,029 $\mathrm{kA}$ atau setara dengan 1,14 p.u. Penurunan tersebut menunjukkan bahwa WT Type 4 memberikan arus terbesar pada periode awal gangguan, kemudian mempertahankan kontribusi yang lebih rendah setelah kondisi transien awal terlewati.
 
-Implikasinya, respons proteksi pada skenario dengan WT Type 4 tidak dapat dibaca dengan asumsi bahwa sumber IBR tidak menyuplai arus gangguan. Berbeda dengan WT Type 3 dan PV yang menunjukkan kontribusi 0 MVA, WT Type 4 memberikan tambahan kontribusi hubung singkat yang dapat memengaruhi arus gangguan, impedansi tampak, arus diferensial, dan arus \textit{restraint}. Oleh karena itu, hasil pada subbagian ini menjadi dasar untuk membaca perubahan respons relay pada skenario yang melibatkan WT Type 4.
+Implikasinya, respons proteksi pada skenario dengan WT Type 4 perlu dianalisis dengan memperhatikan perubahan arus antara periode puncak dan periode setelah gangguan. Kedua nilai tersebut dapat memengaruhi arus yang diterima relay, impedansi tampak, arus diferensial, serta arus \textit{restraint}. Hasil pada subbagian ini menjadi dasar untuk membaca perubahan respons relay pada skenario yang melibatkan WT Type 4 dan membandingkannya dengan karakter kontribusi WT Type 3 maupun PV.
 
 \subsection{Photovoltaic}
 
@@ -419,8 +441,17 @@ Berdasarkan hasil simulasi pada Gambar \ref{fig:kontribusi_PV}, kontribusi hubun
 Implikasinya, respons relay pada skenario dengan \textit{photovoltaic} tidak dapat dijelaskan sebagai akibat tambahan kontribusi arus hubung singkat dari sisi PV. Jika pada bagian berikutnya terdapat perubahan pembacaan impedansi tampak, arus diferensial, arus \textit{restraint}, atau keputusan operasi relay, perubahan tersebut perlu dikaitkan dengan konfigurasi jaringan, lokasi gangguan, dan besaran listrik yang terbaca pada terminal relay. Dengan demikian, hasil pada subbagian ini menjadi dasar bahwa pengaruh PV pada analisis relay berikutnya tidak berasal dari injeksi arus gangguan tambahan dari unit PV.
 
 \section{Dekomposisi Komponen Urutan Arus pada Setiap Skenario}
+\label{sec:dekomposisi_arus}
+
+Bagian ini membahas dekomposisi komponen urutan arus pada saluran TL89 untuk setiap skenario gangguan yang dianalisis. Dekomposisi dilakukan dengan memisahkan arus menjadi komponen urutan positif, urutan negatif, dan urutan nol. Pemisahan ini diperlukan karena perubahan respons relay tidak hanya dipengaruhi oleh besar arus total, tetapi juga oleh pola ketidakseimbangan arus yang muncul selama gangguan.
+
+Komponen urutan positif digunakan untuk membaca kontribusi utama arus selama gangguan, sedangkan komponen urutan negatif dan nol digunakan untuk mengidentifikasi karakter gangguan tak seimbang, khususnya gangguan \textit{single line to ground} dan \textit{double line to ground}. Hasil pada bagian ini menjadi dasar untuk menafsirkan perubahan impedansi tampak pada relay 21. Dengan demikian, pembahasan dekomposisi komponen urutan menjadi penghubung antara kontribusi arus hubung singkat pada bagian sebelumnya dan analisis operasi relay pada bagian berikutnya.
 
 \subsection{Kondisi Tanpa Integrasi IBR}
+
+Subbab ini menyajikan dekomposisi komponen urutan arus pada kondisi sistem tanpa integrasi IBR. Kondisi ini digunakan sebagai acuan dasar karena arus gangguan masih didominasi oleh sumber konvensional, sehingga pola komponen urutan yang terbentuk dapat digunakan untuk membaca karakter gangguan sebelum sistem dipengaruhi oleh jenis IBR tertentu. Skenario yang diamati meliputi gangguan internal DLG pada saluran TL89 serta gangguan eksternal tiga fasa, SLG, dan DLG.
+
+Analisis pada bagian ini difokuskan pada perubahan komponen urutan positif, negatif, dan nol selama gangguan berlangsung. Untuk gangguan simetris tiga fasa, perhatian utama diberikan pada komponen urutan positif, sedangkan untuk gangguan tak seimbang seperti SLG dan DLG, komponen urutan negatif dan nol menjadi indikator penting terhadap ketidakseimbangan arus. Hasil kondisi dasar ini kemudian digunakan sebagai pembanding ketika arus pada saluran TL89 berubah akibat integrasi WT Type 3, WT Type 4, maupun \textit{photovoltaic}.
 
 \subsubsection{Gangguan Internal Double Line-to-Ground Fault}
 
@@ -669,6 +700,7 @@ Berdasarkan Gambar \ref{fig:decomposition_sequence_current_s6}, gangguan externa
 Perubahan tersebut menunjukkan ketidakseimbangan arus selama gangguan dua fasa ke tanah. Komponen urutan positif berubah karena arus mengalir melalui jalur gangguan, sedangkan komponen urutan negatif dan nol muncul akibat ketidakseimbangan arus selama gangguan berlangsung. Dengan demikian, pola pada Gambar \ref{fig:decomposition_sequence_current_s6} memperlihatkan karakteristik gangguan external \textit{double line-to-ground} pada saluran TL89 untuk Skenario 6.
 
 \section{Respons Relay 21 pada Sistem dengan WT Type 3}
+\label{sec:respon_relay 21_WTT3}
 
 Bagian ini membahas respons relay 21 ketika sistem diintegrasikan dengan \textit{wind turbine type 3}. Skenario yang diamati mencakup gangguan internal pada TL89 serta gangguan eksternal pada TL79 dengan kondisi saluran tertentu \textit{out of service}, sesuai skenario pengujian pada Bab III. Analisis dilakukan dengan membandingkan impedansi tampak, arah gangguan, dan keputusan trip terhadap kondisi dasar tanpa IBR.
 
@@ -1737,6 +1769,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAG_Bus_9_S5} menunjukkan impedansi tampak loop
 
 
 \section{Respons Relay 21 pada Sistem dengan WT Type 4}
+\label{sec:respon_relay 21_WTT4}
 
 Bagian ini membahas respons relay 21 ketika jenis IBR diganti menjadi \textit{wind turbine type 4}. Struktur pembahasan dibuat sama dengan bagian sebelumnya agar hasilnya dapat dibandingkan langsung dengan \textit{wind turbine type 3}. Fokus analisis tetap diarahkan pada perubahan impedansi tampak, kondisi \textit{starting} relay, dan keputusan trip pada sisi Bus 8 serta Bus 9.
 
@@ -2065,6 +2098,7 @@ Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S2} menunjukkan impedansi tampak loop
 
 
 \section{Respons Relay 21 pada Sistem dengan Photovoltaic}
+\label{sec:respon_relay 21_PV}
 
 Bagian ini membahas respons relay 21 ketika sumber IBR yang digunakan adalah \textit{photovoltaic}. Skenario yang diamati adalah gangguan eksternal DLG pada TL79 dengan TL78 \textit{out of service}. Dengan struktur yang sama seperti bagian \textit{wind turbine type 4}, pembahasan diarahkan untuk melihat apakah karakteristik PV menghasilkan perubahan pada impedansi tampak dan keputusan operasi relay 21.
 
@@ -2388,13 +2422,13 @@ Gambar \ref{fig:Impedansi_Tampak_ZAB_Bus_9_S6} menunjukkan impedansi tampak loop
 
 \section{Perbandingan Karakteristik Relay 21 antar Jenis IBR}
 
-Subbab ini membandingkan karakteristik operasi relay 21 pada kondisi dasar tanpa IBR dan pada sistem yang diintegrasikan dengan WT Type 3, WT Type 4, serta \textit{photovoltaic}. Kondisi dasar pada Subbab 4.1 digunakan sebagai acuan utama, sedangkan Subbab 4.2 sampai 4.6 digunakan untuk menelusuri penyebab perubahan respons melalui kontribusi arus hubung singkat, dekomposisi komponen urutan arus, dan pembacaan impedansi tampak relay.
+Subbab ini membandingkan karakteristik operasi relay 21 pada kondisi dasar tanpa IBR dan pada sistem yang diintegrasikan dengan WT Type 3, WT Type 4, serta \textit{photovoltaic}. Kondisi dasar pada Subbab \ref{sec:kondisi_dasar_sistem} digunakan sebagai acuan utama, sedangkan Subbab \ref{sec:perbandingan_kontribusi_SC_IBR} sampai \ref{sec:respon_relay 21_PV} digunakan untuk menelusuri penyebab perubahan respons melalui kontribusi arus hubung singkat, dekomposisi komponen urutan arus, dan pembacaan impedansi tampak relay.
 
 Pada kondisi dasar, relay 21 menunjukkan pola acuan yang jelas. Untuk gangguan internal DLG pada TL89, relay sisi Bus 8 dan Bus 9 mendeteksi gangguan dan memberikan perintah trip sesuai zona yang terbaca. Untuk gangguan eksternal 3P, SLG, dan DLG, sisi Bus 8 tetap aktif dan memberikan perintah trip berdasarkan pembacaan arus maupun impedansi tampak, sedangkan sisi Bus 9 tidak mengirimkan sinyal trip karena gangguan tidak terbaca sebagai gangguan di arah depan relay. Pola inilah yang digunakan sebagai pembanding ketika sistem mulai diintegrasikan dengan IBR.
 
-Pada sistem dengan WT Type 3, respons relay 21 masih sesuai acuan untuk Skenario 1, yaitu gangguan internal DLG pada TL89. Hal ini sejalan dengan dekomposisi arus pada Subbab 4.3, karena komponen urutan positif meningkat hingga sekitar 1,414 kA dan komponen urutan negatif serta nol juga meningkat cukup besar. Namun, pada Skenario 3, 4, dan 5 yang merupakan gangguan eksternal di TL79 dengan TL78 \textit{out of service}, respons sisi Bus 8 berubah dari acuan kondisi dasar. Arus yang terbaca tidak memenuhi syarat \textit{starting}, sehingga elemen ZAG, ZBG, ZAB, ZBC, maupun ZCA yang dianalisis tidak bekerja sebagaimana respons acuan. Sisi Bus 9 tetap tidak mengirimkan sinyal trip, sehingga responsnya masih sesuai dengan acuan gangguan eksternal.
+Pada sistem dengan WT Type 3, respons relay 21 masih sesuai acuan untuk Skenario 1, yaitu gangguan internal DLG pada TL89. Hal ini sejalan dengan dekomposisi arus pada Subbab , karena komponen urutan positif meningkat hingga sekitar 1,414 kA dan komponen urutan negatif serta nol juga meningkat cukup besar. Namun, pada Skenario 3, 4, dan 5 yang merupakan gangguan eksternal di TL79 dengan TL78 \textit{out of service}, respons sisi Bus 8 berubah dari acuan kondisi dasar. Arus yang terbaca tidak memenuhi syarat \textit{starting}, sehingga elemen ZAG, ZBG, ZAB, ZBC, maupun ZCA yang dianalisis tidak bekerja sebagaimana respons acuan. Sisi Bus 9 tetap tidak mengirimkan sinyal trip, sehingga responsnya masih sesuai dengan acuan gangguan eksternal.
 
-Pada sistem dengan WT Type 4, Subbab 4.2 menunjukkan bahwa model ini memiliki kontribusi arus hubung singkat sebesar 110 MVA atau 92,029 kA. Meskipun kontribusi hubung singkat WT Type 4 lebih besar dibandingkan WT Type 3 dan PV, respons relay 21 pada Skenario 2 tetap menunjukkan pola yang serupa dengan skenario eksternal WT Type 3. Dekomposisi arus memperlihatkan komponen urutan positif hanya naik hingga sekitar 0,31 kA dan komponen urutan negatif serta nol tetap kecil. Akibatnya, relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan dikategorikan mengalami \textit{misoperation}, sedangkan sisi Bus 9 tetap tidak trip sesuai acuan gangguan eksternal.
+Pada sistem dengan WT Type 4, Subbab 4.2 menunjukkan kontribusi daya hubung singkat sebesar 110 MVA. Kontribusi arusnya mencapai nilai puncak 130,149 kA, kemudian turun menjadi 92,029 kA setelah periode puncak gangguan. Meskipun WT Type 4 tetap menyuplai arus gangguan, respons relay 21 pada Skenario 2 menunjukkan pola yang serupa dengan skenario eksternal WT Type 3. Dekomposisi arus memperlihatkan komponen urutan positif hanya naik hingga sekitar 0,31 kA dan komponen urutan negatif serta nol tetap kecil. Akibatnya, relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan dikategorikan mengalami \textit{misoperation}, sedangkan sisi Bus 9 tetap tidak trip sesuai acuan gangguan eksternal.
 
 Pada sistem dengan \textit{photovoltaic}, kontribusi arus hubung singkat dari sisi PV pada Subbab 4.2 bernilai 0 MVA karena opsi \textit{No short-circuit contribution} aktif. Pada Skenario 6, komponen urutan positif turun dan stabil pada 0,2424 kA, sedangkan komponen urutan negatif serta nol tetap rendah setelah gangguan. Kondisi ini membuat relay sisi Bus 8 tidak memenuhi syarat \textit{starting} dan mengalami \textit{misoperation}. Sisi Bus 9 tetap tidak mengirimkan sinyal trip, tetapi pada elemen ZBG terdapat kondisi khusus ketika impedansi tampak terlihat masuk zona 1 dan operasi tetap tertahan karena elemen \textit{phase directional} tidak membaca gangguan berada di arah depan relay.
 
@@ -2443,6 +2477,10 @@ Skenario yang dibahas mencakup gangguan internal DLG pada TL89 serta gangguan ek
 
 \subsection{Skenario 1 : Wind Turbine Type 3 Internal DLG Fault}
 
+Subbab ini membahas respons relay 87L pada sistem dengan \textit{wind turbine type 3} ketika terjadi gangguan internal DLG pada saluran TL89. Karena gangguan berada di dalam daerah proteksi saluran, relay 87L diharapkan menghasilkan arus diferensial yang melewati batas operasi sehingga relay dapat memberikan perintah trip. Hasil pada skenario ini dibandingkan dengan kondisi dasar tanpa IBR pada Subbab \ref{subsec:tanpa_IBR_in_dlg} untuk menilai apakah integrasi WT Type 3 mengubah kemampuan relay dalam mendeteksi gangguan internal.
+
+Analisis dilakukan pada fasa A, fasa B, dan fasa C melalui hubungan antara arus diferensial dan arus penahan. Posisi titik arus terhadap batas operasi digunakan sebagai indikator utama keputusan relay. Dengan demikian, pembahasan pada subbab ini tidak hanya melihat apakah relay memberikan perintah trip, tetapi juga apakah karakteristik operasinya masih konsisten dengan prinsip kerja relay 87L pada gangguan internal.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{contents/chapter-4/plot_Ax1_Ay1.png}
@@ -2450,7 +2488,7 @@ Skenario yang dibahas mencakup gangguan internal DLG pada TL89 serta gangguan ek
     \label{fig:plot_Ax1_Ay1}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Ax1_Ay1} arus diferensial dan arus penahan fasa A saat adanya gangguan internal DLG menunjukkan bahwa arus berada di atas batas yang ditentukan oleh setting relay. Relay mendeteksi adanya gangguan kemudian memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_in_dlg}.
+Terlihat pada gambar \ref{fig:plot_Ax1_Ay1} arus diferensial dan arus penahan fasa A saat adanya gangguan internal DLG menunjukkan bahwa arus berada di atas batas yang ditentukan oleh setting relay. Relay mendeteksi adanya gangguan kemudian memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_in_dlg}.
 
 \begin{figure}[H]
     \centering
@@ -2459,7 +2497,7 @@ Terlihat pada gambar \ref{fig:plot_Ax1_Ay1} arus diferensial dan arus penahan fa
     \label{fig:plot_Bx1_By1}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Bx1_By1} arus diferensial dan arus penahan fasa B saat adanya gangguan internal DLG menunjukkan bahwa arus berada di atas batas yang ditentukan oleh setting relay. Relay mendeteksi adanya gangguan kemudian memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_in_dlg}.
+Terlihat pada gambar \ref{fig:plot_Bx1_By1} arus diferensial dan arus penahan fasa B saat adanya gangguan internal DLG menunjukkan bahwa arus berada di atas batas yang ditentukan oleh setting relay. Relay mendeteksi adanya gangguan kemudian memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_in_dlg}.
 
 \begin{figure}[H]
     \centering
@@ -2468,10 +2506,14 @@ Terlihat pada gambar \ref{fig:plot_Bx1_By1} arus diferensial dan arus penahan fa
     \label{fig:plot_Cx1_Cy1}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Cx1_Cy1} arus diferensial dan arus penahan fasa C saat adanya gangguan internal DLG menunjukkan bahwa arus berada di atas batas yang ditentukan oleh setting relay. Relay mendeteksi adanya gangguan kemudian memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_in_dlg}.
+Terlihat pada gambar \ref{fig:plot_Cx1_Cy1} arus diferensial dan arus penahan fasa C saat adanya gangguan internal DLG menunjukkan bahwa arus berada di atas batas yang ditentukan oleh setting relay. Relay mendeteksi adanya gangguan kemudian memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_in_dlg}.
 
 
 \subsection{Skenario 3 : Wind Turbine Type 3 External DLG Fault}
+
+Subbab ini membahas respons relay 87L pada sistem dengan \textit{wind turbine type 3} ketika terjadi gangguan eksternal DLG. Berbeda dengan Skenario 1, titik gangguan pada skenario ini berada di luar daerah proteksi saluran TL89, sehingga relay 87L diharapkan tetap berada pada daerah penahan dan tidak memberikan perintah trip. Hasil pada skenario ini dibandingkan dengan acuan gangguan eksternal DLG tanpa IBR pada Subbab \ref{subsec:tanpa_IBR_ex_dlg} untuk menilai apakah integrasi WT Type 3 memengaruhi selektivitas relay diferensial saluran.
+
+Analisis dilakukan pada fasa A, fasa B, dan fasa C dengan memperhatikan posisi arus diferensial dan arus penahan terhadap batas operasi relay. Jika titik arus tetap berada di bawah batas operasi, maka relay 87L masih mampu membedakan gangguan eksternal dari gangguan internal pada kondisi sistem dengan WT Type 3. Dengan demikian, pembahasan ini menjadi dasar untuk menilai konsistensi relay 87L pada skenario eksternal sebelum dibandingkan dengan jenis IBR lainnya.
 
 \begin{figure}[H]
     \centering
@@ -2489,7 +2531,7 @@ Terlihat pada gambar \ref{fig:plot_Ax3_Ay3} arus diferensial dan arus penahan fa
     \label{fig:plot_Bx3_By3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Bx3_By3} arus diferensial dan arus penahan fasa B saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Bx3_By3} arus diferensial dan arus penahan fasa B saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \begin{figure}[H]
     \centering
@@ -2498,9 +2540,13 @@ Terlihat pada gambar \ref{fig:plot_Bx3_By3} arus diferensial dan arus penahan fa
     \label{fig:plot_Cx3_Cy3}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Cx3_Cy3} arus diferensial dan arus penahan fasa C saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Cx3_Cy3} arus diferensial dan arus penahan fasa C saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \subsection{Skenario 4 : Wind Turbine Type 3 External 3P Fault}
+
+Subbab ini membahas respons relay 87L pada sistem dengan \textit{wind turbine type 3} ketika terjadi gangguan eksternal tiga fasa. Pada skenario ini, titik gangguan berada di luar daerah proteksi saluran TL89, sehingga relay 87L diharapkan tetap berada pada daerah penahan dan tidak memberikan perintah trip. Hasil pada skenario ini dibandingkan dengan acuan gangguan eksternal tiga fasa tanpa IBR pada Subbab \ref{subsec:tanpa_IBR_ex_3p} untuk menilai apakah integrasi WT Type 3 memengaruhi selektivitas relay diferensial saluran.
+
+Analisis dilakukan pada fasa A, fasa B, dan fasa C melalui hubungan antara arus diferensial dan arus penahan. Karena gangguan tiga fasa merupakan gangguan seimbang, pembahasan diarahkan pada kemampuan relay 87L mempertahankan titik operasi di bawah batas trip meskipun terjadi perubahan arus pada seluruh fasa. Dengan demikian, subbab ini digunakan untuk memastikan bahwa relay 87L tetap tidak beroperasi pada gangguan eksternal seimbang dalam sistem dengan WT Type 3.
 
 \begin{figure}[H]
     \centering
@@ -2509,7 +2555,7 @@ Terlihat pada gambar \ref{fig:plot_Cx3_Cy3} arus diferensial dan arus penahan fa
     \label{fig:plot_Ax4_Ay4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Ax4_Ay4} arus diferensial dan arus penahan fasa A saat adanya gangguan external 3P menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_3p}.
+Terlihat pada gambar \ref{fig:plot_Ax4_Ay4} arus diferensial dan arus penahan fasa A saat adanya gangguan external 3P menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_3p}.
 
 
 \begin{figure}[H]
@@ -2519,7 +2565,7 @@ Terlihat pada gambar \ref{fig:plot_Ax4_Ay4} arus diferensial dan arus penahan fa
     \label{fig:plot_Bx4_By4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Bx4_By4} arus diferensial dan arus penahan fasa B saat adanya gangguan external 3P menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_3p}.
+Terlihat pada gambar \ref{fig:plot_Bx4_By4} arus diferensial dan arus penahan fasa B saat adanya gangguan external 3P menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_3p}.
 
 \begin{figure}[H]
     \centering
@@ -2528,9 +2574,13 @@ Terlihat pada gambar \ref{fig:plot_Bx4_By4} arus diferensial dan arus penahan fa
     \label{fig:plot_Cx4_Cy4}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Cx4_Cy4} arus diferensial dan arus penahan fasa C saat adanya gangguan external 3P menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_3p}.
+Terlihat pada gambar \ref{fig:plot_Cx4_Cy4} arus diferensial dan arus penahan fasa C saat adanya gangguan external 3P menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_3p}.
 
 \subsection{Skenario 5 : Wind Turbine Type 3 External SLG Fault}
+
+Subbab ini membahas respons relay 87L pada sistem dengan \textit{wind turbine type 3} ketika terjadi gangguan eksternal \textit{single line to ground} (SLG). Gangguan berada di luar daerah proteksi saluran TL89, sehingga relay 87L diharapkan tetap berada pada daerah penahan dan tidak memberikan perintah trip. Hasil pada skenario ini dibandingkan dengan acuan gangguan eksternal SLG tanpa IBR pada Subbab \ref{subsec:tanpa_IBR_ex_slg} untuk menilai apakah integrasi WT Type 3 memengaruhi selektivitas relay diferensial terhadap gangguan tak seimbang.
+
+Analisis dilakukan pada fasa A, fasa B, dan fasa C dengan memperhatikan posisi arus diferensial dan arus penahan terhadap batas operasi relay. Karena gangguan SLG melibatkan satu fasa dan jalur tanah, evaluasi tidak hanya melihat fasa yang terganggu, tetapi juga memastikan fasa lain tetap berada pada daerah penahan. Dengan demikian, pembahasan ini digunakan untuk memastikan bahwa relay 87L tetap mampu membedakan gangguan eksternal tak seimbang dari gangguan internal pada sistem dengan WT Type 3.
 
 \begin{figure}[H]
     \centering
@@ -2539,7 +2589,7 @@ Terlihat pada gambar \ref{fig:plot_Cx4_Cy4} arus diferensial dan arus penahan fa
     \label{fig:plot_Ax5_Ay5}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Ax5_Ay5} arus diferensial dan arus penahan fasa A saat adanya gangguan external SLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_slg}.
+Terlihat pada gambar \ref{fig:plot_Ax5_Ay5} arus diferensial dan arus penahan fasa A saat adanya gangguan external SLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_slg}.
 
 \begin{figure}[H]
     \centering
@@ -2548,7 +2598,7 @@ Terlihat pada gambar \ref{fig:plot_Ax5_Ay5} arus diferensial dan arus penahan fa
     \label{fig:plot_Bx5_By5}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Bx5_By5} arus diferensial dan arus penahan fasa B saat adanya gangguan external SLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_slg}.
+Terlihat pada gambar \ref{fig:plot_Bx5_By5} arus diferensial dan arus penahan fasa B saat adanya gangguan external SLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_slg}.
 
 
 \begin{figure}[H]
@@ -2558,13 +2608,17 @@ Terlihat pada gambar \ref{fig:plot_Bx5_By5} arus diferensial dan arus penahan fa
     \label{fig:plot_Cx5_Cy5}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Cx5_Cy5} arus diferensial dan arus penahan fasa C saat adanya gangguan external SLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_slg}.
+Terlihat pada gambar \ref{fig:plot_Cx5_Cy5} arus diferensial dan arus penahan fasa C saat adanya gangguan external SLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_slg}.
 
 \section{Respons Relay 87L pada Sistem dengan WT Type 4}
 
 Bagian ini membahas respons relay 87L ketika sistem menggunakan \textit{wind turbine type 4}. Struktur pembahasan dibuat sama dengan bagian sebelumnya, yaitu dengan melihat posisi titik arus diferensial terhadap arus \textit{restraint}. Skenario yang diamati adalah gangguan eksternal DLG pada TL79 dengan TL78 \textit{out of service}.
 
 \subsection{Skenario 2 : Wind Turbine Type 4 External DLG Fault}
+
+Subbab ini membahas respons relay 87L pada sistem dengan \textit{wind turbine type 4} ketika terjadi gangguan eksternal DLG. Titik gangguan berada di luar daerah proteksi saluran TL89, sehingga relay 87L diharapkan tetap berada pada daerah penahan dan tidak memberikan perintah trip. Hasil pada skenario ini dibandingkan dengan acuan gangguan eksternal DLG tanpa IBR pada Subbab \ref{subsec:tanpa_IBR_ex_dlg} untuk menilai apakah karakter kontribusi arus WT Type 4 memengaruhi selektivitas relay diferensial saluran.
+
+Analisis dilakukan pada fasa A, fasa B, dan fasa C melalui hubungan antara arus diferensial dan arus penahan. Karena WT Type 4 memiliki karakter antarmuka konverter yang berbeda dari WT Type 3, pembahasan ini digunakan untuk memastikan bahwa perubahan jenis IBR tidak menyebabkan titik operasi relay melewati batas trip pada gangguan yang berada di luar daerah proteksi. Dengan demikian, hasil subbab ini menjadi pembanding terhadap respons relay 87L pada skenario eksternal DLG dengan WT Type 3.
 
 \begin{figure}[H]
     \centering
@@ -2573,7 +2627,7 @@ Bagian ini membahas respons relay 87L ketika sistem menggunakan \textit{wind tur
     \label{fig:plot_Ax2_Ay2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Ax2_Ay2} arus diferensial dan arus penahan fasa A saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Ax2_Ay2} arus diferensial dan arus penahan fasa A saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \begin{figure}[H]
     \centering
@@ -2582,7 +2636,7 @@ Terlihat pada gambar \ref{fig:plot_Ax2_Ay2} arus diferensial dan arus penahan fa
     \label{fig:plot_Bx2_By2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Bx2_By2} arus diferensial dan arus penahan fasa B saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Bx2_By2} arus diferensial dan arus penahan fasa B saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \begin{figure}[H]
     \centering
@@ -2591,13 +2645,17 @@ Terlihat pada gambar \ref{fig:plot_Bx2_By2} arus diferensial dan arus penahan fa
     \label{fig:plot_Cx2_Cy2}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Cx2_Cy2} arus diferensial dan arus penahan fasa C saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Cx2_Cy2} arus diferensial dan arus penahan fasa C saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \section{Respons Relay 87L pada Sistem dengan Photovoltaic}
 
 Bagian ini membahas respons relay 87L ketika sistem menggunakan \textit{photovoltaic}. Skenario yang diamati adalah gangguan eksternal DLG pada TL79 dengan TL78 \textit{out of service}. Analisis difokuskan pada apakah titik arus diferensial dan arus \textit{restraint} masih berada di daerah penahan atau bergeser ke daerah operasi.
 
 \subsection{Skenario 6 : Photovoltaic External DLG Fault}
+
+Subbab ini membahas respons relay 87L pada sistem dengan \textit{photovoltaic} ketika terjadi gangguan eksternal DLG. Pada pemodelan yang digunakan, PV tidak memberikan kontribusi arus hubung singkat tambahan karena opsi \textit{No short-circuit contribution} aktif. Oleh karena itu, respons relay pada skenario ini dibaca terutama sebagai akibat konfigurasi jaringan, lokasi gangguan, dan besaran arus yang diterima relay, bukan sebagai akibat injeksi arus gangguan dari sisi PV.
+
+Karena gangguan berada di luar daerah proteksi saluran TL89, relay 87L diharapkan tetap berada pada daerah penahan dan tidak memberikan perintah trip. Hasil pada skenario ini dibandingkan dengan acuan gangguan eksternal DLG tanpa IBR pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}. Analisis dilakukan pada fasa A, fasa B, dan fasa C dengan memperhatikan posisi arus diferensial dan arus penahan terhadap batas operasi relay, sehingga dapat dinilai apakah integrasi PV tetap mempertahankan selektivitas relay diferensial saluran.
 
 \begin{figure}[H]
     \centering
@@ -2606,7 +2664,7 @@ Bagian ini membahas respons relay 87L ketika sistem menggunakan \textit{photovol
     \label{fig:plot_Ax6_Ay6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Ax6_Ay6} arus diferensial dan arus penahan fasa A saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Ax6_Ay6} arus diferensial dan arus penahan fasa A saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \begin{figure}[H]
     \centering
@@ -2615,7 +2673,7 @@ Terlihat pada gambar \ref{fig:plot_Ax6_Ay6} arus diferensial dan arus penahan fa
     \label{fig:plot_Bx6_By6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Bx6_By6} arus diferensial dan arus penahan fasa B saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Bx6_By6} arus diferensial dan arus penahan fasa B saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \begin{figure}[H]
     \centering
@@ -2624,7 +2682,7 @@ Terlihat pada gambar \ref{fig:plot_Bx6_By6} arus diferensial dan arus penahan fa
     \label{fig:plot_Cx6_Cy6}
 \end{figure}
 
-Terlihat pada gambar \ref{fig:plot_Cx6_Cy6} arus diferensial dan arus penahan fasa C saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada \ref{subsec:tanpa_IBR_ex_dlg}.
+Terlihat pada gambar \ref{fig:plot_Cx6_Cy6} arus diferensial dan arus penahan fasa C saat adanya gangguan external DLG menunjukkan bahwa arus berada di bawah batas yang ditentukan oleh setting relay. Relay tidak mendeteksi adanya gangguan maka relay tidak memerintahkan CB untuk trip. Relay 87L beroperasi dengan benar berdasarkan acuan pada Subbab \ref{subsec:tanpa_IBR_ex_dlg}.
 
 \section{Perbandingan Karakteristik Relay 87L antar Jenis IBR}
 

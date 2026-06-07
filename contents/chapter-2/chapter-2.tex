@@ -35,6 +35,38 @@ Setting relay jarak biasanya dibagi ke dalam beberapa zona. Zona 1 digunakan unt
 
 Ilustrasi pembagian zona pada relay 21 dapat ditunjukkan melalui bidang R-X seperti pada Gambar \ref{fig:rx_plot_relay21_zona}. Pada bidang tersebut, sumbu R merepresentasikan komponen resistansi, sedangkan sumbu X merepresentasikan komponen reaktansi dari impedansi tampak yang dihitung relay. Karakteristik \textit{mho} membentuk daerah cakupan proteksi yang menghadap ke arah impedansi saluran. Titik impedansi tampak yang berada di dalam karakteristik suatu zona dapat dikenali sebagai gangguan pada cakupan zona tersebut. Zona 1 digunakan sebagai proteksi utama dengan waktu kerja instan, sedangkan zona 2 dan zona 3 memberikan cakupan yang lebih jauh dengan waktu kerja tunda sebagai proteksi lanjutan atau cadangan. Pembagian beberapa zona ini digunakan agar proteksi jarak dapat menjaga selektivitas sekaligus menyediakan cakupan cadangan pada saluran berikutnya \cite{abboud2019fivezones}.
 
+Dekomposisi komponen urutan arus digunakan untuk membaca arus tiga fasa yang terukur pada relay menjadi komponen urutan nol, positif, dan negatif. Dengan fasor arus fasa \(I_a\), \(I_b\), dan \(I_c\), dekomposisi tersebut dapat dituliskan sebagai berikut:
+
+\begin{equation}
+    \begin{bmatrix}
+        I_0 \\
+        I_1 \\
+        I_2
+    \end{bmatrix}
+    =
+    \frac{1}{3}
+    \begin{bmatrix}
+        1 & 1 & 1       \\
+        1 & a & a^2     \\
+        1 & a^2 & a
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_a \\
+        I_b \\
+        I_c
+    \end{bmatrix},
+    \qquad a = 1\angle 120^\circ
+    \label{eq:dekomposisi_urutan_arus}
+\end{equation}
+
+Pada Persamaan \ref{eq:dekomposisi_urutan_arus}, \(I_1\) merepresentasikan komponen urutan positif, \(I_2\) merepresentasikan komponen urutan negatif, sedangkan \(I_0\) merepresentasikan komponen urutan nol. Komponen urutan positif berkaitan dengan bagian arus yang seimbang dan mengikuti urutan fasa normal. Komponen urutan negatif muncul ketika arus tiga fasa tidak seimbang, sedangkan komponen urutan nol berkaitan dengan arus sefasa yang umumnya muncul pada gangguan yang melibatkan tanah atau jalur netral. Dalam konteks relay 21, pemisahan ini penting karena gangguan tak seimbang dapat mengubah komposisi arus yang dipakai relay untuk membentuk besaran impedansi tampak.
+
+Kajian Liu \textit{et al.} menempatkan tegangan dan arus urutan positif, negatif, dan nol yang terukur pada relay sebagai besaran penting dalam analisis proteksi jarak pada saluran yang terhubung IBR ketika terjadi gangguan tak seimbang. Studi tersebut juga menunjukkan bahwa berkurangnya kontribusi arus gangguan pada sistem lemah dapat menyebabkan \textit{underreach} atau \textit{overreach} pada relay jarak sisi grid \cite{liu2025sequence}. Oleh karena itu, pada penelitian ini dekomposisi komponen urutan arus digunakan sebagai konteks untuk membaca apakah arus gangguan yang masuk ke relay 21 didominasi oleh komponen urutan positif saja atau juga mengandung komponen urutan negatif dan nol.
+
+Pada elemen fasa-tanah, komponen urutan nol menjadi penting karena perhitungan impedansi tampak elemen \textit{ground distance} memerlukan kompensasi urutan nol. Tsimtsios dan Nikolaidis menjelaskan bahwa faktor kompensasi urutan nol \(K_0\) merupakan nilai setting yang berkaitan dengan impedansi urutan positif dan nol saluran, serta berpengaruh pada akurasi operasi elemen \textit{ground distance} saat gangguan satu fasa ke tanah \cite{tsimtsios2018setting}. Xu \textit{et al.} juga menggunakan komponen arus urutan negatif, urutan nol, dan gabungan negatif-nol dalam algoritma \textit{ground distance relaying} untuk gangguan resistansi tinggi, sehingga komponen urutan dapat menjadi indikator tambahan dalam membaca gangguan fasa-tanah \cite{xu2010ground}.
+
+Keterkaitan tersebut menjadi lebih penting pada sistem dengan IBR karena arus gangguan tidak hanya dibatasi magnitudonya, tetapi juga dapat dibentuk oleh strategi kontrol inverter. Liu \textit{et al.} menunjukkan bahwa injeksi arus urutan negatif dari sumber berbasis konverter selama gangguan dapat mengubah respons gangguan konverter dan menimbulkan ketidakpastian terhadap proteksi AC yang sudah ada \cite{liu2025impact}. Xie \textit{et al.} juga menempatkan kompatibilitas proteksi jarak terhadap berbagai skema kontrol inverter sebagai isu kajian, sehingga pembacaan \(I_1\), \(I_2\), dan \(I_0\) perlu digunakan sebagai konteks ketika respons relay 21 dibandingkan pada jenis IBR yang berbeda \cite{xie2025distance}.
+
 Pada sistem dengan IBR, pengukuran impedansi tampak dapat mengalami penyimpangan karena arus gangguan yang masuk ke relay dipengaruhi oleh kontrol inverter. Hooshyar \textit{et al.} menunjukkan bahwa saluran yang terhubung ke pembangkit energi terbarukan berbasis konverter penuh dapat menyebabkan relay jarak gagal mendeteksi gangguan internal atau salah beroperasi untuk gangguan eksternal \cite{hooshyar2015cirepp1}. Fang \textit{et al.} juga menunjukkan bahwa \textit{inverter-interfaced renewable energy generators} dapat memengaruhi performa proteksi jarak dan mendorong kebutuhan skema yang ditingkatkan \cite{fang2019impact}.
 
 Selain magnitudo arus yang terbatas, sudut fasa arus gangguan juga dapat berubah karena strategi kontrol inverter. Hal ini penting karena relay jarak tidak hanya bergantung pada besar arus, tetapi pada hubungan fasor antara tegangan dan arus. Sarkar \textit{et al.} menyoroti bahwa performa relay jarak perlu dianalisis kembali pada sistem masa depan yang didominasi konverter \cite{sarkar2017distance_relay_future}. Dengan demikian, evaluasi relay 21 pada penelitian ini diarahkan untuk melihat apakah setting berbasis sistem konvensional masih menghasilkan karakteristik operasi yang sesuai ketika jenis IBR yang terhubung ke sistem berubah.
@@ -146,11 +178,21 @@ Ringkasan literatur yang digunakan pada Bab ini disajikan pada Tabel \ref{tab:ma
 
     Abboud \textit{et al.} (2019) \cite{abboud2019fivezones} & Makalah konferensi & Penggunaan beberapa zona pada proteksi jarak & Kajian teknis aplikasi zona proteksi & Menjelaskan manfaat pembagian zona proteksi jarak & Mendukung penjelasan karakteristik zona relay 21 pada bidang R-X \\ \hline
 
+    Tsimtsios dan Nikolaidis (2018) \cite{tsimtsios2018setting} & Artikel jurnal & Faktor kompensasi urutan nol pada relay jarak & Analisis teori dan studi setting & Menjelaskan bahwa \(K_0\) memengaruhi akurasi elemen \textit{ground distance} pada gangguan satu fasa ke tanah & Menjadi dasar pembahasan komponen urutan nol dan kompensasi urutan nol pada relay 21 \\ \hline
+
+    Xu \textit{et al.} (2010) \cite{xu2010ground} & Artikel jurnal & Algoritma \textit{ground distance} untuk gangguan resistansi tinggi & Pemanfaatan komponen arus urutan negatif, nol, dan gabungan negatif-nol & Menggunakan komponen urutan arus dalam estimasi impedansi gangguan fasa-tanah & Mendukung interpretasi komponen urutan sebagai konteks pembacaan gangguan fasa-tanah pada relay 21 \\ \hline
+
     Hooshyar \textit{et al.} (2015a) \cite{hooshyar2015cirepp1} & Artikel jurnal & Proteksi jarak pada saluran dari pembangkit berbasis konverter penuh & Pernyataan masalah dan analisis proteksi & Menunjukkan potensi kegagalan atau salah operasi relay jarak pada sistem berbasis konverter & Menjadi dasar bahwa relay 21 sensitif terhadap karakteristik arus gangguan IBR \\ \hline
 
     Fang \textit{et al.} (2019) \cite{fang2019impact} & Artikel jurnal & Dampak pembangkit energi terbarukan berbasis inverter terhadap proteksi jarak & Analisis dampak dan usulan skema perbaikan & Menunjukkan perubahan performa relay jarak akibat sumber berbasis inverter & Mendukung evaluasi perubahan impedansi tampak dan keputusan operasi relay 21 \\ \hline
 
     Sarkar \textit{et al.} (2017) \cite{sarkar2017distance_relay_future} & Makalah konferensi & Performa relay jarak pada sistem yang didominasi konverter & Analisis performa relay & Menunjukkan perlunya evaluasi relay jarak pada sistem masa depan berbasis konverter & Memperkuat urgensi analisis relay 21 pada sistem dengan IBR \\ \hline
+
+    Liu \textit{et al.} (2025a) \cite{liu2025sequence} & Artikel jurnal & Proteksi jarak berbasis komponen urutan untuk saluran terhubung IBR saat gangguan tak seimbang & Algoritma berbasis komponen urutan dan simulasi RTDS & Menunjukkan isu \textit{underreach} dan \textit{overreach} serta pemanfaatan besaran urutan lokal pada relay jarak & Menjadi dasar pembahasan dekomposisi komponen urutan arus pada relay 21 \\ \hline
+
+    Liu \textit{et al.} (2025b) \cite{liu2025impact} & Makalah konferensi & Pengaruh injeksi arus urutan negatif konverter terhadap proteksi jarak & Analisis dan pengujian \textit{hardware-in-the-loop} & Menunjukkan bahwa injeksi arus urutan negatif dapat mengubah respons gangguan konverter dan memberi risiko pada proteksi AC & Mendukung alasan perlunya membaca komponen urutan negatif pada sistem dengan IBR \\ \hline
+
+    Xie \textit{et al.} (2025) \cite{xie2025distance} & Artikel jurnal & Proteksi jarak saluran yang terhubung IBR dengan berbagai skema kontrol inverter & Kajian proteksi jarak untuk variasi kontrol inverter & Menempatkan kompatibilitas proteksi jarak terhadap berbagai skema kontrol inverter sebagai isu kajian & Mendukung penggunaan dekomposisi komponen urutan sebagai konteks perbandingan respons relay 21 pada jenis IBR yang berbeda \\ \hline
 
     IEEE Std C37.243 (2015) \cite{ieee2015c37243} & Standar & Aplikasi relay diferensial arus saluran digital & Panduan aplikasi relay 87L & Menjelaskan penggunaan relay diferensial saluran berbasis komunikasi digital & Menjadi dasar teori dan pemodelan relay 87L pada saluran TL89 \\ \hline
 
